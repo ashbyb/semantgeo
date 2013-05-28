@@ -191,6 +191,7 @@
       conversion:enhance [
          ov:csvCol          10;
          ov:csvHeader       "Conductivity (umhos)";
+         a qb:Observation;
          conversion:label   "Conductivity (umhos)";
          conversion:comment "TODO: pretty self explanatory";
          conversion:range   xsd:decimal;
