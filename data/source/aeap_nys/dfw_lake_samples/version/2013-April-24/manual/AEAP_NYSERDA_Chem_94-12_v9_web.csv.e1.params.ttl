@@ -705,6 +705,11 @@
       #conversion:enhance [ # Multi line n-ary assignment           
       #   ov:csvColumn 4,4,5;             
       #   a qb:Observation;
-      #];                              
+      #];
+
    ];
 .
+
+# http://escience.rpi.edu/ontology/semanteco/2/0/pollution.owl#hasValue                         
+# outside and not connected to anyhting
+rdf:value conversion:equivalent_property <http://escience.rpi.edu/ontology/semanteco/2/0/pollution.owl#hasValue> .
