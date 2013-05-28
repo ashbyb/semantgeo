@@ -122,7 +122,7 @@
          conversion:range_name  "WaterSample";
          # Explicit bundling: bind sesson code and lake name.
          # Implicit bundle: "tim lebo has two columns"
-         conversion:equivalent_property <http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#ofEntity>
+         conversion:equivalent_property <http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#ofEntity>;
       ];
       conversion:enhance [
          ov:csvCol          2;
@@ -141,8 +141,8 @@
          conversion:comment "A numeric reference to a lake in the DEC registry, unique to a specific lake";
          conversion:range   rdfs:Resource;
          conversion:range_name  "Lake";
-         # "relation between sample and lake"
-         conversion:equivalent_property <http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#hasContext>
+         # 'relation between sample and lake'
+         conversion:equivalent_property <http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#hasContext>;
          conversion:bundled_by [ ov:csvCol 1 ];
       ];
       conversion:enhance [
