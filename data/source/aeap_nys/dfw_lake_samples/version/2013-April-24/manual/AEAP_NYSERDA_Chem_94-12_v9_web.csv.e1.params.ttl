@@ -207,6 +207,7 @@
       conversion:enhance [
          ov:csvCol          10;
          a conversion:SubjectAnnotation;
+         # conversion:object is taken in main declaration above so to do this other object, we do another block
          conversion:predicate <http://escience.rpi.edu/ontology/semanteco/2/0/pollution.owl#hasUnit>;
          conversion:object    <http://escience.rpi.edu/ontology/semanteco/2/0/pollution.owl#FINDINPOLLUTIONOWLFILE>;
       ];
@@ -216,7 +217,7 @@
          conversion:label   "pH air eq";
          conversion:comment "The pH reading for the sample. TODO: requires telling how the ph was taken not at the lake itself";
          conversion:range   xsd:double;
-         # fixing quick by saying this explicitly as well
+         # fixing quirk by saying this explicitly as well
          a qb:Observation;
       ];
       conversion:enhance [
@@ -225,7 +226,7 @@
          conversion:label   "ANC (ueq/L)";
          conversion:comment "The acid neutralizing capacity of a lake. TODO: expand this";
          conversion:range   xsd:double;
-         # fixing quick by saying this explicitly as well
+         # fixing quirk by saying this explicitly as well
          a qb:Observation;
       ];
       conversion:enhance [
@@ -239,7 +240,7 @@
          #conversion:range_template  "[/sd]thing[.]";
          conversion:range   todo:Literal;
          #conversion:range_name  "Thing";
-         # fixing quick by saying this explicitly as well
+         # fixing quirk by saying this explicitly as well
          a qb:Observation;
       ];
       conversion:enhance [
@@ -253,7 +254,7 @@
          #conversion:range_template  "[/sd]thing[.]";
          conversion:range   todo:Literal;
          #conversion:range_name  "Thing";
-         # fixing quick by saying this explicitly as well
+         # fixing quirk by saying this explicitly as well
          a qb:Observation;
       ];
       conversion:enhance [
@@ -267,7 +268,7 @@
          #conversion:range_template  "[/sd]thing[.]";
          conversion:range   todo:Literal;
          #conversion:range_name  "Thing";
-         # fixing quick by saying this explicitly as well
+         # fixing quirk by saying this explicitly as well
          a qb:Observation;
       ];
       conversion:enhance [
@@ -281,7 +282,7 @@
          #conversion:range_template  "[/sd]thing[.]";
          conversion:range   todo:Literal;
          #conversion:range_name  "Thing";
-         # fixing quick by saying this explicitly as well
+         # fixing quirk by saying this explicitly as well
          a qb:Observation;
       ];
       conversion:enhance [
@@ -295,7 +296,7 @@
          #conversion:range_template  "[/sd]thing[.]";
          conversion:range   todo:Literal;
          #conversion:range_name  "Thing";
-         # fixing quick by saying this explicitly as well
+         # fixing quirk by saying this explicitly as well
          a qb:Observation;
       ];
       conversion:enhance [
@@ -309,7 +310,7 @@
          #conversion:range_template  "[/sd]thing[.]";
          conversion:range   todo:Literal;
          #conversion:range_name  "Thing";
-         # fixing quick by saying this explicitly as well
+         # fixing quirk by saying this explicitly as well
          a qb:Observation;
       ];
       conversion:enhance [
@@ -323,7 +324,7 @@
          #conversion:range_template  "[/sd]thing[.]";
          conversion:range   todo:Literal;
          #conversion:range_name  "Thing";
-         # fixing quick by saying this explicitly as well
+         # fixing quirk by saying this explicitly as well
          a qb:Observation;
       ];
       conversion:enhance [
@@ -337,7 +338,7 @@
          #conversion:range_template  "[/sd]thing[.]";
          conversion:range   todo:Literal;
          #conversion:range_name  "Thing";
-         # fixing quick by saying this explicitly as well
+         # fixing quirk by saying this explicitly as well
          a qb:Observation;
       ];
       conversion:enhance [
@@ -351,7 +352,7 @@
          #conversion:range_template  "[/sd]thing[.]";
          conversion:range   todo:Literal;
          #conversion:range_name  "Thing";
-         # fixing quick by saying this explicitly as well
+         # fixing quirk by saying this explicitly as well
          a qb:Observation;
       ];
       conversion:enhance [
@@ -365,7 +366,7 @@
          #conversion:range_template  "[/sd]thing[.]";
          conversion:range   todo:Literal;
          #conversion:range_name  "Thing";
-         # fixing quick by saying this explicitly as well
+         # fixing quirk by saying this explicitly as well
          a qb:Observation;
       ];
       conversion:enhance [
@@ -379,7 +380,7 @@
          #conversion:range_template  "[/sd]thing[.]";
          conversion:range   todo:Literal;
          #conversion:range_name  "Thing";
-         # fixing quick by saying this explicitly as well
+         # fixing quirk by saying this explicitly as well
          a qb:Observation;
       ];
       conversion:enhance [
@@ -393,7 +394,7 @@
          #conversion:range_template  "[/sd]thing[.]";
          conversion:range   todo:Literal;
          #conversion:range_name  "Thing";
-         # fixing quick by saying this explicitly as well
+         # fixing quirk by saying this explicitly as well
          a qb:Observation;
       ];
       conversion:enhance [
@@ -407,7 +408,7 @@
          #conversion:range_template  "[/sd]thing[.]";
          conversion:range   todo:Literal;
          #conversion:range_name  "Thing";
-         # fixing quick by saying this explicitly as well
+         # fixing quirk by saying this explicitly as well
          a qb:Observation;
       ];
       conversion:enhance [
@@ -421,7 +422,7 @@
          #conversion:range_template  "[/sd]thing[.]";
          conversion:range   todo:Literal;
          #conversion:range_name  "Thing";
-         # fixing quick by saying this explicitly as well
+         # fixing quirk by saying this explicitly as well
          a qb:Observation;
       ];
       conversion:enhance [
@@ -435,7 +436,7 @@
          #conversion:range_template  "[/sd]thing[.]";
          conversion:range   todo:Literal;
          #conversion:range_name  "Thing";
-         # fixing quick by saying this explicitly as well
+         # fixing quirk by saying this explicitly as well
          a qb:Observation;
       ];
       conversion:enhance [
@@ -449,7 +450,7 @@
          #conversion:range_template  "[/sd]thing[.]";
          conversion:range   todo:Literal;
          #conversion:range_name  "Thing";
-         # fixing quick by saying this explicitly as well
+         # fixing quirk by saying this explicitly as well
          a qb:Observation;
       ];
       conversion:enhance [
@@ -463,7 +464,7 @@
          #conversion:range_template  "[/sd]thing[.]";
          conversion:range   todo:Literal;
          #conversion:range_name  "Thing";
-         # fixing quick by saying this explicitly as well
+         # fixing quirk by saying this explicitly as well
          a qb:Observation;
       ];
       conversion:enhance [
@@ -477,7 +478,7 @@
          #conversion:range_template  "[/sd]thing[.]";
          conversion:range   todo:Literal;
          #conversion:range_name  "Thing";
-         # fixing quick by saying this explicitly as well
+         # fixing quirk by saying this explicitly as well
          a qb:Observation;
       ];
       conversion:enhance [
@@ -491,7 +492,7 @@
          #conversion:range_template  "[/sd]thing[.]";
          conversion:range   todo:Literal;
          #conversion:range_name  "Thing";
-         # fixing quick by saying this explicitly as well
+         # fixing quirk by saying this explicitly as well
          a qb:Observation;
       ];
       conversion:enhance [
@@ -505,7 +506,7 @@
          #conversion:range_template  "[/sd]thing[.]";
          conversion:range   todo:Literal;
          #conversion:range_name  "Thing";
-         # fixing quick by saying this explicitly as well
+         # fixing quirk by saying this explicitly as well
          a qb:Observation;
       ];
       conversion:enhance [
@@ -519,7 +520,7 @@
          #conversion:range_template  "[/sd]thing[.]";
          conversion:range   todo:Literal;
          #conversion:range_name  "Thing";
-         # fixing quick by saying this explicitly as well
+         # fixing quirk by saying this explicitly as well
          a qb:Observation;
       ];
       conversion:enhance [
@@ -533,7 +534,7 @@
          #conversion:range_template  "[/sd]thing[.]";
          conversion:range   todo:Literal;
          #conversion:range_name  "Thing";
-         # fixing quick by saying this explicitly as well
+         # fixing quirk by saying this explicitly as well
          a qb:Observation;
       ];
       conversion:enhance [
@@ -547,7 +548,7 @@
          #conversion:range_template  "[/sd]thing[.]";
          conversion:range   todo:Literal;
          #conversion:range_name  "Thing";
-         # fixing quick by saying this explicitly as well
+         # fixing quirk by saying this explicitly as well
          a qb:Observation;
       ];
       conversion:enhance [
@@ -561,7 +562,7 @@
          #conversion:range_template  "[/sd]thing[.]";
          conversion:range   todo:Literal;
          #conversion:range_name  "Thing";
-         # fixing quick by saying this explicitly as well
+         # fixing quirk by saying this explicitly as well
          a qb:Observation;
       ];
       conversion:enhance [
@@ -575,7 +576,7 @@
          #conversion:range_template  "[/sd]thing[.]";
          conversion:range   todo:Literal;
          #conversion:range_name  "Thing";
-         # fixing quick by saying this explicitly as well
+         # fixing quirk by saying this explicitly as well
          a qb:Observation;
       ];
       conversion:enhance [
@@ -589,7 +590,7 @@
          #conversion:range_template  "[/sd]thing[.]";
          conversion:range   todo:Literal;
          #conversion:range_name  "Thing";
-         # fixing quick by saying this explicitly as well
+         # fixing quirk by saying this explicitly as well
          a qb:Observation;
       ];
       conversion:enhance [
@@ -603,7 +604,7 @@
          #conversion:range_template  "[/sd]thing[.]";
          conversion:range   todo:Literal;
          #conversion:range_name  "Thing";
-         # fixing quick by saying this explicitly as well
+         # fixing quirk by saying this explicitly as well
          a qb:Observation;
       ];
       conversion:enhance [
@@ -617,7 +618,7 @@
          #conversion:range_template  "[/sd]thing[.]";
          conversion:range   todo:Literal;
          #conversion:range_name  "Thing";
-         # fixing quick by saying this explicitly as well
+         # fixing quirk by saying this explicitly as well
          a qb:Observation;
       ];
       conversion:enhance [
@@ -631,7 +632,7 @@
          #conversion:range_template  "[/sd]thing[.]";
          conversion:range   todo:Literal;
          #conversion:range_name  "Thing";
-         # fixing quick by saying this explicitly as well
+         # fixing quirk by saying this explicitly as well
          a qb:Observation;
       ];
       conversion:enhance [
@@ -645,7 +646,7 @@
          #conversion:range_template  "[/sd]thing[.]";
          conversion:range   todo:Literal;
          #conversion:range_name  "Thing";
-         # fixing quick by saying this explicitly as well
+         # fixing quirk by saying this explicitly as well
          a qb:Observation;
       ];
       conversion:enhance [
@@ -659,7 +660,7 @@
          #conversion:range_template  "[/sd]thing[.]";
          conversion:range   todo:Literal;
          #conversion:range_name  "Thing";
-         # fixing quick by saying this explicitly as well
+         # fixing quirk by saying this explicitly as well
          a qb:Observation;
       ];
       conversion:enhance [
@@ -673,7 +674,7 @@
          #conversion:range_template  "[/sd]thing[.]";
          conversion:range   todo:Literal;
          #conversion:range_name  "Thing";
-         # fixing quick by saying this explicitly as well
+         # fixing quirk by saying this explicitly as well
          a qb:Observation;
       ];
       conversion:enhance [
@@ -687,7 +688,7 @@
          #conversion:range_template  "[/sd]thing[.]";
          conversion:range   todo:Literal;
          #conversion:range_name  "Thing";
-         # fixing quick by saying this explicitly as well
+         # fixing quirk by saying this explicitly as well
          a qb:Observation;
       ];
       conversion:enhance [
@@ -701,7 +702,7 @@
          #conversion:range_template  "[/sd]thing[.]";
          conversion:range   todo:Literal;
          #conversion:range_name  "Thing";
-         # fixing quick by saying this explicitly as well
+         # fixing quirk by saying this explicitly as well
          a qb:Observation;
       ];
       conversion:enhance [
