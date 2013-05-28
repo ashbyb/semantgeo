@@ -116,15 +116,20 @@
          conversion:label   "Accession Code (sample#)";
          a conversion:DataStartRow;
          conversion:comment "A unique numeric reference to a specific water sample taken from a lake";
-         conversion:range   xsd:integer;
+         conversion:range   rdfs:Resource;
+         conversion:range_name  "WaterSample";
+         # Explicit bundling: bind sesson code and lake name.
+         # Implicit bundle: "tim lebo has two columns"
       ];
       conversion:enhance [
          ov:csvCol          2;
          ov:csvHeader       "Lake Name";
          conversion:label   "Lake Name";
-         conversion:equivalent_property foaf:isPrimaryTopicOf;
+         conversion:equivalent_property rdfs:Label;
          conversion:comment "The name of the lake the sample is from";
          conversion:range   rdfs:Literal;
+         # is bundled by column 3
+         conversion:bundled_by [ ov:csvCol 3 ];
       ];
       conversion:enhance [
          ov:csvCol          3;
