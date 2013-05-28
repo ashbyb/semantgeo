@@ -80,14 +80,15 @@
          conversion:symbol        "";
          conversion:interpretation conversion:null; 
       ];
-      #conversion:enhance [
+      conversion:enhance [
       #   conversion:domain_template "thing_[r]";
       #   conversion:domain_name     "Thing";
-      #];
-      #conversion:enhance [
-      #   conversion:class_name "Thing";
-      #   conversion:subclass_of <http://purl.org/...>;
-      #];
+          conversion:domain_name "WaterMeasurement";
+      ];
+      conversion:enhance [
+         conversion:class_name "WaterMeasurement";
+         conversion:subclass_of <http://escience.rpi.edu/ontology/semanteco/2/0/water.owl#WaterMeasurement>;
+      ];
       conversion:enhance [ # Multi line n-ary assignment           
          ov:csvCol 10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46;             
          a qb:Observation;
@@ -114,7 +115,6 @@
          ov:csvHeader       "Accession Code (sample#)";
          conversion:label   "Accession Code (sample#)";
          a conversion:DataStartRow;
-         conversion:domain_name "Sample";
          conversion:comment "A unique numeric reference to a specific water sample taken from a lake";
          conversion:range   xsd:integer;
       ];
