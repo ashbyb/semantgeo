@@ -137,6 +137,7 @@
          conversion:label   "DEC Code";
          conversion:comment "A numeric reference to a lake in the DEC registry, unique to a specific lake";
          conversion:range   rdfs:Resource;
+         conversion:range_name  "Lake";
       ];
       conversion:enhance [
          ov:csvCol          4;
