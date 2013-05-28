@@ -42,12 +42,12 @@
 @prefix :              <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/params/enhancement/1/> .
 
 
-#:a_bundle
-#   a conversion:ImplicitBundle;
-#   conversion:property_name "a_property"; # Can also be a URI, e.g. dcterms:title.
-#   conversion:name_template "[/sd]company/[#2]/[r]";
-#   #conversion:type_name     "My Class";   # Can also be a URI, e.g. foaf:Person.
-#.
+:a_bundle
+   a conversion:ImplicitBundle;
+   conversion:property_name <http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#hasContext>; # Can also be a URI, e.g. dcterms:title.
+   conversion:name_template "[/sd]sampleLocation/[r]";
+   conversion:type_name     prov:Location;   # Can also be a URI, e.g. foaf:Person.
+.
 
 <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1>
    a conversion:LayerDataset, void:Dataset;
@@ -113,6 +113,11 @@
       #final QueryResource unitHasUnit = query.getResource(UNIT_NS+"hasUnit");
       #final QueryResource atLocation = query.getResource(PROV_NS+"atLocation");
       #final QueryResource hasMeasurement = query.getResource(POL_NS +"hasMeasurement");
+
+      # Talk about how I am doing these:
+      # cell based
+      # explicit bundle
+      # forcing new triples (aeerting new triples with a new block)
       
       conversion:enhance [
          ov:csvCol          1;
@@ -209,7 +214,7 @@
          a conversion:SubjectAnnotation;
          # conversion:object is taken in main declaration above so to do this other object, we do another block
          conversion:predicate <http://escience.rpi.edu/ontology/semanteco/2/0/pollution.owl#hasUnit>;
-         conversion:object    <http://escience.rpi.edu/ontology/semanteco/2/0/pollution.owl#FINDINPOLLUTIONOWLFILE>;
+         conversion:object    <http://escience.rpi.edu/ontology/semanteco/2/0/pollution.owl#UMHOS - FINDINPOLLUTIONOWLFILE>;
       ];
       conversion:enhance [
          ov:csvCol          11;
