@@ -136,7 +136,7 @@
          ov:csvHeader       "DEC Code";
          conversion:label   "DEC Code";
          conversion:comment "A numeric reference to a lake in the DEC registry, unique to a specific lake";
-         conversion:range   xsd:integer;
+         conversion:range   rdfs:Resource;
       ];
       conversion:enhance [
          ov:csvCol          4;
