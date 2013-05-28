@@ -115,9 +115,13 @@
       #final QueryResource hasMeasurement = query.getResource(POL_NS +"hasMeasurement");
 
       # Talk about how I am doing these:
-      # cell based
+      # cell based conversion
       # explicit bundle
-      # forcing new triples (aeerting new triples with a new block)
+      # forcing new triples (aserting new triples with a new block)
+      #  Column 10, we added new triples based off the column. overrode what the cell-based conversion would have done. The up part. We didn't want that, so we edited the object and predicate with the newly made block.
+      #  Pattern for new triples. "subjectAnnotation". Applies to cell or row based, not just one or the other.
+      # implicit bundles
+      # Little small one: default for cell is rdf:value, we overrode this as rdf:hasValue. uses semantEco's vocabulary for measurements.
       
       conversion:enhance [
          ov:csvCol          1;
