@@ -77,7 +77,7 @@
       #conversion:delimits_cell ",";   # comma
 
       conversion:interpret [
-         conversion:symbol        "";
+         conversion:symbol        "","N/A";
          conversion:interpretation conversion:null; 
       ];
       conversion:enhance [
@@ -96,6 +96,8 @@
          prov:atLocation query_ns:site;
          # "of entity"
          # measurement to sample: http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#ofEntity
+         # fixing odd structure
+         conversion:equivalent_property <http://escience.rpi.edu/ontology/semanteco/2/0/pollution.owl#hasCharacteristic>;
       ];   
 
       #final Variable measurement = query.getVariable(VAR_NS+"measurement");
@@ -157,7 +159,7 @@
          ov:csvHeader       "Z max (m)";
          conversion:label   "Z max (m)";
          conversion:comment "The maximum depth to the lake floor at the site where the sample was taken";
-         conversion:range   xsd:decimal;
+         conversion:range   xsd:double;
       ];
       conversion:enhance [
          ov:csvCol          6;
@@ -171,7 +173,7 @@
          ov:csvHeader       "Sample Z (m)";
          conversion:label   "Sample Z (m)";
          conversion:comment "TODO";
-         conversion:range   xsd:decimal;
+         conversion:range   xsd:double;
       ];
       conversion:enhance [
          ov:csvCol          8;
@@ -185,18 +187,17 @@
          ov:csvHeader       "Secchi (m)";
          conversion:label   "Secchi (m)";
          conversion:comment "TODO: has to do with how clear the water is";
-         conversion:range   xsd:decimal;
+         conversion:range   xsd:double;
 
       ];
       conversion:enhance [
          ov:csvCol          10;
          ov:csvHeader       "Conductivity (umhos)";
+         # hiccup of the implementation. "to change what the object of the triple of the attribute header resource"
          a qb:Observation;
          conversion:label   "Conductivity (umhos)";
          conversion:comment "TODO: pretty self explanatory";
-         conversion:range   xsd:decimal;
-         # fixing odd structure
-         conversion:equivalent_property <http://escience.rpi.edu/ontology/semanteco/2/0/pollution.owl#hasCharacteristic>;
+         conversion:range   xsd:double;
          #conversion:interpret [
          #   conversion:symbol        "Conductivity (umhos)";
          #   conversion:interpretation <http://escience.rpi.edu/ontology/semanteco/2/0/pollution.owl#Conductivity>; 
@@ -208,15 +209,18 @@
          ov:csvHeader       "pH air eq";
          conversion:label   "pH air eq";
          conversion:comment "The pH reading for the sample. TODO: requires telling how the ph was taken not at the lake itself";
-         conversion:range   xsd:decimal;
+         conversion:range   xsd:double;
+         # fixing quick by saying this explicitly as well
+         a qb:Observation;
       ];
       conversion:enhance [
          ov:csvCol          12;
          ov:csvHeader       "ANC (ueq/L)";
          conversion:label   "ANC (ueq/L)";
          conversion:comment "The acid neutralizing capacity of a lake. TODO: expand this";
-         conversion:range   xsd:decimal;
-
+         conversion:range   xsd:double;
+         # fixing quick by saying this explicitly as well
+         a qb:Observation;
       ];
       conversion:enhance [
          ov:csvCol          13;
@@ -229,6 +233,8 @@
          #conversion:range_template  "[/sd]thing[.]";
          conversion:range   todo:Literal;
          #conversion:range_name  "Thing";
+         # fixing quick by saying this explicitly as well
+         a qb:Observation;
       ];
       conversion:enhance [
          ov:csvCol          14;
@@ -241,6 +247,8 @@
          #conversion:range_template  "[/sd]thing[.]";
          conversion:range   todo:Literal;
          #conversion:range_name  "Thing";
+         # fixing quick by saying this explicitly as well
+         a qb:Observation;
       ];
       conversion:enhance [
          ov:csvCol          15;
@@ -253,6 +261,8 @@
          #conversion:range_template  "[/sd]thing[.]";
          conversion:range   todo:Literal;
          #conversion:range_name  "Thing";
+         # fixing quick by saying this explicitly as well
+         a qb:Observation;
       ];
       conversion:enhance [
          ov:csvCol          16;
@@ -265,6 +275,8 @@
          #conversion:range_template  "[/sd]thing[.]";
          conversion:range   todo:Literal;
          #conversion:range_name  "Thing";
+         # fixing quick by saying this explicitly as well
+         a qb:Observation;
       ];
       conversion:enhance [
          ov:csvCol          17;
@@ -277,6 +289,8 @@
          #conversion:range_template  "[/sd]thing[.]";
          conversion:range   todo:Literal;
          #conversion:range_name  "Thing";
+         # fixing quick by saying this explicitly as well
+         a qb:Observation;
       ];
       conversion:enhance [
          ov:csvCol          18;
@@ -289,6 +303,8 @@
          #conversion:range_template  "[/sd]thing[.]";
          conversion:range   todo:Literal;
          #conversion:range_name  "Thing";
+         # fixing quick by saying this explicitly as well
+         a qb:Observation;
       ];
       conversion:enhance [
          ov:csvCol          19;
@@ -301,6 +317,8 @@
          #conversion:range_template  "[/sd]thing[.]";
          conversion:range   todo:Literal;
          #conversion:range_name  "Thing";
+         # fixing quick by saying this explicitly as well
+         a qb:Observation;
       ];
       conversion:enhance [
          ov:csvCol          20;
@@ -313,6 +331,8 @@
          #conversion:range_template  "[/sd]thing[.]";
          conversion:range   todo:Literal;
          #conversion:range_name  "Thing";
+         # fixing quick by saying this explicitly as well
+         a qb:Observation;
       ];
       conversion:enhance [
          ov:csvCol          21;
@@ -325,6 +345,8 @@
          #conversion:range_template  "[/sd]thing[.]";
          conversion:range   todo:Literal;
          #conversion:range_name  "Thing";
+         # fixing quick by saying this explicitly as well
+         a qb:Observation;
       ];
       conversion:enhance [
          ov:csvCol          22;
@@ -337,6 +359,8 @@
          #conversion:range_template  "[/sd]thing[.]";
          conversion:range   todo:Literal;
          #conversion:range_name  "Thing";
+         # fixing quick by saying this explicitly as well
+         a qb:Observation;
       ];
       conversion:enhance [
          ov:csvCol          23;
@@ -349,6 +373,8 @@
          #conversion:range_template  "[/sd]thing[.]";
          conversion:range   todo:Literal;
          #conversion:range_name  "Thing";
+         # fixing quick by saying this explicitly as well
+         a qb:Observation;
       ];
       conversion:enhance [
          ov:csvCol          24;
@@ -361,6 +387,8 @@
          #conversion:range_template  "[/sd]thing[.]";
          conversion:range   todo:Literal;
          #conversion:range_name  "Thing";
+         # fixing quick by saying this explicitly as well
+         a qb:Observation;
       ];
       conversion:enhance [
          ov:csvCol          25;
@@ -373,6 +401,8 @@
          #conversion:range_template  "[/sd]thing[.]";
          conversion:range   todo:Literal;
          #conversion:range_name  "Thing";
+         # fixing quick by saying this explicitly as well
+         a qb:Observation;
       ];
       conversion:enhance [
          ov:csvCol          26;
@@ -385,6 +415,8 @@
          #conversion:range_template  "[/sd]thing[.]";
          conversion:range   todo:Literal;
          #conversion:range_name  "Thing";
+         # fixing quick by saying this explicitly as well
+         a qb:Observation;
       ];
       conversion:enhance [
          ov:csvCol          27;
@@ -397,6 +429,8 @@
          #conversion:range_template  "[/sd]thing[.]";
          conversion:range   todo:Literal;
          #conversion:range_name  "Thing";
+         # fixing quick by saying this explicitly as well
+         a qb:Observation;
       ];
       conversion:enhance [
          ov:csvCol          28;
@@ -409,6 +443,8 @@
          #conversion:range_template  "[/sd]thing[.]";
          conversion:range   todo:Literal;
          #conversion:range_name  "Thing";
+         # fixing quick by saying this explicitly as well
+         a qb:Observation;
       ];
       conversion:enhance [
          ov:csvCol          29;
@@ -421,6 +457,8 @@
          #conversion:range_template  "[/sd]thing[.]";
          conversion:range   todo:Literal;
          #conversion:range_name  "Thing";
+         # fixing quick by saying this explicitly as well
+         a qb:Observation;
       ];
       conversion:enhance [
          ov:csvCol          30;
@@ -433,6 +471,8 @@
          #conversion:range_template  "[/sd]thing[.]";
          conversion:range   todo:Literal;
          #conversion:range_name  "Thing";
+         # fixing quick by saying this explicitly as well
+         a qb:Observation;
       ];
       conversion:enhance [
          ov:csvCol          31;
@@ -445,6 +485,8 @@
          #conversion:range_template  "[/sd]thing[.]";
          conversion:range   todo:Literal;
          #conversion:range_name  "Thing";
+         # fixing quick by saying this explicitly as well
+         a qb:Observation;
       ];
       conversion:enhance [
          ov:csvCol          32;
@@ -457,6 +499,8 @@
          #conversion:range_template  "[/sd]thing[.]";
          conversion:range   todo:Literal;
          #conversion:range_name  "Thing";
+         # fixing quick by saying this explicitly as well
+         a qb:Observation;
       ];
       conversion:enhance [
          ov:csvCol          33;
@@ -469,6 +513,8 @@
          #conversion:range_template  "[/sd]thing[.]";
          conversion:range   todo:Literal;
          #conversion:range_name  "Thing";
+         # fixing quick by saying this explicitly as well
+         a qb:Observation;
       ];
       conversion:enhance [
          ov:csvCol          34;
@@ -481,6 +527,8 @@
          #conversion:range_template  "[/sd]thing[.]";
          conversion:range   todo:Literal;
          #conversion:range_name  "Thing";
+         # fixing quick by saying this explicitly as well
+         a qb:Observation;
       ];
       conversion:enhance [
          ov:csvCol          35;
@@ -493,6 +541,8 @@
          #conversion:range_template  "[/sd]thing[.]";
          conversion:range   todo:Literal;
          #conversion:range_name  "Thing";
+         # fixing quick by saying this explicitly as well
+         a qb:Observation;
       ];
       conversion:enhance [
          ov:csvCol          36;
@@ -505,6 +555,8 @@
          #conversion:range_template  "[/sd]thing[.]";
          conversion:range   todo:Literal;
          #conversion:range_name  "Thing";
+         # fixing quick by saying this explicitly as well
+         a qb:Observation;
       ];
       conversion:enhance [
          ov:csvCol          37;
@@ -517,6 +569,8 @@
          #conversion:range_template  "[/sd]thing[.]";
          conversion:range   todo:Literal;
          #conversion:range_name  "Thing";
+         # fixing quick by saying this explicitly as well
+         a qb:Observation;
       ];
       conversion:enhance [
          ov:csvCol          38;
@@ -529,6 +583,8 @@
          #conversion:range_template  "[/sd]thing[.]";
          conversion:range   todo:Literal;
          #conversion:range_name  "Thing";
+         # fixing quick by saying this explicitly as well
+         a qb:Observation;
       ];
       conversion:enhance [
          ov:csvCol          39;
@@ -541,6 +597,8 @@
          #conversion:range_template  "[/sd]thing[.]";
          conversion:range   todo:Literal;
          #conversion:range_name  "Thing";
+         # fixing quick by saying this explicitly as well
+         a qb:Observation;
       ];
       conversion:enhance [
          ov:csvCol          40;
@@ -553,6 +611,8 @@
          #conversion:range_template  "[/sd]thing[.]";
          conversion:range   todo:Literal;
          #conversion:range_name  "Thing";
+         # fixing quick by saying this explicitly as well
+         a qb:Observation;
       ];
       conversion:enhance [
          ov:csvCol          41;
@@ -565,6 +625,8 @@
          #conversion:range_template  "[/sd]thing[.]";
          conversion:range   todo:Literal;
          #conversion:range_name  "Thing";
+         # fixing quick by saying this explicitly as well
+         a qb:Observation;
       ];
       conversion:enhance [
          ov:csvCol          42;
@@ -577,6 +639,8 @@
          #conversion:range_template  "[/sd]thing[.]";
          conversion:range   todo:Literal;
          #conversion:range_name  "Thing";
+         # fixing quick by saying this explicitly as well
+         a qb:Observation;
       ];
       conversion:enhance [
          ov:csvCol          43;
@@ -589,6 +653,8 @@
          #conversion:range_template  "[/sd]thing[.]";
          conversion:range   todo:Literal;
          #conversion:range_name  "Thing";
+         # fixing quick by saying this explicitly as well
+         a qb:Observation;
       ];
       conversion:enhance [
          ov:csvCol          44;
@@ -601,6 +667,8 @@
          #conversion:range_template  "[/sd]thing[.]";
          conversion:range   todo:Literal;
          #conversion:range_name  "Thing";
+         # fixing quick by saying this explicitly as well
+         a qb:Observation;
       ];
       conversion:enhance [
          ov:csvCol          45;
@@ -613,6 +681,8 @@
          #conversion:range_template  "[/sd]thing[.]";
          conversion:range   todo:Literal;
          #conversion:range_name  "Thing";
+         # fixing quick by saying this explicitly as well
+         a qb:Observation;
       ];
       conversion:enhance [
          ov:csvCol          46;
@@ -625,6 +695,8 @@
          #conversion:range_template  "[/sd]thing[.]";
          conversion:range   todo:Literal;
          #conversion:range_name  "Thing";
+         # fixing quick by saying this explicitly as well
+         a qb:Observation;
       ];
       conversion:enhance [
          ov:csvCol          47;
