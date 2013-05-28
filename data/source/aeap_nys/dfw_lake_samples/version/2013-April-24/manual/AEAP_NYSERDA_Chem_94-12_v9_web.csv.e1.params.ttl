@@ -196,10 +196,11 @@
          conversion:range   xsd:decimal;
          # fixing odd structure
          conversion:equivalent_property <http://escience.rpi.edu/ontology/semanteco/2/0/pollution.owl#hasCharacteristic>;
-         conversion:interpret [
-            conversion:symbol        "Conductivity (umhos)";
-            conversion:interpretation <http://escience.rpi.edu/ontology/semanteco/2/0/pollution.owl#Conductivity>; 
-         ];
+         #conversion:interpret [
+         #   conversion:symbol        "Conductivity (umhos)";
+         #   conversion:interpretation <http://escience.rpi.edu/ontology/semanteco/2/0/pollution.owl#Conductivity>; 
+         #];
+         conversion:object <http://escience.rpi.edu/ontology/semanteco/2/0/pollution.owl#Conductivity> .
       ];
       conversion:enhance [
          ov:csvCol          11;
