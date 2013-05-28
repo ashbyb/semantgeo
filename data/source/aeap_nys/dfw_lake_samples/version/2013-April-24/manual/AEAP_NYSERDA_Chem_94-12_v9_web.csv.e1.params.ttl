@@ -42,7 +42,7 @@
 @prefix :              <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/params/enhancement/1/> .
 
 
-:a_bundle
+:a_location_bundle
    a conversion:ImplicitBundle;
    conversion:property_name <http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#hasContext>; # Can also be a URI, e.g. dcterms:title.
    conversion:name_template "[/sd]sampleLocation/[r]";
@@ -165,7 +165,7 @@
          conversion:label   "Z max (m)";
          conversion:comment "The maximum depth to the lake floor at the site where the sample was taken";
          conversion:range   xsd:double;
-         conversion:bundled_by :a_bundle;
+         conversion:bundled_by :a_location_bundle;
       ];
       conversion:enhance [
          ov:csvCol          6;
@@ -173,7 +173,7 @@
          conversion:label   "Sample Type";
          conversion:comment "I represents 'Integrated' sample which is a mixed sample representing several meters from the surface to the top of the thermocline.  G represents a 'Grab' sample at a specific depth.";
          conversion:range   rdfs:Literal;
-         conversion:bundled_by :a_bundle;
+         conversion:bundled_by :a_location_bundle;
       ];
       conversion:enhance [
          ov:csvCol          7;
@@ -181,7 +181,7 @@
          conversion:label   "Sample Z (m)";
          conversion:comment "TODO";
          conversion:range   xsd:double;
-         conversion:bundled_by :a_bundle;
+         conversion:bundled_by :a_location_bundle;
       ];
       conversion:enhance [
          ov:csvCol          8;
@@ -189,7 +189,7 @@
          conversion:label   "Sample Layer";
          conversion:comment "TODO";
          conversion:range   rdfs:Literal;
-         conversion:bundled_by :a_bundle;
+         conversion:bundled_by :a_location_bundle;
       ];
       conversion:enhance [
          ov:csvCol          9;
@@ -197,7 +197,7 @@
          conversion:label   "Secchi (m)";
          conversion:comment "TODO: has to do with how clear the water is";
          conversion:range   xsd:double;
-         conversion:bundled_by :a_bundle;
+         conversion:bundled_by :a_location_bundle;
       ];
       conversion:enhance [
          ov:csvCol          10;
