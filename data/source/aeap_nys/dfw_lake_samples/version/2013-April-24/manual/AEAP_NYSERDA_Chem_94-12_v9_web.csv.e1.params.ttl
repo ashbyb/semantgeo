@@ -205,6 +205,12 @@
          conversion:object <http://escience.rpi.edu/ontology/semanteco/2/0/pollution.owl#Conductivity>;
       ];
       conversion:enhance [
+         ov:csvCol          10;
+         a conversion:SubjectAnnotation;
+         conversion:predicate <http://escience.rpi.edu/ontology/semanteco/2/0/pollution.owl#hasUnit>;
+         conversion:object    <http://escience.rpi.edu/ontology/semanteco/2/0/pollution.owl#FINDINPOLLUTIONOWLFILE>;
+      ];
+      conversion:enhance [
          ov:csvCol          11;
          ov:csvHeader       "pH air eq";
          conversion:label   "pH air eq";
