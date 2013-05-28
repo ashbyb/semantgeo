@@ -194,6 +194,8 @@
          conversion:label   "Conductivity (umhos)";
          conversion:comment "TODO: pretty self explanatory";
          conversion:range   xsd:decimal;
+         # fixing odd structure
+         conversion:equivalent_property <http://escience.rpi.edu/ontology/semanteco/2/0/pollution.owl#hasCharacteristic>;
       ];
       conversion:enhance [
          ov:csvCol          11;
@@ -711,5 +713,5 @@
 .
 
 # http://escience.rpi.edu/ontology/semanteco/2/0/pollution.owl#hasValue                         
-# outside and not connected to anyhting
+# outside and not connected to anything
 rdf:value conversion:equivalent_property <http://escience.rpi.edu/ontology/semanteco/2/0/pollution.owl#hasValue> .
