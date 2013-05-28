@@ -113,19 +113,6 @@ else
    echo "  -- automatic/AEAP_crust_web_v3.csv.raw.params.ttl omitted --"
 fi
 
-if [ -e "automatic/AEAP_NYSERDA_Chem_94-12_v9_web.csv.e1.params.ttl" ]; then 
-   wwwfile="$wwwroot/source/aeap_nys/file/dfw_lake_samples/version/2013-April-24/automatic/AEAP_NYSERDA_Chem_94-12_v9_web.csv.e1.params.ttl"
-   if [ -e "$wwwfile" ]; then 
-     $sudo rm -f "$wwwfile"
-   else
-     $sudo mkdir -p `dirname "$wwwfile"`
-   fi
-   echo "  $wwwfile"
-   $sudo ln $symbolic "${pwd}automatic/AEAP_NYSERDA_Chem_94-12_v9_web.csv.e1.params.ttl" "$wwwfile"
-else
-   echo "  -- automatic/AEAP_NYSERDA_Chem_94-12_v9_web.csv.e1.params.ttl omitted --"
-fi
-
 if [ -e "automatic/AEAP_NYSERDA_Chem_94-12_v9_web.csv.raw.params.ttl" ]; then 
    wwwfile="$wwwroot/source/aeap_nys/file/dfw_lake_samples/version/2013-April-24/automatic/AEAP_NYSERDA_Chem_94-12_v9_web.csv.raw.params.ttl"
    if [ -e "$wwwfile" ]; then 
@@ -220,6 +207,19 @@ fi
 ##################################################
 # Link all PROVENANCE files that describe how the input CSV files were obtained.
 #
+if [ -e "manual/AEAP_NYSERDA_Chem_94-12_v9_web.csv.pml.ttl" ]; then 
+   wwwfile="$wwwroot/source/aeap_nys/file/dfw_lake_samples/version/2013-April-24/manual/AEAP_NYSERDA_Chem_94-12_v9_web.csv.pml.ttl"
+   if [ -e "$wwwfile" ]; then
+     $sudo rm -f "$wwwfile"
+   else
+     $sudo mkdir -p `dirname "$wwwfile"`
+   fi
+   echo "  $wwwfile"
+   $sudo ln $symbolic "${pwd}manual/AEAP_NYSERDA_Chem_94-12_v9_web.csv.pml.ttl" "$wwwfile"
+else
+   echo "  -- manual/AEAP_NYSERDA_Chem_94-12_v9_web.csv.pml.ttl omitted --"
+fi
+
 ##################################################
 # Link all bundled RDF output files from the source/.../file directory structure to the web directory.
 #

@@ -8947,10 +8947,10 @@ foaf:topic
     a doap:GitRepository ;
     foaf:isPrimaryTopicOf <https://github.com/timrdf/csv2rdf4lod-automation> .
 
-# num logs: 8
-<http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24> <http://purl.org/twc/vocab/conversion/num_invocation_logs> 8 .
+# num logs: 11
+<http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24> <http://purl.org/twc/vocab/conversion/num_invocation_logs> 11 .
 # BEGIN: publish/aeap_nys-dfw_lake_samples-2013-April-24.pml.ttl:
-@base <http://purl.org/twc/semmdd/source/aeap_nys/file/dfw_lake_samples/version/2013-April-24/automatic/> .
+@base <http://purl.org/twc/semmdd/source/aeap_nys/file/dfw_lake_samples/version/2013-April-24/manual/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
