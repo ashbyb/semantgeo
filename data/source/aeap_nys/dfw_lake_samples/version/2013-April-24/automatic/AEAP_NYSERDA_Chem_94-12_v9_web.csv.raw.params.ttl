@@ -28,7 +28,7 @@
 
       dcterms:creator [ a foaf:OnlineAccount; foaf:accountName "ashbyb";
                         sioc:account_of <http://tw.rpi.edu/instances/BrendanAshby> ];
-      dcterms:created "2013-05-28T18:28:21+00:00"^^xsd:dateTime;
+      dcterms:created "2013-05-28T18:51:15+00:00"^^xsd:dateTime;
 
       conversion:delimits_cell ",";
       #conversion:delimits_cell "	"; # tab

@@ -5,9 +5,9 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix pmlp: <http://inference-web.org/2.0/pml-provenance.owl#> .
 @prefix pmlj: <http://inference-web.org/2.0/pml-justification.owl#> .
-@prefix tw_service: <http://purl.org/twc/semmdd/source/tw-rpi-edu/service/> .
-@prefix tw_converter: <http://purl.org/twc/semmdd/source/tw-rpi-edu/service/csv2rdf4lod/version/2013-Jan-16/> .
-@prefix provenance_1: <http://purl.org/twc/semmdd/source/aeap_nys/provenance/dfw_lake_samples/aeap-nyserda-chem-94-12-v9-web/version/2013-April-24/conversion/enhancement/1/> .
+@prefix tw_service: <http://purl.org/twc/semantgeo/source/tw-rpi-edu/service/> .
+@prefix tw_converter: <http://purl.org/twc/semantgeo/source/tw-rpi-edu/service/csv2rdf4lod/version/2013-Jan-16/> .
+@prefix provenance_1: <http://purl.org/twc/semantgeo/source/source/provenance/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1/> .
 @prefix conversion: <http://purl.org/twc/vocab/conversion/> .
 @prefix ov: <http://open.vocab.org/terms/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
@@ -19,41 +19,51 @@
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix frbrcore: <http://purl.org/vocab/frbr/core#> .
 @prefix coin: <http://purl.org/court/def/2009/coin#> .
-@prefix dfw_lake_samples: <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/> .
-@prefix aeap_nys_vocab: <http://purl.org/twc/semmdd/source/aeap_nys/vocab/> .
-@prefix base_vocab: <http://purl.org/twc/semmdd/vocab/> .
-@prefix dfw_lake_samples_vocab: <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/> .
-@prefix raw: <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/raw/> .
-@prefix e1: <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> .
-@prefix : <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/aeap-nyserda-chem-94-12-v9-web/version/2013-April-24/> .
-@prefix ns1: <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/aeap-nyserda-chem-94-12-v9-web/> .
-@prefix time: <http://www.w3.org/2006/time#> .
-@prefix bibo: <http://purl.org/ontology/bibo/> .
-@prefix govtrackusgov: <http://www.rdfabout.com/rdf/usgov/geo/us/> .
-@prefix dbpedia: <http://dbpedia.org/resource/> .
-@prefix geonames: <http://www.geonames.org/ontology#> .
-@prefix nfo: <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#> .
-@prefix sioc: <http://rdfs.org/sioc/ns#> .
+@prefix dfwi-aeap-nyserda: <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/> .
+@prefix source_vocab: <http://purl.org/twc/semantgeo/source/source/vocab/> .
+@prefix base_vocab: <http://purl.org/twc/semantgeo/vocab/> .
+@prefix dfwi-aeap-nyserda_vocab: <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/vocab/> .
+@prefix raw: <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/vocab/raw/> .
+@prefix e1: <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/vocab/enhancement/1/> .
+@prefix dfwi-aeap-nyserda_global_value: <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/> .
+@prefix vsr: <http://purl.org/twc/vocab/vsr#> .
 @prefix geonamesid: <http://sws.geonames.org/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix con: <http://www.w3.org/2000/10/swap/pim/contact#> .
+@prefix dbpedia: <http://dbpedia.org/resource/> .
+@prefix pml: <http://provenanceweb.org/ns/pml#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix pollution: <http://escience.rpi.edu/ontology/semanteco/2/0/pollution.owl#> .
+@prefix sioc: <http://rdfs.org/sioc/ns#> .
+@prefix nfo: <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#> .
+@prefix muo: <http://purl.oclc.org/NET/muo/muo#> .
+@prefix geonames: <http://www.geonames.org/ontology#> .
+@prefix govtrackusgov: <http://www.rdfabout.com/rdf/usgov/geo/us/> .
+@prefix wgs: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dbpediaowl: <http://dbpedia.org/ontology/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dgtwc: <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#> .
+@prefix water_ns: <http://escience.rpi.edu/ontology/semanteco/2/0/water.owl#> .
+@prefix query_ns: <http://aquarius.tw.rpi.edu/projects/semantaqua/data-source/query-variable/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix org: <http://www.w3.org/ns/org#> .
 @prefix dbpediaprop: <http://dbpedia.org/property/> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix sio: <http://semanticscience.org/resource/> .
-@prefix muo: <http://purl.oclc.org/NET/muo/muo#> .
-@prefix dbpediaowl: <http://dbpedia.org/ontology/> .
-@prefix con: <http://www.w3.org/2000/10/swap/pim/contact#> .
-@prefix dgtwc: <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#> .
-@prefix prov: <http://www.w3.org/ns/prov#> .
-@prefix wgs: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+
+dfwi-aeap-nyserda_vocab:Sample a rdfs:Class , owl:Class ;
+	rdfs:label "Sample" .
 
 e1:accession_code_sample a rdf:Property ;
 	ov:csvRow "1"^^xsd:integer ;
 	ov:csvCol "1"^^xsd:integer ;
 	ov:csvHeader "Accession Code (sample#)" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "Accession Code sample#" ;
-	rdfs:range rdfs:Literal ;
+	rdfs:range xsd:integer ;
+	rdfs:comment "A unique numeric reference to a specific water sample taken from a lake" ;
 	conversion:enhances raw:accession_code_sample .
 
 e1:lake_name a rdf:Property ;
@@ -61,9 +71,10 @@ e1:lake_name a rdf:Property ;
 	ov:csvCol "2"^^xsd:integer ;
 	ov:csvHeader "Lake Name" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "Lake Name" ;
 	rdfs:range rdfs:Literal ;
+	rdfs:comment "The name of the lake the sample is from" ;
 	conversion:enhances raw:lake_name .
 
 e1:dec_code a rdf:Property ;
@@ -71,9 +82,10 @@ e1:dec_code a rdf:Property ;
 	ov:csvCol "3"^^xsd:integer ;
 	ov:csvHeader "DEC Code" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "DEC Code" ;
-	rdfs:range rdfs:Literal ;
+	rdfs:range xsd:integer ;
+	rdfs:comment "A numeric reference to a lake in the DEC registry, unique to a specific lake" ;
 	conversion:enhances raw:dec_code .
 
 e1:date a rdf:Property ;
@@ -81,9 +93,10 @@ e1:date a rdf:Property ;
 	ov:csvCol "4"^^xsd:integer ;
 	ov:csvHeader "Date" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "Date" ;
-	rdfs:range rdfs:Literal ;
+	rdfs:range xsd:date ;
+	rdfs:comment "The date the sample was taken from the lake" ;
 	conversion:enhances raw:date .
 
 e1:z_max_m a rdf:Property ;
@@ -91,9 +104,10 @@ e1:z_max_m a rdf:Property ;
 	ov:csvCol "5"^^xsd:integer ;
 	ov:csvHeader "Z max (m)" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "Z max m" ;
-	rdfs:range rdfs:Literal ;
+	rdfs:range xsd:decimal ;
+	rdfs:comment "The maximum depth to the lake floor at the site where the sample was taken" ;
 	conversion:enhances raw:z_max_m .
 
 e1:sample_type a rdf:Property ;
@@ -101,9 +115,10 @@ e1:sample_type a rdf:Property ;
 	ov:csvCol "6"^^xsd:integer ;
 	ov:csvHeader "Sample Type" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "Sample Type" ;
 	rdfs:range rdfs:Literal ;
+	rdfs:comment "I represents “Integrated” sample which is a mixed sample representing several meters from the surface to the top of the thermocline.  G represents a “Grab” sample at a specific depth." ;
 	conversion:enhances raw:sample_type .
 
 e1:sample_z_m a rdf:Property ;
@@ -111,9 +126,10 @@ e1:sample_z_m a rdf:Property ;
 	ov:csvCol "7"^^xsd:integer ;
 	ov:csvHeader "Sample Z (m)" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "Sample Z m" ;
-	rdfs:range rdfs:Literal ;
+	rdfs:range xsd:decimal ;
+	rdfs:comment "TODO" ;
 	conversion:enhances raw:sample_z_m .
 
 e1:sample_layer a rdf:Property ;
@@ -121,9 +137,10 @@ e1:sample_layer a rdf:Property ;
 	ov:csvCol "8"^^xsd:integer ;
 	ov:csvHeader "Sample Layer" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "Sample Layer" ;
 	rdfs:range rdfs:Literal ;
+	rdfs:comment "TODO" ;
 	conversion:enhances raw:sample_layer .
 
 e1:secchi_m a rdf:Property ;
@@ -131,9 +148,10 @@ e1:secchi_m a rdf:Property ;
 	ov:csvCol "9"^^xsd:integer ;
 	ov:csvHeader "Secchi (m)" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "Secchi m" ;
-	rdfs:range rdfs:Literal ;
+	rdfs:range xsd:decimal ;
+	rdfs:comment "TODO: has to do with how clear the water is" ;
 	conversion:enhances raw:secchi_m .
 
 e1:conductivity_umhos a rdf:Property ;
@@ -141,377 +159,417 @@ e1:conductivity_umhos a rdf:Property ;
 	ov:csvCol "10"^^xsd:integer ;
 	ov:csvHeader "Conductivity (umhos)" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "Conductivity umhos" ;
-	rdfs:range rdfs:Literal ;
-	conversion:enhances raw:conductivity_umhos .
+	rdfs:range xsd:decimal ;
+	rdfs:comment "TODO: pretty self explanatory" ;
+	conversion:enhances raw:conductivity_umhos ;
+	a qb:DimensionProperty .
 
 e1:ph_air_eq a rdf:Property ;
 	ov:csvRow "1"^^xsd:integer ;
 	ov:csvCol "11"^^xsd:integer ;
 	ov:csvHeader "pH air eq" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "pH air eq" ;
-	rdfs:range rdfs:Literal ;
-	conversion:enhances raw:ph_air_eq .
+	rdfs:range xsd:decimal ;
+	rdfs:comment "The pH reading for the sample. TODO: requires telling how the ph was taken not at the lake itself" ;
+	conversion:enhances raw:ph_air_eq ;
+	a qb:DimensionProperty .
 
 e1:anc_ueq_l a rdf:Property ;
 	ov:csvRow "1"^^xsd:integer ;
 	ov:csvCol "12"^^xsd:integer ;
 	ov:csvHeader "ANC (ueq/L)" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "ANC ueq/L" ;
-	rdfs:range rdfs:Literal ;
-	conversion:enhances raw:anc_ueq_l .
+	rdfs:range xsd:decimal ;
+	rdfs:comment "The acid neutralizing capacity of a lake. TODO: expand this" ;
+	conversion:enhances raw:anc_ueq_l ;
+	a qb:DimensionProperty .
 
 e1:nh4_n_ug_n_l a rdf:Property ;
 	ov:csvRow "1"^^xsd:integer ;
 	ov:csvCol "13"^^xsd:integer ;
 	ov:csvHeader "NH4-N (ug N/L)" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "NH4-N ug N/L" ;
 	rdfs:range rdfs:Literal ;
-	conversion:enhances raw:nh4_n_ug_n_l .
+	conversion:enhances raw:nh4_n_ug_n_l ;
+	a qb:DimensionProperty .
 
 e1:nh4_mg_l a rdf:Property ;
 	ov:csvRow "1"^^xsd:integer ;
 	ov:csvCol "14"^^xsd:integer ;
 	ov:csvHeader "NH4+ (mg/L)" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "NH4+ mg/L" ;
 	rdfs:range rdfs:Literal ;
-	conversion:enhances raw:nh4_mg_l .
+	conversion:enhances raw:nh4_mg_l ;
+	a qb:DimensionProperty .
 
 e1:nh4_ueq_l a rdf:Property ;
 	ov:csvRow "1"^^xsd:integer ;
 	ov:csvCol "15"^^xsd:integer ;
 	ov:csvHeader "NH4+ (ueq/L)" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "NH4+ ueq/L" ;
 	rdfs:range rdfs:Literal ;
-	conversion:enhances raw:nh4_ueq_l .
+	conversion:enhances raw:nh4_ueq_l ;
+	a qb:DimensionProperty .
 
 e1:dic_mg_l a rdf:Property ;
 	ov:csvRow "1"^^xsd:integer ;
 	ov:csvCol "16"^^xsd:integer ;
 	ov:csvHeader "DIC (mg/L)" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "DIC mg/L" ;
 	rdfs:range rdfs:Literal ;
-	conversion:enhances raw:dic_mg_l .
+	conversion:enhances raw:dic_mg_l ;
+	a qb:DimensionProperty .
 
 e1:doc_mg_l a rdf:Property ;
 	ov:csvRow "1"^^xsd:integer ;
 	ov:csvCol "17"^^xsd:integer ;
 	ov:csvHeader "DOC (mg/L)" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "DOC mg/L" ;
 	rdfs:range rdfs:Literal ;
-	conversion:enhances raw:doc_mg_l .
+	conversion:enhances raw:doc_mg_l ;
+	a qb:DimensionProperty .
 
 e1:f_mg_l a rdf:Property ;
 	ov:csvRow "1"^^xsd:integer ;
 	ov:csvCol "18"^^xsd:integer ;
 	ov:csvHeader "F (mg/L)" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "F mg/L" ;
 	rdfs:range rdfs:Literal ;
-	conversion:enhances raw:f_mg_l .
+	conversion:enhances raw:f_mg_l ;
+	a qb:DimensionProperty .
 
 e1:cl_mg_l a rdf:Property ;
 	ov:csvRow "1"^^xsd:integer ;
 	ov:csvCol "19"^^xsd:integer ;
 	ov:csvHeader "Cl (mg/L)" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "Cl mg/L" ;
 	rdfs:range rdfs:Literal ;
-	conversion:enhances raw:cl_mg_l .
+	conversion:enhances raw:cl_mg_l ;
+	a qb:DimensionProperty .
 
 e1:cl_ueq_l a rdf:Property ;
 	ov:csvRow "1"^^xsd:integer ;
 	ov:csvCol "20"^^xsd:integer ;
 	ov:csvHeader "Cl (ueq/L)" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "Cl ueq/L" ;
 	rdfs:range rdfs:Literal ;
-	conversion:enhances raw:cl_ueq_l .
+	conversion:enhances raw:cl_ueq_l ;
+	a qb:DimensionProperty .
 
 e1:no3_n_mg_n_l a rdf:Property ;
 	ov:csvRow "1"^^xsd:integer ;
 	ov:csvCol "21"^^xsd:integer ;
 	ov:csvHeader "NO3-N (mg N/L)" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "NO3-N mg N/L" ;
 	rdfs:range rdfs:Literal ;
-	conversion:enhances raw:no3_n_mg_n_l .
+	conversion:enhances raw:no3_n_mg_n_l ;
+	a qb:DimensionProperty .
 
 e1:no3_mg_l a rdf:Property ;
 	ov:csvRow "1"^^xsd:integer ;
 	ov:csvCol "22"^^xsd:integer ;
 	ov:csvHeader "NO3- (mg/L)" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "NO3- mg/L" ;
 	rdfs:range rdfs:Literal ;
-	conversion:enhances raw:no3_mg_l .
+	conversion:enhances raw:no3_mg_l ;
+	a qb:DimensionProperty .
 
 e1:no3_ueq_l a rdf:Property ;
 	ov:csvRow "1"^^xsd:integer ;
 	ov:csvCol "23"^^xsd:integer ;
 	ov:csvHeader "NO3- (ueq/L)" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "NO3- ueq/L" ;
 	rdfs:range rdfs:Literal ;
-	conversion:enhances raw:no3_ueq_l .
+	conversion:enhances raw:no3_ueq_l ;
+	a qb:DimensionProperty .
 
 e1:so4_s_mg_s_l a rdf:Property ;
 	ov:csvRow "1"^^xsd:integer ;
 	ov:csvCol "24"^^xsd:integer ;
 	ov:csvHeader "SO4-S (mg S/L)" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "SO4-S mg S/L" ;
 	rdfs:range rdfs:Literal ;
-	conversion:enhances raw:so4_s_mg_s_l .
+	conversion:enhances raw:so4_s_mg_s_l ;
+	a qb:DimensionProperty .
 
 e1:so4_mg_l a rdf:Property ;
 	ov:csvRow "1"^^xsd:integer ;
 	ov:csvCol "25"^^xsd:integer ;
 	ov:csvHeader "SO4-- (mg/L)" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "SO4-- mg/L" ;
 	rdfs:range rdfs:Literal ;
-	conversion:enhances raw:so4_mg_l .
+	conversion:enhances raw:so4_mg_l ;
+	a qb:DimensionProperty .
 
 e1:so4_ueq_l a rdf:Property ;
 	ov:csvRow "1"^^xsd:integer ;
 	ov:csvCol "26"^^xsd:integer ;
 	ov:csvHeader "SO4-- (ueq/L)" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "SO4-- ueq/L" ;
 	rdfs:range rdfs:Literal ;
-	conversion:enhances raw:so4_ueq_l .
+	conversion:enhances raw:so4_ueq_l ;
+	a qb:DimensionProperty .
 
 e1:total_p_ug_l a rdf:Property ;
 	ov:csvRow "1"^^xsd:integer ;
 	ov:csvCol "27"^^xsd:integer ;
 	ov:csvHeader "Total P (ug/L)" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "Total P ug/L" ;
 	rdfs:range rdfs:Literal ;
-	conversion:enhances raw:total_p_ug_l .
+	conversion:enhances raw:total_p_ug_l ;
+	a qb:DimensionProperty .
 
 e1:mrp_ug_p_l a rdf:Property ;
 	ov:csvRow "1"^^xsd:integer ;
 	ov:csvCol "28"^^xsd:integer ;
 	ov:csvHeader "MRP    (ug P/L)" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "MRP    ug P/L" ;
 	rdfs:range rdfs:Literal ;
-	conversion:enhances raw:mrp_ug_p_l .
+	conversion:enhances raw:mrp_ug_p_l ;
+	a qb:DimensionProperty .
 
 e1:tfp_ug_l a rdf:Property ;
 	ov:csvRow "1"^^xsd:integer ;
 	ov:csvCol "29"^^xsd:integer ;
 	ov:csvHeader "TFP (ug/L)" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "TFP ug/L" ;
 	rdfs:range rdfs:Literal ;
-	conversion:enhances raw:tfp_ug_l .
+	conversion:enhances raw:tfp_ug_l ;
+	a qb:DimensionProperty .
 
 e1:tn_mg_l a rdf:Property ;
 	ov:csvRow "1"^^xsd:integer ;
 	ov:csvCol "30"^^xsd:integer ;
 	ov:csvHeader "TN (mg/L)" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "TN mg/L" ;
 	rdfs:range rdfs:Literal ;
-	conversion:enhances raw:tn_mg_l .
+	conversion:enhances raw:tn_mg_l ;
+	a qb:DimensionProperty .
 
 e1:chla_ug_l a rdf:Property ;
 	ov:csvRow "1"^^xsd:integer ;
 	ov:csvCol "31"^^xsd:integer ;
 	ov:csvHeader "Chla (ug/L)" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "Chla ug/L" ;
 	rdfs:range rdfs:Literal ;
-	conversion:enhances raw:chla_ug_l .
+	conversion:enhances raw:chla_ug_l ;
+	a qb:DimensionProperty .
 
 e1:si_mg_l a rdf:Property ;
 	ov:csvRow "1"^^xsd:integer ;
 	ov:csvCol "32"^^xsd:integer ;
 	ov:csvHeader "Si (mg/l)" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "Si mg/l" ;
 	rdfs:range rdfs:Literal ;
-	conversion:enhances raw:si_mg_l .
+	conversion:enhances raw:si_mg_l ;
+	a qb:DimensionProperty .
 
 e1:dissolved_silica_sio2_mg_l a rdf:Property ;
 	ov:csvRow "1"^^xsd:integer ;
 	ov:csvCol "33"^^xsd:integer ;
 	ov:csvHeader "Dissolved Silica SiO2 (mg/l)" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "Dissolved Silica SiO2 mg/l" ;
 	rdfs:range rdfs:Literal ;
-	conversion:enhances raw:dissolved_silica_sio2_mg_l .
+	conversion:enhances raw:dissolved_silica_sio2_mg_l ;
+	a qb:DimensionProperty .
 
 e1:na_mg_l a rdf:Property ;
 	ov:csvRow "1"^^xsd:integer ;
 	ov:csvCol "34"^^xsd:integer ;
 	ov:csvHeader "Na (mg/L)" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "Na mg/L" ;
 	rdfs:range rdfs:Literal ;
-	conversion:enhances raw:na_mg_l .
+	conversion:enhances raw:na_mg_l ;
+	a qb:DimensionProperty .
 
 e1:na_ueq_l a rdf:Property ;
 	ov:csvRow "1"^^xsd:integer ;
 	ov:csvCol "35"^^xsd:integer ;
 	ov:csvHeader "Na (ueq/L)" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "Na ueq/L" ;
 	rdfs:range rdfs:Literal ;
-	conversion:enhances raw:na_ueq_l .
+	conversion:enhances raw:na_ueq_l ;
+	a qb:DimensionProperty .
 
 e1:k_mg_l a rdf:Property ;
 	ov:csvRow "1"^^xsd:integer ;
 	ov:csvCol "36"^^xsd:integer ;
 	ov:csvHeader "K (mg/L)" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "K mg/L" ;
 	rdfs:range rdfs:Literal ;
-	conversion:enhances raw:k_mg_l .
+	conversion:enhances raw:k_mg_l ;
+	a qb:DimensionProperty .
 
 e1:k_ueq_l a rdf:Property ;
 	ov:csvRow "1"^^xsd:integer ;
 	ov:csvCol "37"^^xsd:integer ;
 	ov:csvHeader "K (ueq/L)" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "K ueq/L" ;
 	rdfs:range rdfs:Literal ;
-	conversion:enhances raw:k_ueq_l .
+	conversion:enhances raw:k_ueq_l ;
+	a qb:DimensionProperty .
 
 e1:fe_mg_l a rdf:Property ;
 	ov:csvRow "1"^^xsd:integer ;
 	ov:csvCol "38"^^xsd:integer ;
 	ov:csvHeader "Fe (mg/L)" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "Fe mg/L" ;
 	rdfs:range rdfs:Literal ;
-	conversion:enhances raw:fe_mg_l .
+	conversion:enhances raw:fe_mg_l ;
+	a qb:DimensionProperty .
 
 e1:mg_mg_l a rdf:Property ;
 	ov:csvRow "1"^^xsd:integer ;
 	ov:csvCol "39"^^xsd:integer ;
 	ov:csvHeader "Mg (mg/L)" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "Mg mg/L" ;
 	rdfs:range rdfs:Literal ;
-	conversion:enhances raw:mg_mg_l .
+	conversion:enhances raw:mg_mg_l ;
+	a qb:DimensionProperty .
 
 e1:mg_ueq_l a rdf:Property ;
 	ov:csvRow "1"^^xsd:integer ;
 	ov:csvCol "40"^^xsd:integer ;
 	ov:csvHeader "Mg (ueq/L)" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "Mg ueq/L" ;
 	rdfs:range rdfs:Literal ;
-	conversion:enhances raw:mg_ueq_l .
+	conversion:enhances raw:mg_ueq_l ;
+	a qb:DimensionProperty .
 
 e1:ca_mg_l a rdf:Property ;
 	ov:csvRow "1"^^xsd:integer ;
 	ov:csvCol "41"^^xsd:integer ;
 	ov:csvHeader "Ca (mg/L)" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "Ca mg/L" ;
 	rdfs:range rdfs:Literal ;
-	conversion:enhances raw:ca_mg_l .
+	conversion:enhances raw:ca_mg_l ;
+	a qb:DimensionProperty .
 
 e1:ca_ueq_l a rdf:Property ;
 	ov:csvRow "1"^^xsd:integer ;
 	ov:csvCol "42"^^xsd:integer ;
 	ov:csvHeader "Ca (ueq/L)" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "Ca ueq/L" ;
 	rdfs:range rdfs:Literal ;
-	conversion:enhances raw:ca_ueq_l .
+	conversion:enhances raw:ca_ueq_l ;
+	a qb:DimensionProperty .
 
 e1:total_al_ug_l a rdf:Property ;
 	ov:csvRow "1"^^xsd:integer ;
 	ov:csvCol "43"^^xsd:integer ;
 	ov:csvHeader "Total Al (ug/L)" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "Total Al ug/L" ;
 	rdfs:range rdfs:Literal ;
-	conversion:enhances raw:total_al_ug_l .
+	conversion:enhances raw:total_al_ug_l ;
+	a qb:DimensionProperty .
 
 e1:total_mono_al_ug_l a rdf:Property ;
 	ov:csvRow "1"^^xsd:integer ;
 	ov:csvCol "44"^^xsd:integer ;
 	ov:csvHeader "Total mono Al (ug/L)" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "Total mono Al ug/L" ;
 	rdfs:range rdfs:Literal ;
-	conversion:enhances raw:total_mono_al_ug_l .
+	conversion:enhances raw:total_mono_al_ug_l ;
+	a qb:DimensionProperty .
 
 e1:nonlabile_mono_al_ug_l a rdf:Property ;
 	ov:csvRow "1"^^xsd:integer ;
 	ov:csvCol "45"^^xsd:integer ;
 	ov:csvHeader "Nonlabile mono Al (ug/L)" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "Nonlabile mono Al ug/L" ;
 	rdfs:range rdfs:Literal ;
-	conversion:enhances raw:nonlabile_mono_al_ug_l .
+	conversion:enhances raw:nonlabile_mono_al_ug_l ;
+	a qb:DimensionProperty .
 
 e1:labile_mono_ali_ug_l a rdf:Property ;
 	ov:csvRow "1"^^xsd:integer ;
 	ov:csvCol "46"^^xsd:integer ;
 	ov:csvHeader "Labile mono Ali (ug/L)" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "Labile mono Ali ug/L" ;
 	rdfs:range rdfs:Literal ;
-	conversion:enhances raw:labile_mono_ali_ug_l .
+	conversion:enhances raw:labile_mono_ali_ug_l ;
+	a qb:DimensionProperty .
 
 e1:hydrologic_type a rdf:Property ;
 	ov:csvRow "1"^^xsd:integer ;
 	ov:csvCol "47"^^xsd:integer ;
 	ov:csvHeader "Hydrologic Type" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "Hydrologic Type" ;
 	rdfs:range rdfs:Literal ;
 	conversion:enhances raw:hydrologic_type .
@@ -521,7 +579,7 @@ e1:watershed a rdf:Property ;
 	ov:csvCol "48"^^xsd:integer ;
 	ov:csvHeader "Watershed" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "Watershed" ;
 	rdfs:range rdfs:Literal ;
 	conversion:enhances raw:watershed .
@@ -531,7 +589,7 @@ e1:watershed_area_ha a rdf:Property ;
 	ov:csvCol "49"^^xsd:integer ;
 	ov:csvHeader "Watershed area (ha)" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "Watershed area ha" ;
 	rdfs:range rdfs:Literal ;
 	conversion:enhances raw:watershed_area_ha .
@@ -541,7 +599,7 @@ e1:lake_volume_m3 a rdf:Property ;
 	ov:csvCol "50"^^xsd:integer ;
 	ov:csvHeader "lake volume (m3)" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "lake volume m3" ;
 	rdfs:range rdfs:Literal ;
 	conversion:enhances raw:lake_volume_m3 .
@@ -551,7 +609,7 @@ e1:wa_sa_ratio a rdf:Property ;
 	ov:csvCol "51"^^xsd:integer ;
 	ov:csvHeader "WA/SA ratio" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "WA/SA ratio" ;
 	rdfs:range rdfs:Literal ;
 	conversion:enhances raw:wa_sa_ratio .
@@ -561,7 +619,7 @@ e1:surface_area_ha a rdf:Property ;
 	ov:csvCol "52"^^xsd:integer ;
 	ov:csvHeader "surface area (ha)" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "surface area ha" ;
 	rdfs:range rdfs:Literal ;
 	conversion:enhances raw:surface_area_ha .
@@ -571,7 +629,7 @@ e1:surface_area_m2 a rdf:Property ;
 	ov:csvCol "53"^^xsd:integer ;
 	ov:csvHeader "surface area (m2)" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "surface area m2" ;
 	rdfs:range rdfs:Literal ;
 	conversion:enhances raw:surface_area_m2 .
@@ -581,7 +639,7 @@ e1:column_54 a rdf:Property ;
 	ov:csvCol "54"^^xsd:integer ;
 	ov:csvHeader "" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "column_54" ;
 	rdfs:range rdfs:Literal ;
 	conversion:enhances raw:column_54 .
@@ -591,7 +649,7 @@ e1:column_55 a rdf:Property ;
 	ov:csvCol "55"^^xsd:integer ;
 	ov:csvHeader "" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "column_55" ;
 	rdfs:range rdfs:Literal ;
 	conversion:enhances raw:column_55 .
@@ -601,7 +659,7 @@ e1:column_56 a rdf:Property ;
 	ov:csvCol "56"^^xsd:integer ;
 	ov:csvHeader "" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "column_56" ;
 	rdfs:range rdfs:Literal ;
 	conversion:enhances raw:column_56 .
@@ -611,7 +669,7 @@ e1:column_57 a rdf:Property ;
 	ov:csvCol "57"^^xsd:integer ;
 	ov:csvHeader "" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "column_57" ;
 	rdfs:range rdfs:Literal ;
 	conversion:enhances raw:column_57 .
@@ -621,7 +679,7 @@ e1:column_58 a rdf:Property ;
 	ov:csvCol "58"^^xsd:integer ;
 	ov:csvHeader "" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "column_58" ;
 	rdfs:range rdfs:Literal ;
 	conversion:enhances raw:column_58 .
@@ -631,7 +689,7 @@ e1:column_59 a rdf:Property ;
 	ov:csvCol "59"^^xsd:integer ;
 	ov:csvHeader "" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "column_59" ;
 	rdfs:range rdfs:Literal ;
 	conversion:enhances raw:column_59 .
@@ -641,7 +699,7 @@ e1:column_60 a rdf:Property ;
 	ov:csvCol "60"^^xsd:integer ;
 	ov:csvHeader "" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "column_60" ;
 	rdfs:range rdfs:Literal ;
 	conversion:enhances raw:column_60 .
@@ -651,7 +709,7 @@ e1:column_61 a rdf:Property ;
 	ov:csvCol "61"^^xsd:integer ;
 	ov:csvHeader "" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "column_61" ;
 	rdfs:range rdfs:Literal ;
 	conversion:enhances raw:column_61 .
@@ -661,7 +719,7 @@ e1:column_62 a rdf:Property ;
 	ov:csvCol "62"^^xsd:integer ;
 	ov:csvHeader "" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "column_62" ;
 	rdfs:range rdfs:Literal ;
 	conversion:enhances raw:column_62 .
@@ -671,7 +729,7 @@ e1:column_63 a rdf:Property ;
 	ov:csvCol "63"^^xsd:integer ;
 	ov:csvHeader "" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "column_63" ;
 	rdfs:range rdfs:Literal ;
 	conversion:enhances raw:column_63 .
@@ -681,7 +739,7 @@ e1:column_64 a rdf:Property ;
 	ov:csvCol "64"^^xsd:integer ;
 	ov:csvHeader "" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "column_64" ;
 	rdfs:range rdfs:Literal ;
 	conversion:enhances raw:column_64 .
@@ -691,7 +749,7 @@ e1:column_65 a rdf:Property ;
 	ov:csvCol "65"^^xsd:integer ;
 	ov:csvHeader "" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "column_65" ;
 	rdfs:range rdfs:Literal ;
 	conversion:enhances raw:column_65 .
@@ -701,7 +759,7 @@ e1:column_66 a rdf:Property ;
 	ov:csvCol "66"^^xsd:integer ;
 	ov:csvHeader "" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "column_66" ;
 	rdfs:range rdfs:Literal ;
 	conversion:enhances raw:column_66 .
@@ -711,7 +769,7 @@ e1:column_67 a rdf:Property ;
 	ov:csvCol "67"^^xsd:integer ;
 	ov:csvHeader "" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "column_67" ;
 	rdfs:range rdfs:Literal ;
 	conversion:enhances raw:column_67 .
@@ -721,7 +779,7 @@ e1:column_68 a rdf:Property ;
 	ov:csvCol "68"^^xsd:integer ;
 	ov:csvHeader "" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "column_68" ;
 	rdfs:range rdfs:Literal ;
 	conversion:enhances raw:column_68 .
@@ -731,7 +789,7 @@ e1:column_69 a rdf:Property ;
 	ov:csvCol "69"^^xsd:integer ;
 	ov:csvHeader "" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "column_69" ;
 	rdfs:range rdfs:Literal ;
 	conversion:enhances raw:column_69 .
@@ -741,7 +799,7 @@ e1:column_70 a rdf:Property ;
 	ov:csvCol "70"^^xsd:integer ;
 	ov:csvHeader "" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "column_70" ;
 	rdfs:range rdfs:Literal ;
 	conversion:enhances raw:column_70 .
@@ -751,7 +809,7 @@ e1:column_71 a rdf:Property ;
 	ov:csvCol "71"^^xsd:integer ;
 	ov:csvHeader "" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "column_71" ;
 	rdfs:range rdfs:Literal ;
 	conversion:enhances raw:column_71 .
@@ -761,7 +819,7 @@ e1:column_72 a rdf:Property ;
 	ov:csvCol "72"^^xsd:integer ;
 	ov:csvHeader "" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "column_72" ;
 	rdfs:range rdfs:Literal ;
 	conversion:enhances raw:column_72 .
@@ -771,7 +829,7 @@ e1:column_73 a rdf:Property ;
 	ov:csvCol "73"^^xsd:integer ;
 	ov:csvHeader "" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "column_73" ;
 	rdfs:range rdfs:Literal ;
 	conversion:enhances raw:column_73 .
@@ -781,7 +839,7 @@ e1:column_74 a rdf:Property ;
 	ov:csvCol "74"^^xsd:integer ;
 	ov:csvHeader "" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "column_74" ;
 	rdfs:range rdfs:Literal ;
 	conversion:enhances raw:column_74 .
@@ -791,7 +849,7 @@ e1:column_75 a rdf:Property ;
 	ov:csvCol "75"^^xsd:integer ;
 	ov:csvHeader "" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "column_75" ;
 	rdfs:range rdfs:Literal ;
 	conversion:enhances raw:column_75 .
@@ -801,7 +859,7 @@ e1:column_76 a rdf:Property ;
 	ov:csvCol "76"^^xsd:integer ;
 	ov:csvHeader "" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "column_76" ;
 	rdfs:range rdfs:Literal ;
 	conversion:enhances raw:column_76 .
@@ -811,7 +869,7 @@ e1:column_77 a rdf:Property ;
 	ov:csvCol "77"^^xsd:integer ;
 	ov:csvHeader "" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "column_77" ;
 	rdfs:range rdfs:Literal ;
 	conversion:enhances raw:column_77 .
@@ -821,7 +879,7 @@ e1:column_78 a rdf:Property ;
 	ov:csvCol "78"^^xsd:integer ;
 	ov:csvHeader "" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "column_78" ;
 	rdfs:range rdfs:Literal ;
 	conversion:enhances raw:column_78 .
@@ -831,7 +889,7 @@ e1:column_79 a rdf:Property ;
 	ov:csvCol "79"^^xsd:integer ;
 	ov:csvHeader "" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "column_79" ;
 	rdfs:range rdfs:Literal ;
 	conversion:enhances raw:column_79 .
@@ -841,7 +899,7 @@ e1:column_80 a rdf:Property ;
 	ov:csvCol "80"^^xsd:integer ;
 	ov:csvHeader "" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "column_80" ;
 	rdfs:range rdfs:Literal ;
 	conversion:enhances raw:column_80 .
@@ -851,7 +909,7 @@ e1:column_81 a rdf:Property ;
 	ov:csvCol "81"^^xsd:integer ;
 	ov:csvHeader "" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "column_81" ;
 	rdfs:range rdfs:Literal ;
 	conversion:enhances raw:column_81 .
@@ -861,7 +919,7 @@ e1:column_82 a rdf:Property ;
 	ov:csvCol "82"^^xsd:integer ;
 	ov:csvHeader "" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "column_82" ;
 	rdfs:range rdfs:Literal ;
 	conversion:enhances raw:column_82 .
@@ -871,7 +929,7 @@ e1:column_83 a rdf:Property ;
 	ov:csvCol "83"^^xsd:integer ;
 	ov:csvHeader "" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "column_83" ;
 	rdfs:range rdfs:Literal ;
 	conversion:enhances raw:column_83 .
@@ -881,7 +939,7 @@ e1:column_84 a rdf:Property ;
 	ov:csvCol "84"^^xsd:integer ;
 	ov:csvHeader "" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "column_84" ;
 	rdfs:range rdfs:Literal ;
 	conversion:enhances raw:column_84 .
@@ -891,7 +949,7 @@ e1:column_85 a rdf:Property ;
 	ov:csvCol "85"^^xsd:integer ;
 	ov:csvHeader "" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "column_85" ;
 	rdfs:range rdfs:Literal ;
 	conversion:enhances raw:column_85 .
@@ -901,7 +959,7 @@ e1:column_86 a rdf:Property ;
 	ov:csvCol "86"^^xsd:integer ;
 	ov:csvHeader "" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "column_86" ;
 	rdfs:range rdfs:Literal ;
 	conversion:enhances raw:column_86 .
@@ -911,7 +969,7 @@ e1:column_87 a rdf:Property ;
 	ov:csvCol "87"^^xsd:integer ;
 	ov:csvHeader "" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "column_87" ;
 	rdfs:range rdfs:Literal ;
 	conversion:enhances raw:column_87 .
@@ -921,7 +979,7 @@ e1:column_88 a rdf:Property ;
 	ov:csvCol "88"^^xsd:integer ;
 	ov:csvHeader "" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "column_88" ;
 	rdfs:range rdfs:Literal ;
 	conversion:enhances raw:column_88 .
@@ -931,7 +989,7 @@ e1:column_89 a rdf:Property ;
 	ov:csvCol "89"^^xsd:integer ;
 	ov:csvHeader "" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "column_89" ;
 	rdfs:range rdfs:Literal ;
 	conversion:enhances raw:column_89 .
@@ -941,7 +999,7 @@ e1:column_90 a rdf:Property ;
 	ov:csvCol "90"^^xsd:integer ;
 	ov:csvHeader "" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "column_90" ;
 	rdfs:range rdfs:Literal ;
 	conversion:enhances raw:column_90 .
@@ -951,7 +1009,7 @@ e1:column_91 a rdf:Property ;
 	ov:csvCol "91"^^xsd:integer ;
 	ov:csvHeader "" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "column_91" ;
 	rdfs:range rdfs:Literal ;
 	conversion:enhances raw:column_91 .
@@ -961,7 +1019,7 @@ e1:column_92 a rdf:Property ;
 	ov:csvCol "92"^^xsd:integer ;
 	ov:csvHeader "" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "column_92" ;
 	rdfs:range rdfs:Literal ;
 	conversion:enhances raw:column_92 .
@@ -971,7 +1029,7 @@ e1:column_93 a rdf:Property ;
 	ov:csvCol "93"^^xsd:integer ;
 	ov:csvHeader "" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "column_93" ;
 	rdfs:range rdfs:Literal ;
 	conversion:enhances raw:column_93 .
@@ -981,7 +1039,7 @@ e1:column_94 a rdf:Property ;
 	ov:csvCol "94"^^xsd:integer ;
 	ov:csvHeader "" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "column_94" ;
 	rdfs:range rdfs:Literal ;
 	conversion:enhances raw:column_94 .
@@ -991,7 +1049,7 @@ e1:column_95 a rdf:Property ;
 	ov:csvCol "95"^^xsd:integer ;
 	ov:csvHeader "" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "column_95" ;
 	rdfs:range rdfs:Literal ;
 	conversion:enhances raw:column_95 .
@@ -1001,7 +1059,7 @@ e1:column_96 a rdf:Property ;
 	ov:csvCol "96"^^xsd:integer ;
 	ov:csvHeader "" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "column_96" ;
 	rdfs:range rdfs:Literal ;
 	conversion:enhances raw:column_96 .
@@ -1011,7 +1069,7 @@ e1:column_97 a rdf:Property ;
 	ov:csvCol "97"^^xsd:integer ;
 	ov:csvHeader "" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "column_97" ;
 	rdfs:range rdfs:Literal ;
 	conversion:enhances raw:column_97 .
@@ -1021,7 +1079,7 @@ e1:column_98 a rdf:Property ;
 	ov:csvCol "98"^^xsd:integer ;
 	ov:csvHeader "" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "column_98" ;
 	rdfs:range rdfs:Literal ;
 	conversion:enhances raw:column_98 .
@@ -1031,7 +1089,7 @@ e1:column_99 a rdf:Property ;
 	ov:csvCol "99"^^xsd:integer ;
 	ov:csvHeader "" ;
 	conversion:enhancement_layer "1" ;
-	dcterms:isReferencedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
+	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
 	rdfs:label "column_99" ;
 	rdfs:range rdfs:Literal ;
 	conversion:enhances raw:column_99 .
@@ -1042,9 +1100,9 @@ e1:column_99 a rdf:Property ;
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix pmlp: <http://inference-web.org/2.0/pml-provenance.owl#> .
 @prefix pmlj: <http://inference-web.org/2.0/pml-justification.owl#> .
-@prefix tw_service: <http://purl.org/twc/semmdd/source/tw-rpi-edu/service/> .
-@prefix tw_converter: <http://purl.org/twc/semmdd/source/tw-rpi-edu/service/csv2rdf4lod/version/2013-Jan-16/> .
-@prefix provenance_1: <http://purl.org/twc/semmdd/source/aeap_nys/provenance/dfw_lake_samples/aeap-nyserda-chem-94-12-v9-web/version/2013-April-24/conversion/enhancement/1/> .
+@prefix tw_service: <http://purl.org/twc/semantgeo/source/tw-rpi-edu/service/> .
+@prefix tw_converter: <http://purl.org/twc/semantgeo/source/tw-rpi-edu/service/csv2rdf4lod/version/2013-Jan-16/> .
+@prefix provenance_1: <http://purl.org/twc/semantgeo/source/source/provenance/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1/> .
 @prefix conversion: <http://purl.org/twc/vocab/conversion/> .
 @prefix ov: <http://open.vocab.org/terms/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
@@ -1056,587 +1114,481 @@ e1:column_99 a rdf:Property ;
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix frbrcore: <http://purl.org/vocab/frbr/core#> .
 @prefix coin: <http://purl.org/court/def/2009/coin#> .
-@prefix dfw_lake_samples: <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/> .
-@prefix aeap_nys_vocab: <http://purl.org/twc/semmdd/source/aeap_nys/vocab/> .
-@prefix base_vocab: <http://purl.org/twc/semmdd/vocab/> .
-@prefix dfw_lake_samples_vocab: <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/> .
-@prefix raw: <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/raw/> .
-@prefix e1: <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> .
-@prefix : <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/aeap-nyserda-chem-94-12-v9-web/version/2013-April-24/> .
-@prefix ns1: <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/aeap-nyserda-chem-94-12-v9-web/> .
-@prefix time: <http://www.w3.org/2006/time#> .
-@prefix bibo: <http://purl.org/ontology/bibo/> .
-@prefix govtrackusgov: <http://www.rdfabout.com/rdf/usgov/geo/us/> .
-@prefix dbpedia: <http://dbpedia.org/resource/> .
-@prefix geonames: <http://www.geonames.org/ontology#> .
-@prefix nfo: <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#> .
-@prefix sioc: <http://rdfs.org/sioc/ns#> .
+@prefix dfwi-aeap-nyserda: <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/> .
+@prefix source_vocab: <http://purl.org/twc/semantgeo/source/source/vocab/> .
+@prefix base_vocab: <http://purl.org/twc/semantgeo/vocab/> .
+@prefix dfwi-aeap-nyserda_vocab: <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/vocab/> .
+@prefix raw: <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/vocab/raw/> .
+@prefix e1: <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/vocab/enhancement/1/> .
+@prefix dfwi-aeap-nyserda_global_value: <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/> .
+@prefix vsr: <http://purl.org/twc/vocab/vsr#> .
 @prefix geonamesid: <http://sws.geonames.org/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix con: <http://www.w3.org/2000/10/swap/pim/contact#> .
+@prefix dbpedia: <http://dbpedia.org/resource/> .
+@prefix pml: <http://provenanceweb.org/ns/pml#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix pollution: <http://escience.rpi.edu/ontology/semanteco/2/0/pollution.owl#> .
+@prefix sioc: <http://rdfs.org/sioc/ns#> .
+@prefix nfo: <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#> .
+@prefix muo: <http://purl.oclc.org/NET/muo/muo#> .
+@prefix geonames: <http://www.geonames.org/ontology#> .
+@prefix govtrackusgov: <http://www.rdfabout.com/rdf/usgov/geo/us/> .
+@prefix wgs: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dbpediaowl: <http://dbpedia.org/ontology/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dgtwc: <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#> .
+@prefix water_ns: <http://escience.rpi.edu/ontology/semanteco/2/0/water.owl#> .
+@prefix query_ns: <http://aquarius.tw.rpi.edu/projects/semantaqua/data-source/query-variable/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix org: <http://www.w3.org/ns/org#> .
 @prefix dbpediaprop: <http://dbpedia.org/property/> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix sio: <http://semanticscience.org/resource/> .
-@prefix muo: <http://purl.oclc.org/NET/muo/muo#> .
-@prefix dbpediaowl: <http://dbpedia.org/ontology/> .
-@prefix con: <http://www.w3.org/2000/10/swap/pim/contact#> .
-@prefix dgtwc: <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#> .
-@prefix prov: <http://www.w3.org/ns/prov#> .
-@prefix wgs: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 
-<http://purl.org/twc/semmdd/void.ttl> a void:DatasetDescription ;
-	foaf:topic <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples> ;
-	foaf:primaryTopic <http://purl.org/twc/semmdd/void> .
+<http://purl.org/twc/semantgeo/void.ttl> a void:DatasetDescription ;
+	foaf:topic <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda> ;
+	foaf:primaryTopic <http://purl.org/twc/semantgeo/void> .
 
-<http://purl.org/twc/semmdd/void> a void:Dataset ;
-	void:subset <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples> .
+<http://purl.org/twc/semantgeo/void> a void:Dataset ;
+	void:subset <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda> .
 
-<http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples> a aeap_nys_vocab:Dataset , conversion:Dataset , conversion:AbstractDataset , void:Dataset , conversion:EnhancedDataset ;
-	conversion:base_uri "http://purl.org/twc/semmdd" ;
-	conversion:source_identifier "aeap_nys" ;
-	conversion:dataset_identifier "dfw_lake_samples" ;
-	dcterms:contributor <http://purl.org/twc/semmdd/source/aeap_nys> ;
-	dcterms:identifier "aeap_nys dfw_lake_samples" ;
-	foaf:isPrimaryTopicOf <http://purl.org/twc/semmdd/source/aeap_nys/dataset_page/dfw_lake_samples> ;
-	void:subset <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24> , <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/subset/meta> ;
-	dcterms:modified "2013-05-28T17:32:23.883-05:00"^^xsd:dateTime .
+<http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda> a source_vocab:Dataset , conversion:Dataset , conversion:AbstractDataset , void:Dataset , conversion:EnhancedDataset ;
+	conversion:base_uri "http://purl.org/twc/semantgeo" ;
+	conversion:source_identifier "source" ;
+	conversion:dataset_identifier "dfwi-aeap-nyserda" ;
+	dcterms:contributor <http://purl.org/twc/semantgeo/source/source> ;
+	dcterms:identifier "source dfwi-aeap-nyserda" ;
+	foaf:isPrimaryTopicOf <http://purl.org/twc/semantgeo/source/source/dataset_page/dfwi-aeap-nyserda> ;
+	void:subset <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22> , <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/subset/meta> ;
+	dcterms:modified "2013-05-28T18:52:19.719-05:00"^^xsd:dateTime .
 
-<http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24> a aeap_nys_vocab:Dataset , conversion:Dataset , conversion:VersionedDataset , void:Dataset , conversion:EnhancedDataset ;
-	conversion:base_uri "http://purl.org/twc/semmdd" ;
-	conversion:source_identifier "aeap_nys" ;
-	conversion:dataset_identifier "dfw_lake_samples" ;
-	conversion:version_identifier "2013-April-24" ;
-	conversion:dataset_version "2013-April-24" ;
-	dcterms:contributor <http://purl.org/twc/semmdd/source/aeap_nys> ;
-	dcterms:identifier "aeap_nys dfw_lake_samples 2013-April-24" ;
-	dcterms:modified "2013-05-28T17:32:23.883-05:00"^^xsd:dateTime ;
-	foaf:isPrimaryTopicOf <http://purl.org/twc/semmdd/source/aeap_nys/dataset_page/dfw_lake_samples/version/2013-April-24> ;
-	void:dataDump <http://purl.org/twc/semmdd/source/aeap_nys/file/dfw_lake_samples/version/2013-April-24/conversion/aeap_nys-dfw_lake_samples-2013-April-24> ;
-	void:subset <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> .
+<http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22> a source_vocab:Dataset , conversion:Dataset , conversion:VersionedDataset , void:Dataset , conversion:EnhancedDataset ;
+	conversion:base_uri "http://purl.org/twc/semantgeo" ;
+	conversion:source_identifier "source" ;
+	conversion:dataset_identifier "dfwi-aeap-nyserda" ;
+	conversion:version_identifier "2013-mar-22" ;
+	conversion:dataset_version "2013-mar-22" ;
+	dcterms:contributor <http://purl.org/twc/semantgeo/source/source> ;
+	dcterms:identifier "source dfwi-aeap-nyserda 2013-mar-22" ;
+	dcterms:modified "2013-05-28T18:52:19.719-05:00"^^xsd:dateTime ;
+	foaf:isPrimaryTopicOf <http://purl.org/twc/semantgeo/source/source/dataset_page/dfwi-aeap-nyserda/version/2013-mar-22> ;
+	void:dataDump <http://purl.org/twc/semantgeo/source/source/file/dfwi-aeap-nyserda/version/2013-mar-22/conversion/source-dfwi-aeap-nyserda-2013-mar-22> ;
+	void:subset <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> .
 
-<http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> a aeap_nys_vocab:Dataset , conversion:Dataset , conversion:LayerDataset , void:Dataset , conversion:EnhancedDataset ;
-	dcterms:modified "2013-05-28T17:32:23.883-05:00"^^xsd:dateTime ;
-	conversion:base_uri "http://purl.org/twc/semmdd" ;
-	conversion:source_identifier "aeap_nys" ;
-	conversion:dataset_identifier "dfw_lake_samples" ;
-	conversion:version_identifier "2013-April-24" ;
-	conversion:dataset_version "2013-April-24" ;
+<http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> a source_vocab:Dataset , conversion:Dataset , conversion:LayerDataset , void:Dataset , conversion:EnhancedDataset ;
+	dcterms:modified "2013-05-28T18:52:19.719-05:00"^^xsd:dateTime ;
+	conversion:base_uri "http://purl.org/twc/semantgeo" ;
+	conversion:source_identifier "source" ;
+	conversion:dataset_identifier "dfwi-aeap-nyserda" ;
+	conversion:version_identifier "2013-mar-22" ;
+	conversion:dataset_version "2013-mar-22" ;
 	conversion:conversion_identifier "enhancement/1" ;
-	foaf:isPrimaryTopicOf <http://purl.org/twc/semmdd/source/aeap_nys/dataset_page/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
-	void:dataDump <http://purl.org/twc/semmdd/source/aeap_nys/file/dfw_lake_samples/version/2013-April-24/conversion/aeap_nys-dfw_lake_samples-2013-April-24.e1> ;
-	void:subset <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1/subset/sample> ;
-	conversion:uses_predicate e1:lake_name , e1:total_al_ug_l , e1:fe_mg_l , e1:f_mg_l , e1:surface_area_ha , e1:wa_sa_ratio , e1:so4_s_mg_s_l , e1:k_ueq_l , e1:secchi_m , e1:mg_ueq_l , e1:z_max_m , e1:hydrologic_type , e1:ph_air_eq , e1:chla_ug_l , e1:accession_code_sample , e1:column_59 , e1:date , e1:cl_mg_l , e1:column_54 , e1:column_55 , e1:column_56 , e1:sample_layer , e1:column_57 , e1:column_58 , e1:column_61 , e1:column_60 , dcterms:isReferencedBy , e1:labile_mono_ali_ug_l , e1:no3_mg_l , e1:mrp_ug_p_l , e1:doc_mg_l , e1:column_68 , e1:column_69 , e1:column_66 , e1:column_67 , e1:ca_mg_l , e1:column_64 , e1:column_65 , e1:column_62 , e1:column_63 , e1:column_70 , e1:sample_type , e1:column_72 , e1:column_71 , e1:mg_mg_l , e1:tn_mg_l , e1:total_mono_al_ug_l , e1:tfp_ug_l , e1:lake_volume_m3 , e1:so4_ueq_l , e1:column_77 , e1:column_78 , e1:ca_ueq_l , e1:column_79 , e1:column_73 , e1:column_74 , e1:column_75 , e1:column_76 , ov:csvRow , e1:column_99 , ov:subjectDiscriminator , e1:column_98 , e1:column_97 , e1:column_96 , e1:column_95 , e1:surface_area_m2 , e1:k_mg_l , e1:conductivity_umhos , e1:column_93 , e1:column_94 , e1:column_91 , e1:column_92 , e1:column_90 , e1:column_89 , e1:column_88 , e1:nh4_mg_l , e1:column_85 , e1:column_84 , e1:na_mg_l , e1:column_87 , e1:column_86 , e1:so4_mg_l , e1:column_80 , e1:column_81 , e1:column_82 , e1:column_83 , e1:nonlabile_mono_al_ug_l , void:inDataset , e1:na_ueq_l , e1:nh4_n_ug_n_l , e1:si_mg_l , e1:dec_code , e1:anc_ueq_l , e1:sample_z_m , e1:watershed_area_ha , e1:no3_ueq_l , e1:dic_mg_l , e1:nh4_ueq_l , e1:cl_ueq_l , e1:total_p_ug_l , e1:dissolved_silica_sio2_mg_l , e1:no3_n_mg_n_l , e1:watershed ;
-	void:vocabulary <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> , <http://purl.org/dc/terms/> , <http://open.vocab.org/terms/> , <http://rdfs.org/ns/void#> .
+	foaf:isPrimaryTopicOf <http://purl.org/twc/semantgeo/source/source/dataset_page/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> ;
+	void:dataDump <http://purl.org/twc/semantgeo/source/source/file/dfwi-aeap-nyserda/version/2013-mar-22/conversion/source-dfwi-aeap-nyserda-2013-mar-22.e1> ;
+	void:subset <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1/subset/sample> ;
+	conversion:uses_predicate e1:date , ov:csvRow , e1:f_mg_l , e1:nh4_mg_l , e1:mg_mg_l , e1:total_p_ug_l , e1:nonlabile_mono_al_ug_l , e1:conductivity_umhos , e1:mrp_ug_p_l , foaf:isPrimaryTopicOf , e1:k_ueq_l , dcterms:identifier , e1:dec_code , rdf:value , e1:hydrologic_type , e1:ph_air_eq , e1:k_mg_l , e1:cl_mg_l , e1:no3_mg_l , e1:accession_code_sample , e1:na_ueq_l , ov:csvCol , e1:tn_mg_l , e1:chla_ug_l , e1:fe_mg_l , e1:doc_mg_l , void:inDataset , e1:watershed , e1:no3_ueq_l , dcterms:isReferencedBy , e1:sample_type , e1:labile_mono_ali_ug_l , rdf:type , e1:anc_ueq_l , e1:so4_ueq_l , e1:watershed_area_ha , con:preferredURI , e1:si_mg_l , e1:wa_sa_ratio , e1:ca_ueq_l , e1:na_mg_l , e1:surface_area_ha , e1:secchi_m , e1:dissolved_silica_sio2_mg_l , e1:sample_z_m , e1:sample_layer , e1:nh4_ueq_l , e1:lake_volume_m3 , e1:ca_mg_l , e1:nh4_n_ug_n_l , e1:total_mono_al_ug_l , e1:mg_ueq_l , e1:no3_n_mg_n_l , e1:dic_mg_l , e1:total_al_ug_l , e1:cl_ueq_l , e1:so4_s_mg_s_l , e1:so4_mg_l , e1:tfp_ug_l , e1:surface_area_m2 , e1:z_max_m ;
+	void:vocabulary <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/vocab/enhancement/1/> , <http://open.vocab.org/terms/> , <http://xmlns.com/foaf/0.1/> , <http://purl.org/dc/terms/> , <http://www.w3.org/1999/02/22-rdf-syntax-ns#> , <http://rdfs.org/ns/void#> , <http://www.w3.org/2000/10/swap/pim/contact#> .
 
-e1:lake_name rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:total_al_ug_l rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:fe_mg_l rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:f_mg_l rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:surface_area_ha rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:wa_sa_ratio rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:so4_s_mg_s_l rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:k_ueq_l rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:secchi_m rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:mg_ueq_l rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:z_max_m rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:hydrologic_type rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:ph_air_eq rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:chla_ug_l rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:accession_code_sample rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:column_59 rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:date rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:cl_mg_l rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:column_54 rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:column_55 rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:column_56 rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:sample_layer rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:column_57 rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:column_58 rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:column_61 rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:column_60 rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-dcterms:isReferencedBy rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
-	prov:wasAttributedTo <http://purl.org/dc> .
-
-e1:labile_mono_ali_ug_l rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:no3_mg_l rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:mrp_ug_p_l rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:doc_mg_l rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:column_68 rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:column_69 rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:column_66 rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:column_67 rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:ca_mg_l rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:column_64 rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:column_65 rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:column_62 rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:column_63 rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:column_70 rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:sample_type rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:column_72 rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:column_71 rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:mg_mg_l rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:tn_mg_l rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:total_mono_al_ug_l rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:tfp_ug_l rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:lake_volume_m3 rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:so4_ueq_l rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:column_77 rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:column_78 rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:ca_ueq_l rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:column_79 rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:column_73 rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:column_74 rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:column_75 rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:column_76 rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
+e1:date rdfs:isDefinedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/vocab/enhancement/1/> ;
 	prov:wasAttributedTo <http://purl.org/twc> .
 
 ov:csvRow rdfs:isDefinedBy <http://open.vocab.org/terms/> ;
 	prov:wasAttributedTo <http://open.vocab.org> .
 
-e1:column_99 rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
+e1:f_mg_l rdfs:isDefinedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/vocab/enhancement/1/> ;
 	prov:wasAttributedTo <http://purl.org/twc> .
 
-ov:subjectDiscriminator rdfs:isDefinedBy <http://open.vocab.org/terms/> ;
+e1:nh4_mg_l rdfs:isDefinedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/vocab/enhancement/1/> ;
+	prov:wasAttributedTo <http://purl.org/twc> .
+
+e1:mg_mg_l rdfs:isDefinedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/vocab/enhancement/1/> ;
+	prov:wasAttributedTo <http://purl.org/twc> .
+
+e1:total_p_ug_l rdfs:isDefinedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/vocab/enhancement/1/> ;
+	prov:wasAttributedTo <http://purl.org/twc> .
+
+e1:nonlabile_mono_al_ug_l rdfs:isDefinedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/vocab/enhancement/1/> ;
+	prov:wasAttributedTo <http://purl.org/twc> .
+
+e1:conductivity_umhos rdfs:isDefinedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/vocab/enhancement/1/> ;
+	prov:wasAttributedTo <http://purl.org/twc> .
+
+e1:mrp_ug_p_l rdfs:isDefinedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/vocab/enhancement/1/> ;
+	prov:wasAttributedTo <http://purl.org/twc> .
+
+foaf:isPrimaryTopicOf rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/> ;
+	prov:wasAttributedTo <http://xmlns.com> .
+
+e1:k_ueq_l rdfs:isDefinedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/vocab/enhancement/1/> ;
+	prov:wasAttributedTo <http://purl.org/twc> .
+
+dcterms:identifier rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+	prov:wasAttributedTo <http://purl.org/dc> .
+
+e1:dec_code rdfs:isDefinedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/vocab/enhancement/1/> ;
+	prov:wasAttributedTo <http://purl.org/twc> .
+
+rdf:value rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
+	prov:wasAttributedTo <http://www.w3.org> .
+
+e1:hydrologic_type rdfs:isDefinedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/vocab/enhancement/1/> ;
+	prov:wasAttributedTo <http://purl.org/twc> .
+
+e1:ph_air_eq rdfs:isDefinedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/vocab/enhancement/1/> ;
+	prov:wasAttributedTo <http://purl.org/twc> .
+
+e1:k_mg_l rdfs:isDefinedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/vocab/enhancement/1/> ;
+	prov:wasAttributedTo <http://purl.org/twc> .
+
+e1:cl_mg_l rdfs:isDefinedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/vocab/enhancement/1/> ;
+	prov:wasAttributedTo <http://purl.org/twc> .
+
+e1:no3_mg_l rdfs:isDefinedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/vocab/enhancement/1/> ;
+	prov:wasAttributedTo <http://purl.org/twc> .
+
+e1:accession_code_sample rdfs:isDefinedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/vocab/enhancement/1/> ;
+	prov:wasAttributedTo <http://purl.org/twc> .
+
+e1:na_ueq_l rdfs:isDefinedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/vocab/enhancement/1/> ;
+	prov:wasAttributedTo <http://purl.org/twc> .
+
+ov:csvCol rdfs:isDefinedBy <http://open.vocab.org/terms/> ;
 	prov:wasAttributedTo <http://open.vocab.org> .
 
-e1:column_98 rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
+e1:tn_mg_l rdfs:isDefinedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/vocab/enhancement/1/> ;
 	prov:wasAttributedTo <http://purl.org/twc> .
 
-e1:column_97 rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
+e1:chla_ug_l rdfs:isDefinedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/vocab/enhancement/1/> ;
 	prov:wasAttributedTo <http://purl.org/twc> .
 
-e1:column_96 rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
+e1:fe_mg_l rdfs:isDefinedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/vocab/enhancement/1/> ;
 	prov:wasAttributedTo <http://purl.org/twc> .
 
-e1:column_95 rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:surface_area_m2 rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:k_mg_l rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:conductivity_umhos rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:column_93 rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:column_94 rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:column_91 rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:column_92 rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:column_90 rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:column_89 rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:column_88 rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:nh4_mg_l rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:column_85 rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:column_84 rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:na_mg_l rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:column_87 rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:column_86 rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:so4_mg_l rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:column_80 rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:column_81 rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:column_82 rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:column_83 rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
-
-e1:nonlabile_mono_al_ug_l rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
+e1:doc_mg_l rdfs:isDefinedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/vocab/enhancement/1/> ;
 	prov:wasAttributedTo <http://purl.org/twc> .
 
 void:inDataset rdfs:isDefinedBy <http://rdfs.org/ns/void#> ;
 	prov:wasAttributedTo <http://rdfs.org> .
 
-e1:na_ueq_l rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
+e1:watershed rdfs:isDefinedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/vocab/enhancement/1/> ;
 	prov:wasAttributedTo <http://purl.org/twc> .
 
-e1:nh4_n_ug_n_l rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
+e1:no3_ueq_l rdfs:isDefinedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/vocab/enhancement/1/> ;
 	prov:wasAttributedTo <http://purl.org/twc> .
 
-e1:si_mg_l rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
+dcterms:isReferencedBy rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+	prov:wasAttributedTo <http://purl.org/dc> .
+
+e1:sample_type rdfs:isDefinedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/vocab/enhancement/1/> ;
 	prov:wasAttributedTo <http://purl.org/twc> .
 
-e1:dec_code rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
+e1:labile_mono_ali_ug_l rdfs:isDefinedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/vocab/enhancement/1/> ;
 	prov:wasAttributedTo <http://purl.org/twc> .
 
-e1:anc_ueq_l rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
+rdf:type rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
+	prov:wasAttributedTo <http://www.w3.org> .
+
+e1:anc_ueq_l rdfs:isDefinedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/vocab/enhancement/1/> ;
 	prov:wasAttributedTo <http://purl.org/twc> .
 
-e1:sample_z_m rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
+e1:so4_ueq_l rdfs:isDefinedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/vocab/enhancement/1/> ;
 	prov:wasAttributedTo <http://purl.org/twc> .
 
-e1:watershed_area_ha rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
+e1:watershed_area_ha rdfs:isDefinedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/vocab/enhancement/1/> ;
 	prov:wasAttributedTo <http://purl.org/twc> .
 
-e1:no3_ueq_l rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
+con:preferredURI rdfs:isDefinedBy <http://www.w3.org/2000/10/swap/pim/contact#> ;
+	prov:wasAttributedTo <http://www.w3.org> .
+
+e1:si_mg_l rdfs:isDefinedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/vocab/enhancement/1/> ;
 	prov:wasAttributedTo <http://purl.org/twc> .
 
-e1:dic_mg_l rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
+e1:wa_sa_ratio rdfs:isDefinedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/vocab/enhancement/1/> ;
 	prov:wasAttributedTo <http://purl.org/twc> .
 
-e1:nh4_ueq_l rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
+e1:ca_ueq_l rdfs:isDefinedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/vocab/enhancement/1/> ;
 	prov:wasAttributedTo <http://purl.org/twc> .
 
-e1:cl_ueq_l rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
+e1:na_mg_l rdfs:isDefinedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/vocab/enhancement/1/> ;
 	prov:wasAttributedTo <http://purl.org/twc> .
 
-e1:total_p_ug_l rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
+e1:surface_area_ha rdfs:isDefinedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/vocab/enhancement/1/> ;
 	prov:wasAttributedTo <http://purl.org/twc> .
 
-e1:dissolved_silica_sio2_mg_l rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
+e1:secchi_m rdfs:isDefinedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/vocab/enhancement/1/> ;
 	prov:wasAttributedTo <http://purl.org/twc> .
 
-e1:no3_n_mg_n_l rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
+e1:dissolved_silica_sio2_mg_l rdfs:isDefinedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/vocab/enhancement/1/> ;
 	prov:wasAttributedTo <http://purl.org/twc> .
 
-e1:watershed rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> ;
+e1:sample_z_m rdfs:isDefinedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/vocab/enhancement/1/> ;
 	prov:wasAttributedTo <http://purl.org/twc> .
 
-<http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> void:exampleResource :thing_2 , :thing_2008 ;
+e1:sample_layer rdfs:isDefinedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/vocab/enhancement/1/> ;
+	prov:wasAttributedTo <http://purl.org/twc> .
+
+e1:nh4_ueq_l rdfs:isDefinedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/vocab/enhancement/1/> ;
+	prov:wasAttributedTo <http://purl.org/twc> .
+
+e1:lake_volume_m3 rdfs:isDefinedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/vocab/enhancement/1/> ;
+	prov:wasAttributedTo <http://purl.org/twc> .
+
+e1:ca_mg_l rdfs:isDefinedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/vocab/enhancement/1/> ;
+	prov:wasAttributedTo <http://purl.org/twc> .
+
+e1:nh4_n_ug_n_l rdfs:isDefinedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/vocab/enhancement/1/> ;
+	prov:wasAttributedTo <http://purl.org/twc> .
+
+e1:total_mono_al_ug_l rdfs:isDefinedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/vocab/enhancement/1/> ;
+	prov:wasAttributedTo <http://purl.org/twc> .
+
+e1:mg_ueq_l rdfs:isDefinedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/vocab/enhancement/1/> ;
+	prov:wasAttributedTo <http://purl.org/twc> .
+
+e1:no3_n_mg_n_l rdfs:isDefinedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/vocab/enhancement/1/> ;
+	prov:wasAttributedTo <http://purl.org/twc> .
+
+e1:dic_mg_l rdfs:isDefinedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/vocab/enhancement/1/> ;
+	prov:wasAttributedTo <http://purl.org/twc> .
+
+e1:total_al_ug_l rdfs:isDefinedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/vocab/enhancement/1/> ;
+	prov:wasAttributedTo <http://purl.org/twc> .
+
+e1:cl_ueq_l rdfs:isDefinedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/vocab/enhancement/1/> ;
+	prov:wasAttributedTo <http://purl.org/twc> .
+
+e1:so4_s_mg_s_l rdfs:isDefinedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/vocab/enhancement/1/> ;
+	prov:wasAttributedTo <http://purl.org/twc> .
+
+e1:so4_mg_l rdfs:isDefinedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/vocab/enhancement/1/> ;
+	prov:wasAttributedTo <http://purl.org/twc> .
+
+e1:tfp_ug_l rdfs:isDefinedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/vocab/enhancement/1/> ;
+	prov:wasAttributedTo <http://purl.org/twc> .
+
+e1:surface_area_m2 rdfs:isDefinedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/vocab/enhancement/1/> ;
+	prov:wasAttributedTo <http://purl.org/twc> .
+
+e1:z_max_m rdfs:isDefinedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/vocab/enhancement/1/> ;
+	prov:wasAttributedTo <http://purl.org/twc> .
+
+<http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> conversion:uses_class dfwi-aeap-nyserda_vocab:Sample ;
+	void:vocabulary <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/vocab/> .
+
+dfwi-aeap-nyserda_vocab:Sample rdfs:isDefinedBy <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/vocab/> ;
+	prov:wasAttributedTo <http://purl.org/twc> .
+
+<http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> void:exampleResource dfwi-aeap-nyserda:sample_2_10 , dfwi-aeap-nyserda:sample_2008_46 ;
 	conversion:enhancement_identifier "1" ;
-	dcterms:contributor <http://purl.org/twc/semmdd/source/aeap_nys> ;
-	dcterms:identifier "aeap_nys dfw_lake_samples 2013-April-24 e1" ;
-	void:subset <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/aeap-nyserda-chem-94-12-v9-web/version/2013-April-24/conversion/enhancement/1> .
+	dcterms:created "2013-05-28T18:51:22.061-05:00"^^xsd:dateTime ;
+	dcterms:contributor <http://purl.org/twc/semantgeo/source/source> ;
+	dcterms:identifier "source dfwi-aeap-nyserda 2013-mar-22 e1" .
 
-<http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/aeap-nyserda-chem-94-12-v9-web/version/2013-April-24/conversion/enhancement/1> a aeap_nys_vocab:Dataset , conversion:Dataset , void:Dataset , conversion:EnhancedDataset ;
-	dcterms:contributor <http://purl.org/twc/semmdd/source/aeap_nys> ;
-	dcterms:created "2013-05-28T17:32:19.258-05:00"^^xsd:dateTime ;
-	dcterms:modified "2013-05-28T17:32:23.883-05:00"^^xsd:dateTime ;
-	conversion:base_uri "http://purl.org/twc/semmdd" ;
-	conversion:source_identifier "aeap_nys" ;
-	conversion:dataset_identifier "dfw_lake_samples" ;
-	conversion:subject_discriminator "aeap-nyserda-chem-94-12-v9-web" ;
-	conversion:version_identifier "2013-April-24" ;
-	conversion:dataset_version "2013-April-24" ;
+<http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1/subset/sample> a source_vocab:Dataset , conversion:Dataset , conversion:DatasetSample , void:Dataset ;
+	conversion:base_uri "http://purl.org/twc/semantgeo" ;
+	conversion:source_identifier "source" ;
+	conversion:dataset_identifier "dfwi-aeap-nyserda" ;
+	conversion:version_identifier "2013-mar-22" ;
+	conversion:dataset_version "2013-mar-22" ;
 	conversion:conversion_identifier "enhancement/1" ;
-	dcterms:identifier "aeap_nys dfw_lake_samples aeap-nyserda-chem-94-12-v9-web 2013-April-24 e1" .
+	dcterms:modified "2013-05-28T18:52:19.719-05:00"^^xsd:dateTime ;
+	foaf:isPrimaryTopicOf <http://purl.org/twc/semantgeo/source/source/dataset_page/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1/subset/sample> ;
+	void:dataDump <http://purl.org/twc/semantgeo/source/source/file/dfwi-aeap-nyserda/version/2013-mar-22/conversion/source-dfwi-aeap-nyserda-2013-mar-22.e1.sample.ttl> .
 
-<http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1/subset/sample> a aeap_nys_vocab:Dataset , conversion:Dataset , conversion:DatasetSample , void:Dataset ;
-	conversion:base_uri "http://purl.org/twc/semmdd" ;
-	conversion:source_identifier "aeap_nys" ;
-	conversion:dataset_identifier "dfw_lake_samples" ;
-	conversion:version_identifier "2013-April-24" ;
-	conversion:dataset_version "2013-April-24" ;
-	conversion:conversion_identifier "enhancement/1" ;
-	dcterms:modified "2013-05-28T17:32:23.883-05:00"^^xsd:dateTime ;
-	foaf:isPrimaryTopicOf <http://purl.org/twc/semmdd/source/aeap_nys/dataset_page/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1/subset/sample> ;
-	void:dataDump <http://purl.org/twc/semmdd/source/aeap_nys/file/dfw_lake_samples/version/2013-April-24/conversion/aeap_nys-dfw_lake_samples-2013-April-24.e1.sample.ttl> .
+<http://purl.org/twc/semantgeo/source/source/file/dfwi-aeap-nyserda/version/2013-mar-22/conversion/source-dfwi-aeap-nyserda-2013-mar-22.e1.sample.ttl> dcterms:format <http://www.w3.org/ns/formats/Turtle> .
 
-<http://purl.org/twc/semmdd/source/aeap_nys/file/dfw_lake_samples/version/2013-April-24/conversion/aeap_nys-dfw_lake_samples-2013-April-24.e1.sample.ttl> dcterms:format <http://www.w3.org/ns/formats/Turtle> .
+<http://purl.org/twc/semantgeo/source/source> a foaf:Agent ;
+	dcterms:identifier "source" ;
+	foaf:isPrimaryTopicOf <http://purl.org/twc/semantgeo/source_page/source> .
 
-<http://purl.org/twc/semmdd/source/aeap_nys> a foaf:Agent ;
-	dcterms:identifier "aeap_nys" ;
-	foaf:isPrimaryTopicOf <http://purl.org/twc/semmdd/source_page/aeap_nys> .
-
-_:node17rm35566x2 vann:preferredNamespacePrefix "rdf" ;
+_:node17rm7lt14x2 vann:preferredNamespacePrefix "rdf" ;
 	vann:preferredNamespaceUri "http://www.w3.org/1999/02/22-rdf-syntax-ns#" .
 
-_:node17rm35566x3 vann:preferredNamespacePrefix "rdfs" ;
+_:node17rm7lt14x3 vann:preferredNamespacePrefix "rdfs" ;
 	vann:preferredNamespaceUri "http://www.w3.org/2000/01/rdf-schema#" .
 
-_:node17rm35566x4 vann:preferredNamespacePrefix "xsd" ;
+_:node17rm7lt14x4 vann:preferredNamespacePrefix "xsd" ;
 	vann:preferredNamespaceUri "http://www.w3.org/2001/XMLSchema#" .
 
-_:node17rm35566x5 vann:preferredNamespacePrefix "xsd2" ;
+_:node17rm7lt14x5 vann:preferredNamespacePrefix "xsd2" ;
 	vann:preferredNamespaceUri "http://www.w3.org/TR/xmlschema-2/#" .
 
-_:node17rm35566x6 vann:preferredNamespacePrefix "owl" ;
+_:node17rm7lt14x6 vann:preferredNamespacePrefix "owl" ;
 	vann:preferredNamespaceUri "http://www.w3.org/2002/07/owl#" .
 
-_:node17rm35566x7 vann:preferredNamespacePrefix "pmlp" ;
+_:node17rm7lt14x7 vann:preferredNamespacePrefix "pmlp" ;
 	vann:preferredNamespaceUri "http://inference-web.org/2.0/pml-provenance.owl#" .
 
-_:node17rm35566x8 vann:preferredNamespacePrefix "pmlj" ;
+_:node17rm7lt14x8 vann:preferredNamespacePrefix "pmlj" ;
 	vann:preferredNamespaceUri "http://inference-web.org/2.0/pml-justification.owl#" .
 
-_:node17rm35566x9 vann:preferredNamespacePrefix "tw_service" ;
-	vann:preferredNamespaceUri "http://purl.org/twc/semmdd/source/tw-rpi-edu/service/" .
+_:node17rm7lt14x9 vann:preferredNamespacePrefix "tw_service" ;
+	vann:preferredNamespaceUri "http://purl.org/twc/semantgeo/source/tw-rpi-edu/service/" .
 
-_:node17rm35566x10 vann:preferredNamespacePrefix "tw_converter" ;
-	vann:preferredNamespaceUri "http://purl.org/twc/semmdd/source/tw-rpi-edu/service/csv2rdf4lod/version/2013-Jan-16/" .
+_:node17rm7lt14x10 vann:preferredNamespacePrefix "tw_converter" ;
+	vann:preferredNamespaceUri "http://purl.org/twc/semantgeo/source/tw-rpi-edu/service/csv2rdf4lod/version/2013-Jan-16/" .
 
-_:node17rm35566x11 vann:preferredNamespacePrefix "provenance_1" ;
-	vann:preferredNamespaceUri "http://purl.org/twc/semmdd/source/aeap_nys/provenance/dfw_lake_samples/aeap-nyserda-chem-94-12-v9-web/version/2013-April-24/conversion/enhancement/1/" .
+_:node17rm7lt14x11 vann:preferredNamespacePrefix "provenance_1" ;
+	vann:preferredNamespaceUri "http://purl.org/twc/semantgeo/source/source/provenance/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1/" .
 
-_:node17rm35566x12 vann:preferredNamespacePrefix "conversion" ;
+_:node17rm7lt14x12 vann:preferredNamespacePrefix "conversion" ;
 	vann:preferredNamespaceUri "http://purl.org/twc/vocab/conversion/" .
 
-_:node17rm35566x13 vann:preferredNamespacePrefix "ov" ;
+_:node17rm7lt14x13 vann:preferredNamespacePrefix "ov" ;
 	vann:preferredNamespaceUri "http://open.vocab.org/terms/" .
 
-_:node17rm35566x14 vann:preferredNamespacePrefix "dcterms" ;
+_:node17rm7lt14x14 vann:preferredNamespacePrefix "dcterms" ;
 	vann:preferredNamespaceUri "http://purl.org/dc/terms/" .
 
-_:node17rm35566x15 vann:preferredNamespacePrefix "foaf" ;
+_:node17rm7lt14x15 vann:preferredNamespacePrefix "foaf" ;
 	vann:preferredNamespaceUri "http://xmlns.com/foaf/0.1/" .
 
-_:node17rm35566x16 vann:preferredNamespacePrefix "void" ;
+_:node17rm7lt14x16 vann:preferredNamespacePrefix "void" ;
 	vann:preferredNamespaceUri "http://rdfs.org/ns/void#" .
 
-_:node17rm35566x17 vann:preferredNamespacePrefix "doap" ;
+_:node17rm7lt14x17 vann:preferredNamespacePrefix "doap" ;
 	vann:preferredNamespaceUri "http://usefulinc.com/ns/doap#" .
 
-_:node17rm35566x18 vann:preferredNamespacePrefix "scovo" ;
+_:node17rm7lt14x18 vann:preferredNamespacePrefix "scovo" ;
 	vann:preferredNamespaceUri "http://purl.org/NET/scovo#" .
 
-_:node17rm35566x19 vann:preferredNamespacePrefix "qb" ;
+_:node17rm7lt14x19 vann:preferredNamespacePrefix "qb" ;
 	vann:preferredNamespaceUri "http://purl.org/linked-data/cube#" .
 
-_:node17rm35566x20 vann:preferredNamespacePrefix "vann" ;
+_:node17rm7lt14x20 vann:preferredNamespacePrefix "vann" ;
 	vann:preferredNamespaceUri "http://purl.org/vocab/vann/" .
 
-_:node17rm35566x21 vann:preferredNamespacePrefix "frbrcore" ;
+_:node17rm7lt14x21 vann:preferredNamespacePrefix "frbrcore" ;
 	vann:preferredNamespaceUri "http://purl.org/vocab/frbr/core#" .
 
-_:node17rm35566x22 vann:preferredNamespacePrefix "coin" ;
+_:node17rm7lt14x22 vann:preferredNamespacePrefix "coin" ;
 	vann:preferredNamespaceUri "http://purl.org/court/def/2009/coin#" .
 
-_:node17rm35566x23 vann:preferredNamespacePrefix "dfw_lake_samples" ;
-	vann:preferredNamespaceUri "http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/" .
+_:node17rm7lt14x23 vann:preferredNamespacePrefix "dfwi-aeap-nyserda" ;
+	vann:preferredNamespaceUri "http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/" .
 
-_:node17rm35566x24 vann:preferredNamespacePrefix "aeap_nys_vocab" ;
-	vann:preferredNamespaceUri "http://purl.org/twc/semmdd/source/aeap_nys/vocab/" .
+_:node17rm7lt14x24 vann:preferredNamespacePrefix "source_vocab" ;
+	vann:preferredNamespaceUri "http://purl.org/twc/semantgeo/source/source/vocab/" .
 
-_:node17rm35566x25 vann:preferredNamespacePrefix "base_vocab" ;
-	vann:preferredNamespaceUri "http://purl.org/twc/semmdd/vocab/" .
+_:node17rm7lt14x25 vann:preferredNamespacePrefix "base_vocab" ;
+	vann:preferredNamespaceUri "http://purl.org/twc/semantgeo/vocab/" .
 
-_:node17rm35566x26 vann:preferredNamespacePrefix "dfw_lake_samples_vocab" ;
-	vann:preferredNamespaceUri "http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/" .
+_:node17rm7lt14x26 vann:preferredNamespacePrefix "dfwi-aeap-nyserda_vocab" ;
+	vann:preferredNamespaceUri "http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/vocab/" .
 
-_:node17rm35566x27 vann:preferredNamespacePrefix "raw" ;
-	vann:preferredNamespaceUri "http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/raw/" .
+_:node17rm7lt14x27 vann:preferredNamespacePrefix "raw" ;
+	vann:preferredNamespaceUri "http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/vocab/raw/" .
 
-_:node17rm35566x28 vann:preferredNamespacePrefix "e1" ;
-	vann:preferredNamespaceUri "http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/" .
+_:node17rm7lt14x28 vann:preferredNamespacePrefix "e1" ;
+	vann:preferredNamespaceUri "http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/vocab/enhancement/1/" .
 
-_:node17rm35566x29 vann:preferredNamespacePrefix "" ;
-	vann:preferredNamespaceUri "http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/aeap-nyserda-chem-94-12-v9-web/version/2013-April-24/" .
+_:node17rm7lt14x29 vann:preferredNamespacePrefix "dfwi-aeap-nyserda_global_value" ;
+	vann:preferredNamespaceUri "http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/" .
 
-_:node17rm35566x30 vann:preferredNamespacePrefix "_global_value" ;
-	vann:preferredNamespaceUri "http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/aeap-nyserda-chem-94-12-v9-web/" .
+_:node17rm7lt14x30 vann:preferredNamespacePrefix "vsr" ;
+	vann:preferredNamespaceUri "http://purl.org/twc/vocab/vsr#" .
 
-_:node17rm35566x31 vann:preferredNamespacePrefix "time" ;
-	vann:preferredNamespaceUri "http://www.w3.org/2006/time#" .
-
-_:node17rm35566x32 vann:preferredNamespacePrefix "bibo" ;
-	vann:preferredNamespaceUri "http://purl.org/ontology/bibo/" .
-
-_:node17rm35566x33 vann:preferredNamespacePrefix "govtrackusgov" ;
-	vann:preferredNamespaceUri "http://www.rdfabout.com/rdf/usgov/geo/us/" .
-
-_:node17rm35566x34 vann:preferredNamespacePrefix "dbpedia" ;
-	vann:preferredNamespaceUri "http://dbpedia.org/resource/" .
-
-_:node17rm35566x35 vann:preferredNamespacePrefix "geonames" ;
-	vann:preferredNamespaceUri "http://www.geonames.org/ontology#" .
-
-_:node17rm35566x36 vann:preferredNamespacePrefix "nfo" ;
-	vann:preferredNamespaceUri "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#" .
-
-_:node17rm35566x37 vann:preferredNamespacePrefix "sioc" ;
-	vann:preferredNamespaceUri "http://rdfs.org/sioc/ns#" .
-
-_:node17rm35566x38 vann:preferredNamespacePrefix "geonamesid" ;
+_:node17rm7lt14x31 vann:preferredNamespacePrefix "geonamesid" ;
 	vann:preferredNamespaceUri "http://sws.geonames.org/" .
 
-_:node17rm35566x39 vann:preferredNamespacePrefix "dbpediaprop" ;
-	vann:preferredNamespaceUri "http://dbpedia.org/property/" .
+_:node17rm7lt14x32 vann:preferredNamespacePrefix "time" ;
+	vann:preferredNamespaceUri "http://www.w3.org/2006/time#" .
 
-_:node17rm35566x40 vann:preferredNamespacePrefix "todo" ;
-	vann:preferredNamespaceUri "http://www.w3.org/2000/01/rdf-schema#" .
-
-_:node17rm35566x41 vann:preferredNamespacePrefix "vs" ;
-	vann:preferredNamespaceUri "http://www.w3.org/2003/06/sw-vocab-status/ns#" .
-
-_:node17rm35566x42 vann:preferredNamespacePrefix "skos" ;
-	vann:preferredNamespaceUri "http://www.w3.org/2004/02/skos/core#" .
-
-_:node17rm35566x43 vann:preferredNamespacePrefix "sio" ;
-	vann:preferredNamespaceUri "http://semanticscience.org/resource/" .
-
-_:node17rm35566x44 vann:preferredNamespacePrefix "muo" ;
-	vann:preferredNamespaceUri "http://purl.oclc.org/NET/muo/muo#" .
-
-_:node17rm35566x45 vann:preferredNamespacePrefix "dbpediaowl" ;
-	vann:preferredNamespaceUri "http://dbpedia.org/ontology/" .
-
-_:node17rm35566x46 vann:preferredNamespacePrefix "con" ;
+_:node17rm7lt14x33 vann:preferredNamespacePrefix "con" ;
 	vann:preferredNamespaceUri "http://www.w3.org/2000/10/swap/pim/contact#" .
 
-_:node17rm35566x47 vann:preferredNamespacePrefix "dgtwc" ;
-	vann:preferredNamespaceUri "http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#" .
+_:node17rm7lt14x34 vann:preferredNamespacePrefix "dbpedia" ;
+	vann:preferredNamespaceUri "http://dbpedia.org/resource/" .
 
-_:node17rm35566x48 vann:preferredNamespacePrefix "frbr" ;
-	vann:preferredNamespaceUri "http://purl.org/vocab/frbr/core#" .
+_:node17rm7lt14x35 vann:preferredNamespacePrefix "pml" ;
+	vann:preferredNamespaceUri "http://provenanceweb.org/ns/pml#" .
 
-_:node17rm35566x49 vann:preferredNamespacePrefix "prov" ;
-	vann:preferredNamespaceUri "http://www.w3.org/ns/prov#" .
+_:node17rm7lt14x36 vann:preferredNamespacePrefix "sio" ;
+	vann:preferredNamespaceUri "http://semanticscience.org/resource/" .
 
-_:node17rm35566x50 vann:preferredNamespacePrefix "wgs" ;
+_:node17rm7lt14x37 vann:preferredNamespacePrefix "pollution" ;
+	vann:preferredNamespaceUri "http://escience.rpi.edu/ontology/semanteco/2/0/pollution.owl#" .
+
+_:node17rm7lt14x38 vann:preferredNamespacePrefix "sioc" ;
+	vann:preferredNamespaceUri "http://rdfs.org/sioc/ns#" .
+
+_:node17rm7lt14x39 vann:preferredNamespacePrefix "nfo" ;
+	vann:preferredNamespaceUri "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#" .
+
+_:node17rm7lt14x40 vann:preferredNamespacePrefix "muo" ;
+	vann:preferredNamespaceUri "http://purl.oclc.org/NET/muo/muo#" .
+
+_:node17rm7lt14x41 vann:preferredNamespacePrefix "geonames" ;
+	vann:preferredNamespaceUri "http://www.geonames.org/ontology#" .
+
+_:node17rm7lt14x42 vann:preferredNamespacePrefix "govtrackusgov" ;
+	vann:preferredNamespaceUri "http://www.rdfabout.com/rdf/usgov/geo/us/" .
+
+_:node17rm7lt14x43 vann:preferredNamespacePrefix "wgs" ;
 	vann:preferredNamespaceUri "http://www.w3.org/2003/01/geo/wgs84_pos#" .
 
-_:node17rm35566x1 rdfs:seeAlso _:node17rm35566x2 , _:node17rm35566x3 , _:node17rm35566x4 , _:node17rm35566x5 , _:node17rm35566x6 , _:node17rm35566x7 , _:node17rm35566x8 , _:node17rm35566x9 , _:node17rm35566x10 , _:node17rm35566x11 , _:node17rm35566x12 , _:node17rm35566x13 , _:node17rm35566x14 , _:node17rm35566x15 , _:node17rm35566x16 , _:node17rm35566x17 , _:node17rm35566x18 , _:node17rm35566x19 , _:node17rm35566x20 , _:node17rm35566x21 , _:node17rm35566x22 , _:node17rm35566x23 , _:node17rm35566x24 , _:node17rm35566x25 , _:node17rm35566x26 , _:node17rm35566x27 , _:node17rm35566x28 , _:node17rm35566x29 , _:node17rm35566x30 , _:node17rm35566x31 , _:node17rm35566x32 , _:node17rm35566x33 , _:node17rm35566x34 , _:node17rm35566x35 , _:node17rm35566x36 , _:node17rm35566x37 , _:node17rm35566x38 , _:node17rm35566x39 , _:node17rm35566x40 , _:node17rm35566x41 , _:node17rm35566x42 , _:node17rm35566x43 , _:node17rm35566x44 , _:node17rm35566x45 , _:node17rm35566x46 , _:node17rm35566x47 , _:node17rm35566x48 , _:node17rm35566x49 , _:node17rm35566x50 .
+_:node17rm7lt14x44 vann:preferredNamespacePrefix "bibo" ;
+	vann:preferredNamespaceUri "http://purl.org/ontology/bibo/" .
+
+_:node17rm7lt14x45 vann:preferredNamespacePrefix "dcat" ;
+	vann:preferredNamespaceUri "http://www.w3.org/ns/dcat#" .
+
+_:node17rm7lt14x46 vann:preferredNamespacePrefix "frbr" ;
+	vann:preferredNamespaceUri "http://purl.org/vocab/frbr/core#" .
+
+_:node17rm7lt14x47 vann:preferredNamespacePrefix "dbpediaowl" ;
+	vann:preferredNamespaceUri "http://dbpedia.org/ontology/" .
+
+_:node17rm7lt14x48 vann:preferredNamespacePrefix "todo" ;
+	vann:preferredNamespaceUri "http://www.w3.org/2000/01/rdf-schema#" .
+
+_:node17rm7lt14x49 vann:preferredNamespacePrefix "skos" ;
+	vann:preferredNamespaceUri "http://www.w3.org/2004/02/skos/core#" .
+
+_:node17rm7lt14x50 vann:preferredNamespacePrefix "dgtwc" ;
+	vann:preferredNamespaceUri "http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#" .
+
+_:node17rm7lt14x51 vann:preferredNamespacePrefix "water_ns" ;
+	vann:preferredNamespaceUri "http://escience.rpi.edu/ontology/semanteco/2/0/water.owl#" .
+
+_:node17rm7lt14x52 vann:preferredNamespacePrefix "query_ns" ;
+	vann:preferredNamespaceUri "http://aquarius.tw.rpi.edu/projects/semantaqua/data-source/query-variable/" .
+
+_:node17rm7lt14x53 vann:preferredNamespacePrefix "prov" ;
+	vann:preferredNamespaceUri "http://www.w3.org/ns/prov#" .
+
+_:node17rm7lt14x54 vann:preferredNamespacePrefix "org" ;
+	vann:preferredNamespaceUri "http://www.w3.org/ns/org#" .
+
+_:node17rm7lt14x55 vann:preferredNamespacePrefix "prov_ns" ;
+	vann:preferredNamespaceUri "http://www.w3.org/ns/prov#" .
+
+_:node17rm7lt14x56 vann:preferredNamespacePrefix "dbpediaprop" ;
+	vann:preferredNamespaceUri "http://dbpedia.org/property/" .
+
+_:node17rm7lt14x57 vann:preferredNamespacePrefix "vs" ;
+	vann:preferredNamespaceUri "http://www.w3.org/2003/06/sw-vocab-status/ns#" .
+
+_:node17rm7lt14x1 rdfs:seeAlso _:node17rm7lt14x2 , _:node17rm7lt14x3 , _:node17rm7lt14x4 , _:node17rm7lt14x5 , _:node17rm7lt14x6 , _:node17rm7lt14x7 , _:node17rm7lt14x8 , _:node17rm7lt14x9 , _:node17rm7lt14x10 , _:node17rm7lt14x11 , _:node17rm7lt14x12 , _:node17rm7lt14x13 , _:node17rm7lt14x14 , _:node17rm7lt14x15 , _:node17rm7lt14x16 , _:node17rm7lt14x17 , _:node17rm7lt14x18 , _:node17rm7lt14x19 , _:node17rm7lt14x20 , _:node17rm7lt14x21 , _:node17rm7lt14x22 , _:node17rm7lt14x23 , _:node17rm7lt14x24 , _:node17rm7lt14x25 , _:node17rm7lt14x26 , _:node17rm7lt14x27 , _:node17rm7lt14x28 , _:node17rm7lt14x29 , _:node17rm7lt14x30 , _:node17rm7lt14x31 , _:node17rm7lt14x32 , _:node17rm7lt14x33 , _:node17rm7lt14x34 , _:node17rm7lt14x35 , _:node17rm7lt14x36 , _:node17rm7lt14x37 , _:node17rm7lt14x38 , _:node17rm7lt14x39 , _:node17rm7lt14x40 , _:node17rm7lt14x41 , _:node17rm7lt14x42 , _:node17rm7lt14x43 , _:node17rm7lt14x44 , _:node17rm7lt14x45 , _:node17rm7lt14x46 , _:node17rm7lt14x47 , _:node17rm7lt14x48 , _:node17rm7lt14x49 , _:node17rm7lt14x50 , _:node17rm7lt14x51 , _:node17rm7lt14x52 , _:node17rm7lt14x53 , _:node17rm7lt14x54 , _:node17rm7lt14x55 , _:node17rm7lt14x56 , _:node17rm7lt14x57 .
 
 provenance_1:nodeset_1 a pmlj:NodeSet ;
-	pmlj:hasConclusion <http://purl.org/twc/semmdd/source/aeap_nys/file/dfw_lake_samples/version/2013-April-24/conversion/aeap_nys-dfw_lake_samples-2013-April-24> ;
+	pmlj:hasConclusion <http://purl.org/twc/semantgeo/source/source/file/dfwi-aeap-nyserda/version/2013-mar-22/conversion/source-dfwi-aeap-nyserda-2013-mar-22> ;
 	pmlj:isConsequentOf provenance_1:infstep_1 .
 
 provenance_1:nodeset_2 a pmlj:NodeSet ;
-	pmlj:hasConclusion <http://purl.org/twc/semmdd/source/aeap_nys/file/dfw_lake_samples/version/2013-April-24/conversion/aeap_nys-dfw_lake_samples-2013-April-24.e1> ;
+	pmlj:hasConclusion <http://purl.org/twc/semantgeo/source/source/file/dfwi-aeap-nyserda/version/2013-mar-22/conversion/source-dfwi-aeap-nyserda-2013-mar-22.e1> ;
 	pmlj:isConsequentOf provenance_1:infstep_1 .
 
 provenance_1:nodeset_3 a pmlj:NodeSet ;
-	pmlj:hasConclusion <http://purl.org/twc/semmdd/source/aeap_nys/file/dfw_lake_samples/version/2013-April-24/conversion/aeap_nys-dfw_lake_samples-2013-April-24.e1.sample.ttl> ;
+	pmlj:hasConclusion <http://purl.org/twc/semantgeo/source/source/file/dfwi-aeap-nyserda/version/2013-mar-22/conversion/source-dfwi-aeap-nyserda-2013-mar-22.e1.sample.ttl> ;
 	pmlj:isConsequentOf provenance_1:infstep_1 .
 
 provenance_1:infstep_1 a pmlj:InferenceStep ;
 	pmlj:hasInferenceEngine tw_converter:csv2rdf4lod_383025bc5d2760793ff770a7c534207c ;
-	pmlj:hasAntecedentList _:node17rm35566x51 ;
-	<http://inference-web.org/2.1exper/pml-provenance.owl#hasAntecedentRole> _:node17rm35566x52 , _:node17rm35566x53 .
+	pmlj:hasAntecedentList _:node17rm7lt14x58 ;
+	<http://inference-web.org/2.1exper/pml-provenance.owl#hasAntecedentRole> _:node17rm7lt14x59 , _:node17rm7lt14x60 .
 
 <http://purl.org/twc/id/software/csv2rdf4lod> con:preferredURI tw_converter:csv2rdf4lod_383025bc5d2760793ff770a7c534207c .
 
@@ -1665,7 +1617,7 @@ tw_converter:csv2rdf4lod_383025bc5d2760793ff770a7c534207c a pmlp:InferenceEngine
 	doap:shortdesc "Converts CSV files to RDF using parameters specified by http://purl.org/twc/vocab/conversion/" ;
 	doap:description "Converts CSV files to RDF using parameters specified by http://purl.org/twc/vocab/conversion/. Organizes datasets using 'source', 'dataset', and 'version' identifiers to allow for third-party aggregation, refinement, and integration of third-party data. Uses predicate 'layers' to allow backward-compatible refinements of Resources' descriptions. Minimizes human error and increases transparancy of conversion by using RDF-encoded interpretation parameters to control all processing." .
 
-_:node17rm35566x54 a doap:GitRepository ;
+_:node17rm7lt14x61 a doap:GitRepository ;
 	foaf:isPrimaryTopicOf <https://github.com/timrdf/csv2rdf4lod-automation> ;
 	doap:browse <https://github.com/timrdf/csv2rdf4lod-automation> .
 
@@ -1681,35 +1633,35 @@ _:node17rm35566x54 a doap:GitRepository ;
 
 <http://purl.org/twc/id/person/Maryam_Fazel-Zarandi> con:preferredURI <http://tw.rpi.edu/instances/MaryamFazel-Zarandi> .
 
-_:node17rm35566x51 a rdf:List ;
+_:node17rm7lt14x58 a rdf:List ;
 	rdf:first provenance_1:nodeset_4 .
 
 provenance_1:nodeset_4 a pmlj:NodeSet ;
-	pmlj:hasConclusion <http://purl.org/twc/semmdd/source/aeap_nys/filedfw_lake_samples/version/2013-April-24/manual/AEAP_NYSERDA_Chem_94-12_v9_web.csv> .
+	pmlj:hasConclusion <http://purl.org/twc/semantgeo/source/source/filedfwi-aeap-nyserda/version/2013-mar-22/manual/AEAP_NYSERDA_Chem_94-12_v9_web.csv> .
 
-_:node17rm35566x51 rdf:rest _:node17rm35566x55 .
+_:node17rm7lt14x58 rdf:rest _:node17rm7lt14x62 .
 
-_:node17rm35566x55 a rdf:List ;
+_:node17rm7lt14x62 a rdf:List ;
 	rdf:first provenance_1:nodeset_5 .
 
 provenance_1:nodeset_5 a pmlj:NodeSet ;
-	pmlj:hasConclusion <http://purl.org/twc/semmdd/source/aeap_nys/filedfw_lake_samples/version/2013-April-24/manual/AEAP_NYSERDA_Chem_94-12_v9_web.csv.e1.params.ttl> .
+	pmlj:hasConclusion <http://purl.org/twc/semantgeo/source/source/filedfwi-aeap-nyserda/version/2013-mar-22/manual/AEAP_NYSERDA_Chem_94-12_v9_web.csv.e1.params.ttl> .
 
-_:node17rm35566x53 <http://inference-web.org/2.1exper/pml-provenance.owl#hasRole> <http://inference-web.org/registry/ROLE/Parameters.owl#Parameters> .
+_:node17rm7lt14x60 <http://inference-web.org/2.1exper/pml-provenance.owl#hasRole> <http://inference-web.org/registry/ROLE/Parameters.owl#Parameters> .
 
-_:node17rm35566x55 rdf:rest rdf:nil .
+_:node17rm7lt14x62 rdf:rest rdf:nil .
 
-_:node17rm35566x52 a <http://inference-web.org/2.1exper/pml-provenance.owl#AntecedentRole> ;
-	<http://inference-web.org/2.1exper/pml-provenance.owl#hasAntecedent> <http://purl.org/twc/semmdd/source/aeap_nys/filedfw_lake_samples/version/2013-April-24/manual/AEAP_NYSERDA_Chem_94-12_v9_web.csv> ;
+_:node17rm7lt14x59 a <http://inference-web.org/2.1exper/pml-provenance.owl#AntecedentRole> ;
+	<http://inference-web.org/2.1exper/pml-provenance.owl#hasAntecedent> <http://purl.org/twc/semantgeo/source/source/filedfwi-aeap-nyserda/version/2013-mar-22/manual/AEAP_NYSERDA_Chem_94-12_v9_web.csv> ;
 	<http://inference-web.org/2.1exper/pml-provenance.owl#hasRole> <http://inference-web.org/registry/ROLE/Input.owl#Input> .
 
-_:node17rm35566x53 a <http://inference-web.org/2.1exper/pml-provenance.owl#AntecedentRole> ;
-	<http://inference-web.org/2.1exper/pml-provenance.owl#hasAntecedent> <http://purl.org/twc/semmdd/source/aeap_nys/filedfw_lake_samples/version/2013-April-24/manual/AEAP_NYSERDA_Chem_94-12_v9_web.csv.e1.params.ttl> .
+_:node17rm7lt14x60 a <http://inference-web.org/2.1exper/pml-provenance.owl#AntecedentRole> ;
+	<http://inference-web.org/2.1exper/pml-provenance.owl#hasAntecedent> <http://purl.org/twc/semantgeo/source/source/filedfwi-aeap-nyserda/version/2013-mar-22/manual/AEAP_NYSERDA_Chem_94-12_v9_web.csv.e1.params.ttl> .
 
-<http://purl.org/twc/semmdd/source/aeap_nys/filedfw_lake_samples/version/2013-April-24/manual/AEAP_NYSERDA_Chem_94-12_v9_web.csv> a pmlp:Information ;
+<http://purl.org/twc/semantgeo/source/source/filedfwi-aeap-nyserda/version/2013-mar-22/manual/AEAP_NYSERDA_Chem_94-12_v9_web.csv> a pmlp:Information ;
 	pmlp:hasFormat <http://iw.cs.utep.edu/registry/FMT/text/CSV.owl#CSV> .
 
-<http://purl.org/twc/semmdd/source/aeap_nys/filedfw_lake_samples/version/2013-April-24/manual/AEAP_NYSERDA_Chem_94-12_v9_web.csv.e1.params.ttl> a pmlp:Information ;
+<http://purl.org/twc/semantgeo/source/source/filedfwi-aeap-nyserda/version/2013-mar-22/manual/AEAP_NYSERDA_Chem_94-12_v9_web.csv.e1.params.ttl> a pmlp:Information ;
 	pmlp:hasFormat <http://inference-web.org/registry/FMT/RDFAbstractSyntax.owl#RDFAbstractSyntax> .
 
 conversion:SameAsDataset rdfs:isDefinedBy <http://purl.org/twc/vocab/conversion/> .
@@ -1756,736 +1708,440 @@ conversion:Dataset rdfs:isDefinedBy <http://purl.org/twc/vocab/conversion/> .
 
 conversion:version_identifier rdfs:isDefinedBy <http://purl.org/twc/vocab/conversion/> .
 
-<http://tw.rpi.edu/instances/BrendanAshby> dcterms:identifier "ashbyb" .
+<http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> conversion:base_uri "http://purl.org/twc/semantgeo"^^xsd:anyURI .
 
-<http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> conversion:base_uri "http://purl.org/twc/semmdd"^^xsd:anyURI .
+_:node17rm7lt2bx1 a conversion:EnhancementConversionProcess ;
+	conversion:enhancement_identifier "1" .
 
-_:node17rm3557gx1 a conversion:EnhancementConversionProcess ;
-	conversion:enhancement_identifier "1" ;
-	conversion:subject_discriminator "aeap-nyserda-chem-94-12-v9-web" .
+_:node17rm7lt2bx2 a foaf:OnlineAccount ;
+	foaf:accountName "bashby" .
 
-_:node17rm3557gx2 a foaf:OnlineAccount ;
-	foaf:accountName "ashbyb" ;
-	sioc:account_of <http://tw.rpi.edu/instances/BrendanAshby> .
-
-_:node17rm3557gx1 dcterms:creator _:node17rm3557gx2 ;
-	dcterms:created "2013-05-28T17:29:48+00:00"^^xsd:dateTime ;
+_:node17rm7lt2bx1 dcterms:creator _:node17rm7lt2bx2 ;
+	dcterms:created "2013-05-10T02:50:53-04:00"^^xsd:dateTime ;
 	conversion:delimits_cell "," .
 
-_:node17rm3557gx3 ov:csvCol "1"^^xsd:integer ;
+_:node17rm7lt2bx3 conversion:symbol "" ;
+	conversion:interpretation conversion:null .
+
+_:node17rm7lt2bx1 conversion:interpret _:node17rm7lt2bx3 .
+
+_:node17rm7lt2bx4 ov:csvCol "10"^^xsd:integer , "11"^^xsd:integer , "12"^^xsd:integer , "13"^^xsd:integer , "14"^^xsd:integer , "15"^^xsd:integer , "16"^^xsd:integer , "17"^^xsd:integer , "18"^^xsd:integer , "19"^^xsd:integer , "20"^^xsd:integer , "21"^^xsd:integer , "22"^^xsd:integer , "23"^^xsd:integer , "24"^^xsd:integer , "25"^^xsd:integer , "26"^^xsd:integer , "27"^^xsd:integer , "28"^^xsd:integer , "29"^^xsd:integer , "30"^^xsd:integer , "31"^^xsd:integer , "32"^^xsd:integer , "33"^^xsd:integer , "34"^^xsd:integer , "35"^^xsd:integer , "36"^^xsd:integer , "37"^^xsd:integer , "38"^^xsd:integer , "39"^^xsd:integer , "40"^^xsd:integer , "41"^^xsd:integer , "42"^^xsd:integer , "43"^^xsd:integer , "44"^^xsd:integer , "45"^^xsd:integer , "46"^^xsd:integer ;
+	a qb:Observation , water_ns:WaterMeasurement ;
+	prov:atLocation query_ns:site .
+
+_:node17rm7lt2bx1 conversion:enhance _:node17rm7lt2bx4 .
+
+_:node17rm7lt2bx5 ov:csvCol "1"^^xsd:integer ;
 	ov:csvHeader "Accession Code (sample#)" ;
-	conversion:comment "" ;
-	conversion:range rdfs:Literal .
+	conversion:label "Accession Code (sample#)" ;
+	a conversion:DataStartRow ;
+	conversion:domain_name "Sample" ;
+	conversion:comment "A unique numeric reference to a specific water sample taken from a lake" ;
+	conversion:range xsd:integer .
 
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx3 .
+_:node17rm7lt2bx1 conversion:enhance _:node17rm7lt2bx5 .
 
-_:node17rm3557gx4 ov:csvCol "2"^^xsd:integer ;
+_:node17rm7lt2bx6 ov:csvCol "2"^^xsd:integer ;
 	ov:csvHeader "Lake Name" ;
-	conversion:comment "" ;
+	conversion:label "Lake Name" ;
+	conversion:equivalent_property foaf:isPrimaryTopicOf ;
+	conversion:comment "The name of the lake the sample is from" ;
 	conversion:range rdfs:Literal .
 
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx4 .
+_:node17rm7lt2bx1 conversion:enhance _:node17rm7lt2bx6 .
 
-_:node17rm3557gx5 ov:csvCol "3"^^xsd:integer ;
+_:node17rm7lt2bx7 ov:csvCol "3"^^xsd:integer ;
 	ov:csvHeader "DEC Code" ;
-	conversion:comment "" ;
-	conversion:range rdfs:Literal .
+	conversion:label "DEC Code" ;
+	conversion:comment "A numeric reference to a lake in the DEC registry, unique to a specific lake" ;
+	conversion:range xsd:integer .
 
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx5 .
+_:node17rm7lt2bx1 conversion:enhance _:node17rm7lt2bx7 .
 
-_:node17rm3557gx6 ov:csvCol "4"^^xsd:integer ;
+_:node17rm7lt2bx8 ov:csvCol "4"^^xsd:integer ;
 	ov:csvHeader "Date" ;
-	conversion:comment "" ;
-	conversion:range rdfs:Literal .
+	conversion:label "Date" ;
+	conversion:comment "The date the sample was taken from the lake" ;
+	conversion:range xsd:date .
 
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx6 .
+_:node17rm7lt2bx1 conversion:enhance _:node17rm7lt2bx8 .
 
-_:node17rm3557gx7 ov:csvCol "5"^^xsd:integer ;
+_:node17rm7lt2bx9 ov:csvCol "5"^^xsd:integer ;
 	ov:csvHeader "Z max (m)" ;
-	conversion:comment "" ;
-	conversion:range rdfs:Literal .
+	conversion:label "Z max (m)" ;
+	conversion:comment "The maximum depth to the lake floor at the site where the sample was taken" ;
+	conversion:range xsd:decimal .
 
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx7 .
+_:node17rm7lt2bx1 conversion:enhance _:node17rm7lt2bx9 .
 
-_:node17rm3557gx8 ov:csvCol "6"^^xsd:integer ;
+_:node17rm7lt2bx10 ov:csvCol "6"^^xsd:integer ;
 	ov:csvHeader "Sample Type" ;
-	conversion:comment "" ;
+	conversion:label "Sample Type" ;
+	conversion:comment "I represents “Integrated” sample which is a mixed sample representing several meters from the surface to the top of the thermocline.  G represents a “Grab” sample at a specific depth." ;
 	conversion:range rdfs:Literal .
 
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx8 .
+_:node17rm7lt2bx1 conversion:enhance _:node17rm7lt2bx10 .
 
-_:node17rm3557gx9 ov:csvCol "7"^^xsd:integer ;
+_:node17rm7lt2bx11 ov:csvCol "7"^^xsd:integer ;
 	ov:csvHeader "Sample Z (m)" ;
-	conversion:comment "" ;
-	conversion:range rdfs:Literal .
+	conversion:label "Sample Z (m)" ;
+	conversion:comment "TODO" ;
+	conversion:range xsd:decimal .
 
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx9 .
+_:node17rm7lt2bx1 conversion:enhance _:node17rm7lt2bx11 .
 
-_:node17rm3557gx10 ov:csvCol "8"^^xsd:integer ;
+_:node17rm7lt2bx12 ov:csvCol "8"^^xsd:integer ;
 	ov:csvHeader "Sample Layer" ;
-	conversion:comment "" ;
+	conversion:label "Sample Layer" ;
+	conversion:comment "TODO" ;
 	conversion:range rdfs:Literal .
 
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx10 .
+_:node17rm7lt2bx1 conversion:enhance _:node17rm7lt2bx12 .
 
-_:node17rm3557gx11 ov:csvCol "9"^^xsd:integer ;
+_:node17rm7lt2bx13 ov:csvCol "9"^^xsd:integer ;
 	ov:csvHeader "Secchi (m)" ;
-	conversion:comment "" ;
-	conversion:range rdfs:Literal .
+	conversion:label "Secchi (m)" ;
+	conversion:comment "TODO: has to do with how clear the water is" ;
+	conversion:range xsd:decimal .
 
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx11 .
+_:node17rm7lt2bx1 conversion:enhance _:node17rm7lt2bx13 .
 
-_:node17rm3557gx12 ov:csvCol "10"^^xsd:integer ;
+_:node17rm7lt2bx14 ov:csvCol "10"^^xsd:integer ;
 	ov:csvHeader "Conductivity (umhos)" ;
-	conversion:comment "" ;
-	conversion:range rdfs:Literal .
+	conversion:label "Conductivity (umhos)" ;
+	conversion:comment "TODO: pretty self explanatory" ;
+	conversion:range xsd:decimal .
 
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx12 .
+_:node17rm7lt2bx1 conversion:enhance _:node17rm7lt2bx14 .
 
-_:node17rm3557gx13 ov:csvCol "11"^^xsd:integer ;
+_:node17rm7lt2bx15 ov:csvCol "11"^^xsd:integer ;
 	ov:csvHeader "pH air eq" ;
-	conversion:comment "" ;
-	conversion:range rdfs:Literal .
+	conversion:label "pH air eq" ;
+	conversion:comment "The pH reading for the sample. TODO: requires telling how the ph was taken not at the lake itself" ;
+	conversion:range xsd:decimal .
 
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx13 .
+_:node17rm7lt2bx1 conversion:enhance _:node17rm7lt2bx15 .
 
-_:node17rm3557gx14 ov:csvCol "12"^^xsd:integer ;
+_:node17rm7lt2bx16 ov:csvCol "12"^^xsd:integer ;
 	ov:csvHeader "ANC (ueq/L)" ;
-	conversion:comment "" ;
-	conversion:range rdfs:Literal .
+	conversion:label "ANC (ueq/L)" ;
+	conversion:comment "The acid neutralizing capacity of a lake. TODO: expand this" ;
+	conversion:range xsd:decimal .
 
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx14 .
+_:node17rm7lt2bx1 conversion:enhance _:node17rm7lt2bx16 .
 
-_:node17rm3557gx15 ov:csvCol "13"^^xsd:integer ;
+_:node17rm7lt2bx17 ov:csvCol "13"^^xsd:integer ;
 	ov:csvHeader "NH4-N (ug N/L)" ;
 	conversion:comment "" ;
 	conversion:range rdfs:Literal .
 
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx15 .
+_:node17rm7lt2bx1 conversion:enhance _:node17rm7lt2bx17 .
 
-_:node17rm3557gx16 ov:csvCol "14"^^xsd:integer ;
+_:node17rm7lt2bx18 ov:csvCol "14"^^xsd:integer ;
 	ov:csvHeader "NH4+ (mg/L)" ;
 	conversion:comment "" ;
 	conversion:range rdfs:Literal .
 
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx16 .
+_:node17rm7lt2bx1 conversion:enhance _:node17rm7lt2bx18 .
 
-_:node17rm3557gx17 ov:csvCol "15"^^xsd:integer ;
+_:node17rm7lt2bx19 ov:csvCol "15"^^xsd:integer ;
 	ov:csvHeader "NH4+ (ueq/L)" ;
 	conversion:comment "" ;
 	conversion:range rdfs:Literal .
 
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx17 .
+_:node17rm7lt2bx1 conversion:enhance _:node17rm7lt2bx19 .
 
-_:node17rm3557gx18 ov:csvCol "16"^^xsd:integer ;
+_:node17rm7lt2bx20 ov:csvCol "16"^^xsd:integer ;
 	ov:csvHeader "DIC (mg/L)" ;
 	conversion:comment "" ;
 	conversion:range rdfs:Literal .
 
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx18 .
+_:node17rm7lt2bx1 conversion:enhance _:node17rm7lt2bx20 .
 
-_:node17rm3557gx19 ov:csvCol "17"^^xsd:integer ;
+_:node17rm7lt2bx21 ov:csvCol "17"^^xsd:integer ;
 	ov:csvHeader "DOC (mg/L)" ;
 	conversion:comment "" ;
 	conversion:range rdfs:Literal .
 
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx19 .
+_:node17rm7lt2bx1 conversion:enhance _:node17rm7lt2bx21 .
 
-_:node17rm3557gx20 ov:csvCol "18"^^xsd:integer ;
+_:node17rm7lt2bx22 ov:csvCol "18"^^xsd:integer ;
 	ov:csvHeader "F (mg/L)" ;
 	conversion:comment "" ;
 	conversion:range rdfs:Literal .
 
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx20 .
+_:node17rm7lt2bx1 conversion:enhance _:node17rm7lt2bx22 .
 
-_:node17rm3557gx21 ov:csvCol "19"^^xsd:integer ;
+_:node17rm7lt2bx23 ov:csvCol "19"^^xsd:integer ;
 	ov:csvHeader "Cl (mg/L)" ;
 	conversion:comment "" ;
 	conversion:range rdfs:Literal .
 
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx21 .
+_:node17rm7lt2bx1 conversion:enhance _:node17rm7lt2bx23 .
 
-_:node17rm3557gx22 ov:csvCol "20"^^xsd:integer ;
+_:node17rm7lt2bx24 ov:csvCol "20"^^xsd:integer ;
 	ov:csvHeader "Cl (ueq/L)" ;
 	conversion:comment "" ;
 	conversion:range rdfs:Literal .
 
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx22 .
+_:node17rm7lt2bx1 conversion:enhance _:node17rm7lt2bx24 .
 
-_:node17rm3557gx23 ov:csvCol "21"^^xsd:integer ;
+_:node17rm7lt2bx25 ov:csvCol "21"^^xsd:integer ;
 	ov:csvHeader "NO3-N (mg N/L)" ;
 	conversion:comment "" ;
 	conversion:range rdfs:Literal .
 
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx23 .
+_:node17rm7lt2bx1 conversion:enhance _:node17rm7lt2bx25 .
 
-_:node17rm3557gx24 ov:csvCol "22"^^xsd:integer ;
+_:node17rm7lt2bx26 ov:csvCol "22"^^xsd:integer ;
 	ov:csvHeader "NO3- (mg/L)" ;
 	conversion:comment "" ;
 	conversion:range rdfs:Literal .
 
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx24 .
+_:node17rm7lt2bx1 conversion:enhance _:node17rm7lt2bx26 .
 
-_:node17rm3557gx25 ov:csvCol "23"^^xsd:integer ;
+_:node17rm7lt2bx27 ov:csvCol "23"^^xsd:integer ;
 	ov:csvHeader "NO3- (ueq/L)" ;
 	conversion:comment "" ;
 	conversion:range rdfs:Literal .
 
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx25 .
+_:node17rm7lt2bx1 conversion:enhance _:node17rm7lt2bx27 .
 
-_:node17rm3557gx26 ov:csvCol "24"^^xsd:integer ;
+_:node17rm7lt2bx28 ov:csvCol "24"^^xsd:integer ;
 	ov:csvHeader "SO4-S (mg S/L)" ;
 	conversion:comment "" ;
 	conversion:range rdfs:Literal .
 
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx26 .
+_:node17rm7lt2bx1 conversion:enhance _:node17rm7lt2bx28 .
 
-_:node17rm3557gx27 ov:csvCol "25"^^xsd:integer ;
+_:node17rm7lt2bx29 ov:csvCol "25"^^xsd:integer ;
 	ov:csvHeader "SO4-- (mg/L)" ;
 	conversion:comment "" ;
 	conversion:range rdfs:Literal .
 
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx27 .
+_:node17rm7lt2bx1 conversion:enhance _:node17rm7lt2bx29 .
 
-_:node17rm3557gx28 ov:csvCol "26"^^xsd:integer ;
+_:node17rm7lt2bx30 ov:csvCol "26"^^xsd:integer ;
 	ov:csvHeader "SO4-- (ueq/L)" ;
 	conversion:comment "" ;
 	conversion:range rdfs:Literal .
 
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx28 .
+_:node17rm7lt2bx1 conversion:enhance _:node17rm7lt2bx30 .
 
-_:node17rm3557gx29 ov:csvCol "27"^^xsd:integer ;
+_:node17rm7lt2bx31 ov:csvCol "27"^^xsd:integer ;
 	ov:csvHeader "Total P (ug/L)" ;
 	conversion:comment "" ;
 	conversion:range rdfs:Literal .
 
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx29 .
+_:node17rm7lt2bx1 conversion:enhance _:node17rm7lt2bx31 .
 
-_:node17rm3557gx30 ov:csvCol "28"^^xsd:integer ;
+_:node17rm7lt2bx32 ov:csvCol "28"^^xsd:integer ;
 	ov:csvHeader "MRP    (ug P/L)" ;
 	conversion:comment "" ;
 	conversion:range rdfs:Literal .
 
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx30 .
+_:node17rm7lt2bx1 conversion:enhance _:node17rm7lt2bx32 .
 
-_:node17rm3557gx31 ov:csvCol "29"^^xsd:integer ;
+_:node17rm7lt2bx33 ov:csvCol "29"^^xsd:integer ;
 	ov:csvHeader "TFP (ug/L)" ;
 	conversion:comment "" ;
 	conversion:range rdfs:Literal .
 
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx31 .
+_:node17rm7lt2bx1 conversion:enhance _:node17rm7lt2bx33 .
 
-_:node17rm3557gx32 ov:csvCol "30"^^xsd:integer ;
+_:node17rm7lt2bx34 ov:csvCol "30"^^xsd:integer ;
 	ov:csvHeader "TN (mg/L)" ;
 	conversion:comment "" ;
 	conversion:range rdfs:Literal .
 
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx32 .
+_:node17rm7lt2bx1 conversion:enhance _:node17rm7lt2bx34 .
 
-_:node17rm3557gx33 ov:csvCol "31"^^xsd:integer ;
+_:node17rm7lt2bx35 ov:csvCol "31"^^xsd:integer ;
 	ov:csvHeader "Chla (ug/L)" ;
 	conversion:comment "" ;
 	conversion:range rdfs:Literal .
 
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx33 .
+_:node17rm7lt2bx1 conversion:enhance _:node17rm7lt2bx35 .
 
-_:node17rm3557gx34 ov:csvCol "32"^^xsd:integer ;
+_:node17rm7lt2bx36 ov:csvCol "32"^^xsd:integer ;
 	ov:csvHeader "Si (mg/l)" ;
 	conversion:comment "" ;
 	conversion:range rdfs:Literal .
 
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx34 .
+_:node17rm7lt2bx1 conversion:enhance _:node17rm7lt2bx36 .
 
-_:node17rm3557gx35 ov:csvCol "33"^^xsd:integer ;
+_:node17rm7lt2bx37 ov:csvCol "33"^^xsd:integer ;
 	ov:csvHeader "Dissolved Silica SiO2 (mg/l)" ;
 	conversion:comment "" ;
 	conversion:range rdfs:Literal .
 
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx35 .
+_:node17rm7lt2bx1 conversion:enhance _:node17rm7lt2bx37 .
 
-_:node17rm3557gx36 ov:csvCol "34"^^xsd:integer ;
+_:node17rm7lt2bx38 ov:csvCol "34"^^xsd:integer ;
 	ov:csvHeader "Na (mg/L)" ;
 	conversion:comment "" ;
 	conversion:range rdfs:Literal .
 
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx36 .
+_:node17rm7lt2bx1 conversion:enhance _:node17rm7lt2bx38 .
 
-_:node17rm3557gx37 ov:csvCol "35"^^xsd:integer ;
+_:node17rm7lt2bx39 ov:csvCol "35"^^xsd:integer ;
 	ov:csvHeader "Na (ueq/L)" ;
 	conversion:comment "" ;
 	conversion:range rdfs:Literal .
 
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx37 .
+_:node17rm7lt2bx1 conversion:enhance _:node17rm7lt2bx39 .
 
-_:node17rm3557gx38 ov:csvCol "36"^^xsd:integer ;
+_:node17rm7lt2bx40 ov:csvCol "36"^^xsd:integer ;
 	ov:csvHeader "K (mg/L)" ;
 	conversion:comment "" ;
 	conversion:range rdfs:Literal .
 
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx38 .
+_:node17rm7lt2bx1 conversion:enhance _:node17rm7lt2bx40 .
 
-_:node17rm3557gx39 ov:csvCol "37"^^xsd:integer ;
+_:node17rm7lt2bx41 ov:csvCol "37"^^xsd:integer ;
 	ov:csvHeader "K (ueq/L)" ;
 	conversion:comment "" ;
 	conversion:range rdfs:Literal .
 
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx39 .
+_:node17rm7lt2bx1 conversion:enhance _:node17rm7lt2bx41 .
 
-_:node17rm3557gx40 ov:csvCol "38"^^xsd:integer ;
+_:node17rm7lt2bx42 ov:csvCol "38"^^xsd:integer ;
 	ov:csvHeader "Fe (mg/L)" ;
 	conversion:comment "" ;
 	conversion:range rdfs:Literal .
 
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx40 .
+_:node17rm7lt2bx1 conversion:enhance _:node17rm7lt2bx42 .
 
-_:node17rm3557gx41 ov:csvCol "39"^^xsd:integer ;
+_:node17rm7lt2bx43 ov:csvCol "39"^^xsd:integer ;
 	ov:csvHeader "Mg (mg/L)" ;
 	conversion:comment "" ;
 	conversion:range rdfs:Literal .
 
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx41 .
+_:node17rm7lt2bx1 conversion:enhance _:node17rm7lt2bx43 .
 
-_:node17rm3557gx42 ov:csvCol "40"^^xsd:integer ;
+_:node17rm7lt2bx44 ov:csvCol "40"^^xsd:integer ;
 	ov:csvHeader "Mg (ueq/L)" ;
 	conversion:comment "" ;
 	conversion:range rdfs:Literal .
 
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx42 .
+_:node17rm7lt2bx1 conversion:enhance _:node17rm7lt2bx44 .
 
-_:node17rm3557gx43 ov:csvCol "41"^^xsd:integer ;
+_:node17rm7lt2bx45 ov:csvCol "41"^^xsd:integer ;
 	ov:csvHeader "Ca (mg/L)" ;
 	conversion:comment "" ;
 	conversion:range rdfs:Literal .
 
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx43 .
+_:node17rm7lt2bx1 conversion:enhance _:node17rm7lt2bx45 .
 
-_:node17rm3557gx44 ov:csvCol "42"^^xsd:integer ;
+_:node17rm7lt2bx46 ov:csvCol "42"^^xsd:integer ;
 	ov:csvHeader "Ca (ueq/L)" ;
 	conversion:comment "" ;
 	conversion:range rdfs:Literal .
 
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx44 .
+_:node17rm7lt2bx1 conversion:enhance _:node17rm7lt2bx46 .
 
-_:node17rm3557gx45 ov:csvCol "43"^^xsd:integer ;
+_:node17rm7lt2bx47 ov:csvCol "43"^^xsd:integer ;
 	ov:csvHeader "Total Al (ug/L)" ;
 	conversion:comment "" ;
 	conversion:range rdfs:Literal .
 
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx45 .
+_:node17rm7lt2bx1 conversion:enhance _:node17rm7lt2bx47 .
 
-_:node17rm3557gx46 ov:csvCol "44"^^xsd:integer ;
+_:node17rm7lt2bx48 ov:csvCol "44"^^xsd:integer ;
 	ov:csvHeader "Total mono Al (ug/L)" ;
 	conversion:comment "" ;
 	conversion:range rdfs:Literal .
 
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx46 .
+_:node17rm7lt2bx1 conversion:enhance _:node17rm7lt2bx48 .
 
-_:node17rm3557gx47 ov:csvCol "45"^^xsd:integer ;
+_:node17rm7lt2bx49 ov:csvCol "45"^^xsd:integer ;
 	ov:csvHeader "Nonlabile mono Al (ug/L)" ;
 	conversion:comment "" ;
 	conversion:range rdfs:Literal .
 
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx47 .
+_:node17rm7lt2bx1 conversion:enhance _:node17rm7lt2bx49 .
 
-_:node17rm3557gx48 ov:csvCol "46"^^xsd:integer ;
+_:node17rm7lt2bx50 ov:csvCol "46"^^xsd:integer ;
 	ov:csvHeader "Labile mono Ali (ug/L)" ;
 	conversion:comment "" ;
 	conversion:range rdfs:Literal .
 
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx48 .
+_:node17rm7lt2bx1 conversion:enhance _:node17rm7lt2bx50 .
 
-_:node17rm3557gx49 ov:csvCol "47"^^xsd:integer ;
+_:node17rm7lt2bx51 ov:csvCol "47"^^xsd:integer ;
 	ov:csvHeader "Hydrologic Type" ;
 	conversion:comment "" ;
 	conversion:range rdfs:Literal .
 
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx49 .
+_:node17rm7lt2bx1 conversion:enhance _:node17rm7lt2bx51 .
 
-_:node17rm3557gx50 ov:csvCol "48"^^xsd:integer ;
+_:node17rm7lt2bx52 ov:csvCol "48"^^xsd:integer ;
 	ov:csvHeader "Watershed" ;
 	conversion:comment "" ;
 	conversion:range rdfs:Literal .
 
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx50 .
+_:node17rm7lt2bx1 conversion:enhance _:node17rm7lt2bx52 .
 
-_:node17rm3557gx51 ov:csvCol "49"^^xsd:integer ;
+_:node17rm7lt2bx53 ov:csvCol "49"^^xsd:integer ;
 	ov:csvHeader "Watershed area (ha)" ;
 	conversion:comment "" ;
 	conversion:range rdfs:Literal .
 
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx51 .
+_:node17rm7lt2bx1 conversion:enhance _:node17rm7lt2bx53 .
 
-_:node17rm3557gx52 ov:csvCol "50"^^xsd:integer ;
+_:node17rm7lt2bx54 ov:csvCol "50"^^xsd:integer ;
 	ov:csvHeader "lake volume (m3)" ;
 	conversion:comment "" ;
 	conversion:range rdfs:Literal .
 
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx52 .
+_:node17rm7lt2bx1 conversion:enhance _:node17rm7lt2bx54 .
 
-_:node17rm3557gx53 ov:csvCol "51"^^xsd:integer ;
+_:node17rm7lt2bx55 ov:csvCol "51"^^xsd:integer ;
 	ov:csvHeader "WA/SA ratio" ;
 	conversion:comment "" ;
 	conversion:range rdfs:Literal .
 
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx53 .
+_:node17rm7lt2bx1 conversion:enhance _:node17rm7lt2bx55 .
 
-_:node17rm3557gx54 ov:csvCol "52"^^xsd:integer ;
+_:node17rm7lt2bx56 ov:csvCol "52"^^xsd:integer ;
 	ov:csvHeader "surface area (ha)" ;
 	conversion:comment "" ;
 	conversion:range rdfs:Literal .
 
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx54 .
+_:node17rm7lt2bx1 conversion:enhance _:node17rm7lt2bx56 .
 
-_:node17rm3557gx55 ov:csvCol "53"^^xsd:integer ;
+_:node17rm7lt2bx57 ov:csvCol "53"^^xsd:integer ;
 	ov:csvHeader "surface area (m2)" ;
 	conversion:comment "" ;
 	conversion:range rdfs:Literal .
 
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx55 .
-
-_:node17rm3557gx56 ov:csvCol "54"^^xsd:integer ;
-	ov:csvHeader "" ;
-	conversion:comment "" ;
-	conversion:range rdfs:Literal .
-
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx56 .
-
-_:node17rm3557gx57 ov:csvCol "55"^^xsd:integer ;
-	ov:csvHeader "" ;
-	conversion:comment "" ;
-	conversion:range rdfs:Literal .
-
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx57 .
-
-_:node17rm3557gx58 ov:csvCol "56"^^xsd:integer ;
-	ov:csvHeader "" ;
-	conversion:comment "" ;
-	conversion:range rdfs:Literal .
-
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx58 .
-
-_:node17rm3557gx59 ov:csvCol "57"^^xsd:integer ;
-	ov:csvHeader "" ;
-	conversion:comment "" ;
-	conversion:range rdfs:Literal .
-
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx59 .
-
-_:node17rm3557gx60 ov:csvCol "58"^^xsd:integer ;
-	ov:csvHeader "" ;
-	conversion:comment "" ;
-	conversion:range rdfs:Literal .
-
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx60 .
-
-_:node17rm3557gx61 ov:csvCol "59"^^xsd:integer ;
-	ov:csvHeader "" ;
-	conversion:comment "" ;
-	conversion:range rdfs:Literal .
-
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx61 .
-
-_:node17rm3557gx62 ov:csvCol "60"^^xsd:integer ;
-	ov:csvHeader "" ;
-	conversion:comment "" ;
-	conversion:range rdfs:Literal .
-
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx62 .
-
-_:node17rm3557gx63 ov:csvCol "61"^^xsd:integer ;
-	ov:csvHeader "" ;
-	conversion:comment "" ;
-	conversion:range rdfs:Literal .
-
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx63 .
-
-_:node17rm3557gx64 ov:csvCol "62"^^xsd:integer ;
-	ov:csvHeader "" ;
-	conversion:comment "" ;
-	conversion:range rdfs:Literal .
-
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx64 .
-
-_:node17rm3557gx65 ov:csvCol "63"^^xsd:integer ;
-	ov:csvHeader "" ;
-	conversion:comment "" ;
-	conversion:range rdfs:Literal .
-
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx65 .
-
-_:node17rm3557gx66 ov:csvCol "64"^^xsd:integer ;
-	ov:csvHeader "" ;
-	conversion:comment "" ;
-	conversion:range rdfs:Literal .
-
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx66 .
-
-_:node17rm3557gx67 ov:csvCol "65"^^xsd:integer ;
-	ov:csvHeader "" ;
-	conversion:comment "" ;
-	conversion:range rdfs:Literal .
-
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx67 .
-
-_:node17rm3557gx68 ov:csvCol "66"^^xsd:integer ;
-	ov:csvHeader "" ;
-	conversion:comment "" ;
-	conversion:range rdfs:Literal .
-
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx68 .
-
-_:node17rm3557gx69 ov:csvCol "67"^^xsd:integer ;
-	ov:csvHeader "" ;
-	conversion:comment "" ;
-	conversion:range rdfs:Literal .
-
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx69 .
-
-_:node17rm3557gx70 ov:csvCol "68"^^xsd:integer ;
-	ov:csvHeader "" ;
-	conversion:comment "" ;
-	conversion:range rdfs:Literal .
-
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx70 .
-
-_:node17rm3557gx71 ov:csvCol "69"^^xsd:integer ;
-	ov:csvHeader "" ;
-	conversion:comment "" ;
-	conversion:range rdfs:Literal .
-
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx71 .
-
-_:node17rm3557gx72 ov:csvCol "70"^^xsd:integer ;
-	ov:csvHeader "" ;
-	conversion:comment "" ;
-	conversion:range rdfs:Literal .
-
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx72 .
-
-_:node17rm3557gx73 ov:csvCol "71"^^xsd:integer ;
-	ov:csvHeader "" ;
-	conversion:comment "" ;
-	conversion:range rdfs:Literal .
-
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx73 .
-
-_:node17rm3557gx74 ov:csvCol "72"^^xsd:integer ;
-	ov:csvHeader "" ;
-	conversion:comment "" ;
-	conversion:range rdfs:Literal .
-
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx74 .
-
-_:node17rm3557gx75 ov:csvCol "73"^^xsd:integer ;
-	ov:csvHeader "" ;
-	conversion:comment "" ;
-	conversion:range rdfs:Literal .
-
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx75 .
-
-_:node17rm3557gx76 ov:csvCol "74"^^xsd:integer ;
-	ov:csvHeader "" ;
-	conversion:comment "" ;
-	conversion:range rdfs:Literal .
-
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx76 .
-
-_:node17rm3557gx77 ov:csvCol "75"^^xsd:integer ;
-	ov:csvHeader "" ;
-	conversion:comment "" ;
-	conversion:range rdfs:Literal .
-
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx77 .
-
-_:node17rm3557gx78 ov:csvCol "76"^^xsd:integer ;
-	ov:csvHeader "" ;
-	conversion:comment "" ;
-	conversion:range rdfs:Literal .
-
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx78 .
-
-_:node17rm3557gx79 ov:csvCol "77"^^xsd:integer ;
-	ov:csvHeader "" ;
-	conversion:comment "" ;
-	conversion:range rdfs:Literal .
-
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx79 .
-
-_:node17rm3557gx80 ov:csvCol "78"^^xsd:integer ;
-	ov:csvHeader "" ;
-	conversion:comment "" ;
-	conversion:range rdfs:Literal .
-
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx80 .
-
-_:node17rm3557gx81 ov:csvCol "79"^^xsd:integer ;
-	ov:csvHeader "" ;
-	conversion:comment "" ;
-	conversion:range rdfs:Literal .
-
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx81 .
-
-_:node17rm3557gx82 ov:csvCol "80"^^xsd:integer ;
-	ov:csvHeader "" ;
-	conversion:comment "" ;
-	conversion:range rdfs:Literal .
-
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx82 .
-
-_:node17rm3557gx83 ov:csvCol "81"^^xsd:integer ;
-	ov:csvHeader "" ;
-	conversion:comment "" ;
-	conversion:range rdfs:Literal .
-
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx83 .
-
-_:node17rm3557gx84 ov:csvCol "82"^^xsd:integer ;
-	ov:csvHeader "" ;
-	conversion:comment "" ;
-	conversion:range rdfs:Literal .
-
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx84 .
-
-_:node17rm3557gx85 ov:csvCol "83"^^xsd:integer ;
-	ov:csvHeader "" ;
-	conversion:comment "" ;
-	conversion:range rdfs:Literal .
-
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx85 .
-
-_:node17rm3557gx86 ov:csvCol "84"^^xsd:integer ;
-	ov:csvHeader "" ;
-	conversion:comment "" ;
-	conversion:range rdfs:Literal .
-
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx86 .
-
-_:node17rm3557gx87 ov:csvCol "85"^^xsd:integer ;
-	ov:csvHeader "" ;
-	conversion:comment "" ;
-	conversion:range rdfs:Literal .
-
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx87 .
-
-_:node17rm3557gx88 ov:csvCol "86"^^xsd:integer ;
-	ov:csvHeader "" ;
-	conversion:comment "" ;
-	conversion:range rdfs:Literal .
-
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx88 .
-
-_:node17rm3557gx89 ov:csvCol "87"^^xsd:integer ;
-	ov:csvHeader "" ;
-	conversion:comment "" ;
-	conversion:range rdfs:Literal .
-
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx89 .
-
-_:node17rm3557gx90 ov:csvCol "88"^^xsd:integer ;
-	ov:csvHeader "" ;
-	conversion:comment "" ;
-	conversion:range rdfs:Literal .
-
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx90 .
-
-_:node17rm3557gx91 ov:csvCol "89"^^xsd:integer ;
-	ov:csvHeader "" ;
-	conversion:comment "" ;
-	conversion:range rdfs:Literal .
-
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx91 .
-
-_:node17rm3557gx92 ov:csvCol "90"^^xsd:integer ;
-	ov:csvHeader "" ;
-	conversion:comment "" ;
-	conversion:range rdfs:Literal .
-
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx92 .
-
-_:node17rm3557gx93 ov:csvCol "91"^^xsd:integer ;
-	ov:csvHeader "" ;
-	conversion:comment "" ;
-	conversion:range rdfs:Literal .
-
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx93 .
-
-_:node17rm3557gx94 ov:csvCol "92"^^xsd:integer ;
-	ov:csvHeader "" ;
-	conversion:comment "" ;
-	conversion:range rdfs:Literal .
-
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx94 .
-
-_:node17rm3557gx95 ov:csvCol "93"^^xsd:integer ;
-	ov:csvHeader "" ;
-	conversion:comment "" ;
-	conversion:range rdfs:Literal .
-
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx95 .
-
-_:node17rm3557gx96 ov:csvCol "94"^^xsd:integer ;
-	ov:csvHeader "" ;
-	conversion:comment "" ;
-	conversion:range rdfs:Literal .
-
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx96 .
-
-_:node17rm3557gx97 ov:csvCol "95"^^xsd:integer ;
-	ov:csvHeader "" ;
-	conversion:comment "" ;
-	conversion:range rdfs:Literal .
-
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx97 .
-
-_:node17rm3557gx98 ov:csvCol "96"^^xsd:integer ;
-	ov:csvHeader "" ;
-	conversion:comment "" ;
-	conversion:range rdfs:Literal .
-
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx98 .
-
-_:node17rm3557gx99 ov:csvCol "97"^^xsd:integer ;
-	ov:csvHeader "" ;
-	conversion:comment "" ;
-	conversion:range rdfs:Literal .
-
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx99 .
-
-_:node17rm3557gx100 ov:csvCol "98"^^xsd:integer ;
-	ov:csvHeader "" ;
-	conversion:comment "" ;
-	conversion:range rdfs:Literal .
-
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx100 .
-
-_:node17rm3557gx101 ov:csvCol "99"^^xsd:integer ;
-	ov:csvHeader "" ;
-	conversion:comment "" ;
-	conversion:range rdfs:Literal .
-
-_:node17rm3557gx1 conversion:enhance _:node17rm3557gx101 .
-
-<http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> conversion:conversion_process _:node17rm3557gx1 .
-
-<http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/subset/meta> a aeap_nys_vocab:Dataset , conversion:Dataset , conversion:MetaDataset , void:Dataset ;
-	conversion:base_uri "http://purl.org/twc/semmdd" ;
-	conversion:source_identifier "aeap_nys" ;
-	conversion:dataset_identifier "dfw_lake_samples" ;
-	dcterms:modified "2013-05-28T17:32:23.883-05:00"^^xsd:dateTime ;
-	foaf:isPrimaryTopicOf <http://purl.org/twc/semmdd/source/aeap_nys/dataset_page/dfw_lake_samples/subset/meta> ;
-	void:dataDump <http://purl.org/twc/semmdd/source/aeap_nys/file/dfw_lake_samples/version/2013-April-24/conversion/aeap_nys-dfw_lake_samples-2013-April-24.void> .
-
-<http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/aeap-nyserda-chem-94-12-v9-web/version/2013-April-24/conversion/enhancement/1> conversion:num_triples "209626"^^xsd:integer ;
-	void:triples "209626"^^xsd:integer ;
-	prov:wasGeneratedBy provenance_1:translationActivity_de828c34-d913-45bd-b22a-9393a21c189f .
-
-provenance_1:translationActivity_de828c34-d913-45bd-b22a-9393a21c189f a prov:Activity , <http://provenanceweb.org/ns/pml#TranslationActivity> ;
-	conversion:triples_per_minute "2682926.6211604094"^^xsd:double ;
-	prov:used e1:lake_name , e1:total_al_ug_l , e1:fe_mg_l , e1:f_mg_l , e1:surface_area_ha , e1:wa_sa_ratio , e1:so4_s_mg_s_l , e1:k_ueq_l , e1:secchi_m , e1:mg_ueq_l , e1:z_max_m , e1:hydrologic_type , e1:ph_air_eq , e1:chla_ug_l , e1:accession_code_sample , e1:column_59 , e1:date , e1:cl_mg_l , e1:column_54 , e1:column_55 , e1:column_56 , e1:sample_layer , e1:column_57 , e1:column_58 , e1:column_61 , e1:column_60 , dcterms:isReferencedBy , e1:labile_mono_ali_ug_l , e1:no3_mg_l , e1:mrp_ug_p_l , e1:doc_mg_l , e1:column_68 , e1:column_69 , e1:column_66 , e1:column_67 , e1:ca_mg_l , e1:column_64 , e1:column_65 , e1:column_62 , e1:column_63 , e1:column_70 , e1:sample_type , e1:column_72 , e1:column_71 , e1:mg_mg_l , e1:tn_mg_l , e1:total_mono_al_ug_l , e1:tfp_ug_l , e1:lake_volume_m3 , e1:so4_ueq_l , e1:column_77 , e1:column_78 , e1:ca_ueq_l , e1:column_79 , e1:column_73 , e1:column_74 , e1:column_75 , e1:column_76 , ov:csvRow , e1:column_99 , ov:subjectDiscriminator , e1:column_98 , e1:column_97 , e1:column_96 , e1:column_95 , e1:surface_area_m2 , e1:k_mg_l , e1:conductivity_umhos , e1:column_93 , e1:column_94 , e1:column_91 , e1:column_92 , e1:column_90 , e1:column_89 , e1:column_88 , e1:nh4_mg_l , e1:column_85 , e1:column_84 , e1:na_mg_l , e1:column_87 , e1:column_86 , e1:so4_mg_l , e1:column_80 , e1:column_81 , e1:column_82 , e1:column_83 , e1:nonlabile_mono_al_ug_l , void:inDataset , e1:na_ueq_l , e1:nh4_n_ug_n_l , e1:si_mg_l , e1:dec_code , e1:anc_ueq_l , e1:sample_z_m , e1:watershed_area_ha , e1:no3_ueq_l , e1:dic_mg_l , e1:nh4_ueq_l , e1:cl_ueq_l , e1:total_p_ug_l , e1:dissolved_silica_sio2_mg_l , e1:no3_n_mg_n_l , e1:watershed ;
-	void:vocabulary <http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> , <http://purl.org/dc/terms/> , <http://open.vocab.org/terms/> , <http://rdfs.org/ns/void#> .
-
-<http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/subset/meta> conversion:uses_predicate ov:csvRow , <http://inference-web.org/2.1exper/pml-provenance.owl#hasAntecedent> , void:dataDump , conversion:VersionedDataset , rdfs:label , foaf:topic , foaf:isPrimaryTopicOf , dcterms:author , doap:implements , pmlj:hasInferenceEngine , dcterms:identifier , doap:revision , dcterms:modified , conversion:enhancement_layer , vann:preferredNamespaceUri , rdfs:isDefinedBy , doap:helper , conversion:uses_predicate , ov:csvCol , doap:audience , doap:description , dcterms:format , doap:documenter , conversion:conversion_identifier , rdfs:range , conversion:version_identifier , pmlp:hasFormat , doap:homepage , conversion:num_triples , doap:shortdesc , pmlj:hasConclusion , dcterms:isReferencedBy , pmlj:hasAntecedentList , foaf:primaryTopic , conversion:base_uri , <http://inference-web.org/2.1exper/pml-provenance.owl#hasAntecedentRole> , void:exampleResource , conversion:dataset_identifier , conversion:enhancement_identifier , rdf:type , void:subset , con:preferredURI , void:triples , doap:browse , doap:developer , ov:csvHeader , rdfs:seeAlso , doap:maintainer , conversion:enhances , conversion:source_identifier , conversion:LayerDataset , dcterms:contributor , doap:platform , vann:preferredNamespacePrefix , pmlj:isConsequentOf , <http://inference-web.org/2.1exper/pml-provenance.owl#hasRole> , void:vocabulary , conversion:subject_discriminator , dcterms:version ;
-	void:vocabulary <http://open.vocab.org/terms/> , <http://inference-web.org/2.1exper/pml-provenance.owl#> , <http://rdfs.org/ns/void#> , <http://purl.org/twc/vocab/conversion/> , <http://www.w3.org/2000/01/rdf-schema#> , <http://xmlns.com/foaf/0.1/> , <http://purl.org/dc/terms/> , <http://usefulinc.com/ns/doap#> , <http://inference-web.org/2.0/pml-justification.owl#> , <http://purl.org/vocab/vann/> , <http://inference-web.org/2.0/pml-provenance.owl#> , <http://www.w3.org/1999/02/22-rdf-syntax-ns#> , <http://www.w3.org/2000/10/swap/pim/contact#> .
+_:node17rm7lt2bx1 conversion:enhance _:node17rm7lt2bx57 .
+
+<http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> conversion:conversion_process _:node17rm7lt2bx1 .
+
+<http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/subset/meta> a source_vocab:Dataset , conversion:Dataset , conversion:MetaDataset , void:Dataset ;
+	conversion:base_uri "http://purl.org/twc/semantgeo" ;
+	conversion:source_identifier "source" ;
+	conversion:dataset_identifier "dfwi-aeap-nyserda" ;
+	dcterms:modified "2013-05-28T18:52:19.719-05:00"^^xsd:dateTime ;
+	foaf:isPrimaryTopicOf <http://purl.org/twc/semantgeo/source/source/dataset_page/dfwi-aeap-nyserda/subset/meta> ;
+	void:dataDump <http://purl.org/twc/semantgeo/source/source/file/dfwi-aeap-nyserda/version/2013-mar-22/conversion/source-dfwi-aeap-nyserda-2013-mar-22.void> .
+
+<http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> conversion:num_triples "1746337"^^xsd:integer ;
+	void:triples "1746337"^^xsd:integer ;
+	prov:wasGeneratedBy provenance_1:translationActivity_6ecd07a4-7bca-4abd-9a49-f434d1c5dcca .
+
+provenance_1:translationActivity_6ecd07a4-7bca-4abd-9a49-f434d1c5dcca a prov:Activity , pml:TranslationActivity ;
+	conversion:triples_per_minute "1816735.500650195"^^xsd:double ;
+	prov:used e1:date , ov:csvRow , e1:f_mg_l , e1:nh4_mg_l , e1:mg_mg_l , e1:total_p_ug_l , e1:nonlabile_mono_al_ug_l , e1:conductivity_umhos , e1:mrp_ug_p_l , foaf:isPrimaryTopicOf , e1:k_ueq_l , dcterms:identifier , e1:dec_code , rdf:value , e1:hydrologic_type , e1:ph_air_eq , e1:k_mg_l , e1:cl_mg_l , e1:no3_mg_l , e1:accession_code_sample , e1:na_ueq_l , ov:csvCol , e1:tn_mg_l , e1:chla_ug_l , e1:fe_mg_l , e1:doc_mg_l , void:inDataset , e1:watershed , e1:no3_ueq_l , dcterms:isReferencedBy , e1:sample_type , e1:labile_mono_ali_ug_l , rdf:type , e1:anc_ueq_l , e1:so4_ueq_l , e1:watershed_area_ha , con:preferredURI , e1:si_mg_l , e1:wa_sa_ratio , e1:ca_ueq_l , e1:na_mg_l , e1:surface_area_ha , e1:secchi_m , e1:dissolved_silica_sio2_mg_l , e1:sample_z_m , e1:sample_layer , e1:nh4_ueq_l , e1:lake_volume_m3 , e1:ca_mg_l , e1:nh4_n_ug_n_l , e1:total_mono_al_ug_l , e1:mg_ueq_l , e1:no3_n_mg_n_l , e1:dic_mg_l , e1:total_al_ug_l , e1:cl_ueq_l , e1:so4_s_mg_s_l , e1:so4_mg_l , e1:tfp_ug_l , e1:surface_area_m2 , e1:z_max_m ;
+	void:vocabulary <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/vocab/enhancement/1/> , <http://open.vocab.org/terms/> , <http://xmlns.com/foaf/0.1/> , <http://purl.org/dc/terms/> , <http://www.w3.org/1999/02/22-rdf-syntax-ns#> , <http://rdfs.org/ns/void#> , <http://www.w3.org/2000/10/swap/pim/contact#> ;
+	prov:used dfwi-aeap-nyserda_vocab:Sample ;
+	void:vocabulary <http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/vocab/> .
+
+<http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/subset/meta> conversion:uses_predicate conversion:uses_class , ov:csvRow , <http://inference-web.org/2.1exper/pml-provenance.owl#hasAntecedent> , void:dataDump , conversion:VersionedDataset , rdfs:label , foaf:topic , foaf:isPrimaryTopicOf , dcterms:author , doap:implements , pmlj:hasInferenceEngine , dcterms:identifier , doap:revision , dcterms:modified , conversion:enhancement_layer , vann:preferredNamespaceUri , rdfs:isDefinedBy , doap:helper , doap:audience , conversion:uses_predicate , ov:csvCol , doap:description , dcterms:format , doap:documenter , conversion:conversion_identifier , rdfs:range , conversion:version_identifier , pmlp:hasFormat , doap:homepage , conversion:num_triples , doap:shortdesc , pmlj:hasConclusion , dcterms:isReferencedBy , pmlj:hasAntecedentList , foaf:primaryTopic , conversion:base_uri , <http://inference-web.org/2.1exper/pml-provenance.owl#hasAntecedentRole> , conversion:dataset_identifier , void:exampleResource , conversion:enhancement_identifier , rdf:type , void:subset , con:preferredURI , void:triples , rdfs:comment , doap:browse , doap:developer , ov:csvHeader , rdfs:seeAlso , doap:maintainer , conversion:enhances , conversion:source_identifier , conversion:LayerDataset , dcterms:contributor , doap:platform , vann:preferredNamespacePrefix , pmlj:isConsequentOf , <http://inference-web.org/2.1exper/pml-provenance.owl#hasRole> , void:vocabulary , dcterms:version ;
+	void:vocabulary <http://purl.org/twc/vocab/conversion/> , <http://open.vocab.org/terms/> , <http://inference-web.org/2.1exper/pml-provenance.owl#> , <http://rdfs.org/ns/void#> , <http://www.w3.org/2000/01/rdf-schema#> , <http://xmlns.com/foaf/0.1/> , <http://purl.org/dc/terms/> , <http://usefulinc.com/ns/doap#> , <http://inference-web.org/2.0/pml-justification.owl#> , <http://purl.org/vocab/vann/> , <http://inference-web.org/2.0/pml-provenance.owl#> , <http://www.w3.org/1999/02/22-rdf-syntax-ns#> , <http://www.w3.org/2000/10/swap/pim/contact#> .
+
+conversion:uses_class prov:wasAttributedTo <http://purl.org/twc> .
 
 <http://inference-web.org/2.1exper/pml-provenance.owl#hasAntecedent> rdfs:isDefinedBy <http://inference-web.org/2.1exper/pml-provenance.owl#> ;
 	prov:wasAttributedTo <http://inference-web.org> .
@@ -2501,9 +2157,6 @@ rdfs:label rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> ;
 foaf:topic rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/> ;
 	prov:wasAttributedTo <http://xmlns.com> .
 
-foaf:isPrimaryTopicOf rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/> ;
-	prov:wasAttributedTo <http://xmlns.com> .
-
 dcterms:author rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
 	prov:wasAttributedTo <http://purl.org/dc> .
 
@@ -2512,9 +2165,6 @@ doap:implements rdfs:isDefinedBy <http://usefulinc.com/ns/doap#> ;
 
 pmlj:hasInferenceEngine rdfs:isDefinedBy <http://inference-web.org/2.0/pml-justification.owl#> ;
 	prov:wasAttributedTo <http://inference-web.org> .
-
-dcterms:identifier rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
-	prov:wasAttributedTo <http://purl.org/dc> .
 
 doap:revision rdfs:isDefinedBy <http://usefulinc.com/ns/doap#> ;
 	prov:wasAttributedTo <http://usefulinc.com> .
@@ -2533,13 +2183,10 @@ rdfs:isDefinedBy rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> ;
 doap:helper rdfs:isDefinedBy <http://usefulinc.com/ns/doap#> ;
 	prov:wasAttributedTo <http://usefulinc.com> .
 
-conversion:uses_predicate prov:wasAttributedTo <http://purl.org/twc> .
-
-ov:csvCol rdfs:isDefinedBy <http://open.vocab.org/terms/> ;
-	prov:wasAttributedTo <http://open.vocab.org> .
-
 doap:audience rdfs:isDefinedBy <http://usefulinc.com/ns/doap#> ;
 	prov:wasAttributedTo <http://usefulinc.com> .
+
+conversion:uses_predicate prov:wasAttributedTo <http://purl.org/twc> .
 
 doap:description rdfs:isDefinedBy <http://usefulinc.com/ns/doap#> ;
 	prov:wasAttributedTo <http://usefulinc.com> .
@@ -2582,25 +2229,22 @@ conversion:base_uri prov:wasAttributedTo <http://purl.org/twc> .
 <http://inference-web.org/2.1exper/pml-provenance.owl#hasAntecedentRole> rdfs:isDefinedBy <http://inference-web.org/2.1exper/pml-provenance.owl#> ;
 	prov:wasAttributedTo <http://inference-web.org> .
 
+conversion:dataset_identifier prov:wasAttributedTo <http://purl.org/twc> .
+
 void:exampleResource rdfs:isDefinedBy <http://rdfs.org/ns/void#> ;
 	prov:wasAttributedTo <http://rdfs.org> .
-
-conversion:dataset_identifier prov:wasAttributedTo <http://purl.org/twc> .
 
 conversion:enhancement_identifier rdfs:isDefinedBy <http://purl.org/twc/vocab/conversion/> ;
 	prov:wasAttributedTo <http://purl.org/twc> .
 
-rdf:type rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
-	prov:wasAttributedTo <http://www.w3.org> .
-
 void:subset rdfs:isDefinedBy <http://rdfs.org/ns/void#> ;
 	prov:wasAttributedTo <http://rdfs.org> .
 
-con:preferredURI rdfs:isDefinedBy <http://www.w3.org/2000/10/swap/pim/contact#> ;
-	prov:wasAttributedTo <http://www.w3.org> .
-
 void:triples rdfs:isDefinedBy <http://rdfs.org/ns/void#> ;
 	prov:wasAttributedTo <http://rdfs.org> .
+
+rdfs:comment rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> ;
+	prov:wasAttributedTo <http://www.w3.org> .
 
 doap:browse rdfs:isDefinedBy <http://usefulinc.com/ns/doap#> ;
 	prov:wasAttributedTo <http://usefulinc.com> .
@@ -2641,13 +2285,14 @@ pmlj:isConsequentOf rdfs:isDefinedBy <http://inference-web.org/2.0/pml-justifica
 void:vocabulary rdfs:isDefinedBy <http://rdfs.org/ns/void#> ;
 	prov:wasAttributedTo <http://rdfs.org> .
 
-conversion:subject_discriminator prov:wasAttributedTo <http://purl.org/twc> .
-
 dcterms:version rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
 	prov:wasAttributedTo <http://purl.org/dc> .
 
-<http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/subset/meta> conversion:uses_class void:Dataset , foaf:Agent , conversion:MetaDataset , aeap_nys_vocab:Dataset , conversion:DatasetSample , conversion:AbstractDataset , void:DatasetDescription , conversion:Dataset ;
-	void:vocabulary <http://purl.org/twc/semmdd/source/aeap_nys/vocab/> .
+<http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/subset/meta> conversion:uses_class source_vocab:Dataset , void:Dataset , foaf:Agent , conversion:MetaDataset , conversion:DatasetSample , conversion:AbstractDataset , void:DatasetDescription , conversion:Dataset ;
+	void:vocabulary <http://purl.org/twc/semantgeo/source/source/vocab/> .
+
+source_vocab:Dataset rdfs:isDefinedBy <http://purl.org/twc/semantgeo/source/source/vocab/> ;
+	prov:wasAttributedTo <http://purl.org/twc> .
 
 void:Dataset rdfs:isDefinedBy <http://rdfs.org/ns/void#> ;
 	prov:wasAttributedTo <http://rdfs.org> .
@@ -2656,9 +2301,6 @@ foaf:Agent rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/> ;
 	prov:wasAttributedTo <http://xmlns.com> .
 
 conversion:MetaDataset prov:wasAttributedTo <http://purl.org/twc> .
-
-aeap_nys_vocab:Dataset rdfs:isDefinedBy <http://purl.org/twc/semmdd/source/aeap_nys/vocab/> ;
-	prov:wasAttributedTo <http://purl.org/twc> .
 
 conversion:DatasetSample prov:wasAttributedTo <http://purl.org/twc> .
 
@@ -2669,4 +2311,4 @@ void:DatasetDescription rdfs:isDefinedBy <http://rdfs.org/ns/void#> ;
 
 conversion:Dataset prov:wasAttributedTo <http://purl.org/twc> .
 
-<http://purl.org/twc/semmdd/source/aeap_nys/dataset/dfw_lake_samples/aeap-nyserda-chem-94-12-v9-web/version/2013-April-24/conversion/enhancement/1> rdfs:comment "hash: 199c1bfa4742ebec536929ac9e44597db50ee9149aff1" .
+<http://purl.org/twc/semantgeo/source/source/dataset/dfwi-aeap-nyserda/version/2013-mar-22/conversion/enhancement/1> rdfs:comment "hash: d54f500880c66c86b519123b6444b41a039ba2ebbf4f5" .
