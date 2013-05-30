@@ -222,7 +222,7 @@
          a conversion:SubjectAnnotation;
          # conversion:object is taken in main declaration above so to do this other object, we do another block
          conversion:predicate <http://escience.rpi.edu/ontology/semanteco/2/0/pollution.owl#hasUnit>;
-         conversion:object    <http://escience.rpi.edu/ontology/semanteco/2/0/pollution.owl#UMHOS - FINDINPOLLUTIONOWLFILE>;
+         conversion:object    <http://escience.rpi.edu/ontology/semanteco/2/0/pollution.owl#UMHOS>; # TODO: FINDINPOLLUTIONOWLFILE
       ];
       conversion:enhance [
          ov:csvCol          11;
