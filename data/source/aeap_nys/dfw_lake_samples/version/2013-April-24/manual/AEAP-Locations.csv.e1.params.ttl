@@ -81,7 +81,7 @@
       # Water Site Enhancement Block
       conversion:enhance [
          conversion:class_name "Lake";
-         conversion:subclass_of water:waterSite;
+         conversion:subclass_of water:WaterSite;
       ];
       conversion:enhance [
          ov:csvCol          1;
