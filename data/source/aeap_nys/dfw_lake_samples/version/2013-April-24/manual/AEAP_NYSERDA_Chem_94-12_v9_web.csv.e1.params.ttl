@@ -33,10 +33,11 @@
 @prefix conversion:    <http://purl.org/twc/vocab/conversion/> .
 @prefix :              <http://purl.org/twc/semantgeo/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/params/enhancement/1/> .
 
-# Added by brendan
+# Added by Brendan
 @prefix pollution:     <http://escience.rpi.edu/ontology/semanteco/2/0/pollution.owl#> .
-@prefix query_ns:      <http://aquarius.tw.rpi.edu/projects/semantaqua/data-source/query-variable/> .
-@prefix water_ns:      <http://escience.rpi.edu/ontology/semanteco/2/0/water.owl#> .
+@prefix query:         <http://aquarius.tw.rpi.edu/projects/semantaqua/data-source/query-variable/> .
+@prefix water:         <http://escience.rpi.edu/ontology/semanteco/2/0/water.owl#> .
+@prefix units:         <http://sweet.jpl.nasa.gov/2.1/reprSciUnits.owl#> .
 
 
 <http://tw.rpi.edu/instances/BrendanAshby> dcterms:identifier "ashbyb" .
@@ -87,8 +88,8 @@
       conversion:enhance [ # Multi line n-ary assignment           
          ov:csvCol 10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46;             
          a qb:Observation;
-         rdf:type           water_ns:WaterMeasurement;
-         prov:atLocation query_ns:site;
+         rdf:type           water:WaterMeasurement;
+         prov:atLocation query:site;
          # "of entity"
          # measurement to sample: http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#ofEntity
          # fixing odd structure
@@ -159,6 +160,8 @@
          conversion:label   "Date";
          conversion:comment "The date the sample was taken from the lake";
          conversion:range   xsd:date;
+         # Aligning date types to SemantEco
+         conversion:equivalent_property time:inXSDDateTime;
       ];
       conversion:enhance [
          ov:csvCol          5;
@@ -219,7 +222,10 @@
          a conversion:SubjectAnnotation;
          # conversion:object is taken in main declaration above so to do this other object, we do another block
          conversion:predicate <http://escience.rpi.edu/ontology/semanteco/2/0/pollution.owl#hasUnit>;
-         conversion:object    <http://escience.rpi.edu/ontology/semanteco/2/0/pollution.owl#UMHOS>; # TODO: FINDINPOLLUTIONOWLFILE
+         
+         # Testing some new URI structure for units
+         #conversion:object    <http://escience.rpi.edu/ontology/semanteco/2/0/pollution.owl#UMHOS>; # TODO: FINDINPOLLUTIONOWLFILE
+         conversion:object    "UMHOS";
       ];
       conversion:enhance [
          ov:csvCol          11;
