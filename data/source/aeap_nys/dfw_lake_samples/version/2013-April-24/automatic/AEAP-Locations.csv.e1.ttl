@@ -116,7 +116,7 @@ e1:county_code a rdf:Property ;
 	conversion:enhancement_layer "1" ;
 	dcterms:isReferencedBy <http://purl.org/twc/semantgeo/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1> ;
 	rdfs:label "County Code" ;
-	rdfs:range xsd:double ;
+	rdfs:range rdfs:Literal ;
 	conversion:enhances raw:county_code .
 
 e1:state a rdf:Property ;
@@ -8259,7 +8259,7 @@ dfw_lake_samples:thing_2008 dcterms:isReferencedBy <http://purl.org/twc/semantge
 	a dfw_lake_samples_vocab:Lake , water:waterSite ;
 	rdfs:label "040752" ;
 	e1:county_name "Herkimer" ;
-	pollution:hasCountyCode "43"^^xsd:double ;
+	pollution:hasCountyCode "043" ;
 	pollution:hasStateCode "NY" ;
 	e1:country "US" .
 
@@ -8270,7 +8270,7 @@ dfw_lake_samples:thing_2008 dcterms:isReferencedBy <http://purl.org/twc/semantge
 	a dfw_lake_samples_vocab:Lake , water:waterSite ;
 	rdfs:label "040874" ;
 	e1:county_name "Hamilton" ;
-	pollution:hasCountyCode "41"^^xsd:double ;
+	pollution:hasCountyCode "041" ;
 	pollution:hasStateCode "NY" ;
 	e1:country "US" .
 
@@ -8281,7 +8281,7 @@ dfw_lake_samples:thing_2008 dcterms:isReferencedBy <http://purl.org/twc/semantge
 	a dfw_lake_samples_vocab:Lake , water:waterSite ;
 	rdfs:label "050669" ;
 	e1:county_name "Hamilton" ;
-	pollution:hasCountyCode "41"^^xsd:double ;
+	pollution:hasCountyCode "041" ;
 	pollution:hasStateCode "NY" ;
 	e1:country "US" .
 
@@ -8292,7 +8292,7 @@ dfw_lake_samples:thing_2008 dcterms:isReferencedBy <http://purl.org/twc/semantge
 	a dfw_lake_samples_vocab:Lake , water:waterSite ;
 	rdfs:label "040747" ;
 	e1:county_name "Hamilton" ;
-	pollution:hasCountyCode "41"^^xsd:double ;
+	pollution:hasCountyCode "041" ;
 	pollution:hasStateCode "NY" ;
 	e1:country "US" .
 
@@ -8303,7 +8303,7 @@ dfw_lake_samples:thing_2008 dcterms:isReferencedBy <http://purl.org/twc/semantge
 	a dfw_lake_samples_vocab:Lake , water:waterSite ;
 	rdfs:label "040777" ;
 	e1:county_name "Hamilton" ;
-	pollution:hasCountyCode "41"^^xsd:double ;
+	pollution:hasCountyCode "041" ;
 	pollution:hasStateCode "NY" ;
 	e1:country "US" .
 
@@ -8314,7 +8314,7 @@ dfw_lake_samples:thing_2008 dcterms:isReferencedBy <http://purl.org/twc/semantge
 	a dfw_lake_samples_vocab:Lake , water:waterSite ;
 	rdfs:label "040750" ;
 	e1:county_name "Herkimer" ;
-	pollution:hasCountyCode "43"^^xsd:double ;
+	pollution:hasCountyCode "043" ;
 	pollution:hasStateCode "NY" ;
 	e1:country "US" .
 
@@ -8325,7 +8325,7 @@ dfw_lake_samples:thing_2008 dcterms:isReferencedBy <http://purl.org/twc/semantge
 	a dfw_lake_samples_vocab:Lake , water:waterSite ;
 	rdfs:label "070859" ;
 	e1:county_name "Hamilton" ;
-	pollution:hasCountyCode "41"^^xsd:double ;
+	pollution:hasCountyCode "041" ;
 	pollution:hasStateCode "NY" ;
 	e1:country "US" .
 
@@ -8336,7 +8336,7 @@ dfw_lake_samples:thing_2008 dcterms:isReferencedBy <http://purl.org/twc/semantge
 	a dfw_lake_samples_vocab:Lake , water:waterSite ;
 	rdfs:label "040706" ;
 	e1:county_name "Herkimer" ;
-	pollution:hasCountyCode "43"^^xsd:double ;
+	pollution:hasCountyCode "043" ;
 	pollution:hasStateCode "NY" ;
 	e1:country "US" .
 
@@ -8347,7 +8347,7 @@ dfw_lake_samples:thing_2008 dcterms:isReferencedBy <http://purl.org/twc/semantge
 	a dfw_lake_samples_vocab:Lake , water:waterSite ;
 	rdfs:label "040877" ;
 	e1:county_name "Hamilton" ;
-	pollution:hasCountyCode "41"^^xsd:double ;
+	pollution:hasCountyCode "041" ;
 	pollution:hasStateCode "NY" ;
 	e1:country "US" .
 
@@ -8358,7 +8358,7 @@ dfw_lake_samples:thing_2008 dcterms:isReferencedBy <http://purl.org/twc/semantge
 	a dfw_lake_samples_vocab:Lake , water:waterSite ;
 	rdfs:label "040876" ;
 	e1:county_name "Hamilton" ;
-	pollution:hasCountyCode "41"^^xsd:double ;
+	pollution:hasCountyCode "041" ;
 	pollution:hasStateCode "NY" ;
 	e1:country "US" .
 
@@ -8369,7 +8369,7 @@ dfw_lake_samples:thing_2008 dcterms:isReferencedBy <http://purl.org/twc/semantge
 	a dfw_lake_samples_vocab:Lake , water:waterSite ;
 	rdfs:label "040852" ;
 	e1:county_name "Hamilton" ;
-	pollution:hasCountyCode "41"^^xsd:double ;
+	pollution:hasCountyCode "041" ;
 	pollution:hasStateCode "NY" ;
 	e1:country "US" .
 
@@ -8380,7 +8380,7 @@ dfw_lake_samples:thing_2008 dcterms:isReferencedBy <http://purl.org/twc/semantge
 	a dfw_lake_samples_vocab:Lake , water:waterSite ;
 	rdfs:label "050259" ;
 	e1:county_name "Fulton" ;
-	pollution:hasCountyCode "35"^^xsd:double ;
+	pollution:hasCountyCode "035" ;
 	pollution:hasStateCode "NY" ;
 	e1:country "US" .
 
@@ -8391,7 +8391,7 @@ dfw_lake_samples:thing_2008 dcterms:isReferencedBy <http://purl.org/twc/semantge
 	a dfw_lake_samples_vocab:Lake , water:waterSite ;
 	rdfs:label "040829" ;
 	e1:county_name "Hamilton" ;
-	pollution:hasCountyCode "41"^^xsd:double ;
+	pollution:hasCountyCode "041" ;
 	pollution:hasStateCode "NY" ;
 	e1:country "US" .
 
@@ -8402,7 +8402,7 @@ dfw_lake_samples:thing_2008 dcterms:isReferencedBy <http://purl.org/twc/semantge
 	a dfw_lake_samples_vocab:Lake , water:waterSite ;
 	rdfs:label "050649" ;
 	e1:county_name "Hamilton" ;
-	pollution:hasCountyCode "41"^^xsd:double ;
+	pollution:hasCountyCode "041" ;
 	pollution:hasStateCode "NY" ;
 	e1:country "US" .
 
@@ -8413,7 +8413,7 @@ dfw_lake_samples:thing_2008 dcterms:isReferencedBy <http://purl.org/twc/semantge
 	a dfw_lake_samples_vocab:Lake , water:waterSite ;
 	rdfs:label "040186" ;
 	e1:county_name "Lewis" ;
-	pollution:hasCountyCode "49"^^xsd:double ;
+	pollution:hasCountyCode "049" ;
 	pollution:hasStateCode "NY" ;
 	e1:country "US" .
 
@@ -8424,7 +8424,7 @@ dfw_lake_samples:thing_2008 dcterms:isReferencedBy <http://purl.org/twc/semantge
 	a dfw_lake_samples_vocab:Lake , water:waterSite ;
 	rdfs:label "040707" ;
 	e1:county_name "Herkimer" ;
-	pollution:hasCountyCode "43"^^xsd:double ;
+	pollution:hasCountyCode "043" ;
 	pollution:hasStateCode "NY" ;
 	e1:country "US" .
 
@@ -8435,7 +8435,7 @@ dfw_lake_samples:thing_2008 dcterms:isReferencedBy <http://purl.org/twc/semantge
 	a dfw_lake_samples_vocab:Lake , water:waterSite ;
 	rdfs:label "040704" ;
 	e1:county_name "Herkimer" ;
-	pollution:hasCountyCode "43"^^xsd:double ;
+	pollution:hasCountyCode "043" ;
 	pollution:hasStateCode "NY" ;
 	e1:country "US" .
 
@@ -8446,7 +8446,7 @@ dfw_lake_samples:thing_2008 dcterms:isReferencedBy <http://purl.org/twc/semantge
 	a dfw_lake_samples_vocab:Lake , water:waterSite ;
 	rdfs:label "040746" ;
 	e1:county_name "Herkimer" ;
-	pollution:hasCountyCode "43"^^xsd:double ;
+	pollution:hasCountyCode "043" ;
 	pollution:hasStateCode "NY" ;
 	e1:country "US" .
 
@@ -8457,7 +8457,7 @@ dfw_lake_samples:thing_2008 dcterms:isReferencedBy <http://purl.org/twc/semantge
 	a dfw_lake_samples_vocab:Lake , water:waterSite ;
 	rdfs:label "0401007" ;
 	e1:county_name "Herkimer" ;
-	pollution:hasCountyCode "43"^^xsd:double ;
+	pollution:hasCountyCode "043" ;
 	pollution:hasStateCode "NY" ;
 	e1:country "US" .
 
@@ -8468,7 +8468,7 @@ dfw_lake_samples:thing_2008 dcterms:isReferencedBy <http://purl.org/twc/semantge
 	a dfw_lake_samples_vocab:Lake , water:waterSite ;
 	rdfs:label "060329" ;
 	e1:county_name "Hamilton" ;
-	pollution:hasCountyCode "41"^^xsd:double ;
+	pollution:hasCountyCode "041" ;
 	pollution:hasStateCode "NY" ;
 	e1:country "US" .
 
@@ -8479,7 +8479,7 @@ dfw_lake_samples:thing_2008 dcterms:isReferencedBy <http://purl.org/twc/semantge
 	a dfw_lake_samples_vocab:Lake , water:waterSite ;
 	rdfs:label "060315A" ;
 	e1:county_name "Hamilton" ;
-	pollution:hasCountyCode "41"^^xsd:double ;
+	pollution:hasCountyCode "041" ;
 	pollution:hasStateCode "NY" ;
 	e1:country "US" .
 
@@ -8490,7 +8490,7 @@ dfw_lake_samples:thing_2008 dcterms:isReferencedBy <http://purl.org/twc/semantge
 	a dfw_lake_samples_vocab:Lake , water:waterSite ;
 	rdfs:label "040739" ;
 	e1:county_name "Herkimer" ;
-	pollution:hasCountyCode "43"^^xsd:double ;
+	pollution:hasCountyCode "043" ;
 	pollution:hasStateCode "NY" ;
 	e1:country "US" .
 
@@ -8501,7 +8501,7 @@ dfw_lake_samples:thing_2008 dcterms:isReferencedBy <http://purl.org/twc/semantge
 	a dfw_lake_samples_vocab:Lake , water:waterSite ;
 	rdfs:label "047031A" ;
 	e1:county_name "Herkimer" ;
-	pollution:hasCountyCode "43"^^xsd:double ;
+	pollution:hasCountyCode "043" ;
 	pollution:hasStateCode "NY" ;
 	e1:country "US" .
 
@@ -8512,7 +8512,7 @@ dfw_lake_samples:thing_2008 dcterms:isReferencedBy <http://purl.org/twc/semantge
 	a dfw_lake_samples_vocab:Lake , water:waterSite ;
 	rdfs:label "060313" ;
 	e1:county_name "Hamilton" ;
-	pollution:hasCountyCode "41"^^xsd:double ;
+	pollution:hasCountyCode "041" ;
 	pollution:hasStateCode "NY" ;
 	e1:country "US" .
 
@@ -8523,7 +8523,7 @@ typed_lake:X rdfs:Label "Seventh" ;
 	a dfw_lake_samples_vocab:Lake , water:waterSite ;
 	rdfs:label "X" ;
 	e1:county_name "Hamilton" ;
-	pollution:hasCountyCode "41"^^xsd:double ;
+	pollution:hasCountyCode "041" ;
 	pollution:hasStateCode "NY" ;
 	e1:country "US" .
 
@@ -8534,7 +8534,7 @@ typed_lake:X rdfs:Label "Seventh" ;
 	a dfw_lake_samples_vocab:Lake , water:waterSite ;
 	rdfs:label "0401004" ;
 	e1:county_name "Herkimer" ;
-	pollution:hasCountyCode "43"^^xsd:double ;
+	pollution:hasCountyCode "043" ;
 	pollution:hasStateCode "NY" ;
 	e1:country "US" .
 
@@ -8545,7 +8545,7 @@ typed_lake:X rdfs:Label "Seventh" ;
 	a dfw_lake_samples_vocab:Lake , water:waterSite ;
 	rdfs:label "040754" ;
 	e1:county_name "Herkimer" ;
-	pollution:hasCountyCode "43"^^xsd:double ;
+	pollution:hasCountyCode "043" ;
 	pollution:hasStateCode "NY" ;
 	e1:country "US" .
 
@@ -8556,7 +8556,7 @@ typed_lake:X rdfs:Label "Seventh" ;
 	a dfw_lake_samples_vocab:Lake , water:waterSite ;
 	rdfs:label "040850" ;
 	e1:county_name "Hamilton" ;
-	pollution:hasCountyCode "41"^^xsd:double ;
+	pollution:hasCountyCode "041" ;
 	pollution:hasStateCode "NY" ;
 	e1:country "US" .
 
@@ -8567,7 +8567,7 @@ typed_lake:X rdfs:Label "Seventh" ;
 	a dfw_lake_samples_vocab:Lake , water:waterSite ;
 	rdfs:label "040473" ;
 	e1:county_name "Herkimer" ;
-	pollution:hasCountyCode "43"^^xsd:double ;
+	pollution:hasCountyCode "043" ;
 	pollution:hasStateCode "NY" ;
 	e1:country "US" .
 
@@ -8578,7 +8578,7 @@ typed_lake:X rdfs:Label "Seventh" ;
 	a dfw_lake_samples_vocab:Lake , water:waterSite ;
 	rdfs:label "020379" ;
 	e1:county_name "Warren" ;
-	pollution:hasCountyCode "113"^^xsd:double ;
+	pollution:hasCountyCode "113" ;
 	pollution:hasStateCode "NY" ;
 	e1:country "US" .
 
@@ -8589,7 +8589,7 @@ typed_lake:X rdfs:Label "Seventh" ;
 	a dfw_lake_samples_vocab:Lake , water:waterSite ;
 	rdfs:label "040753" ;
 	e1:county_name "Herkimer" ;
-	pollution:hasCountyCode "43"^^xsd:double ;
+	pollution:hasCountyCode "043" ;
 	pollution:hasStateCode "NY" ;
 	e1:country "US" .
 
@@ -8600,7 +8600,7 @@ typed_lake:X rdfs:Label "Seventh" ;
 	a dfw_lake_samples_vocab:Lake , water:waterSite ;
 	rdfs:label "040731" ;
 	e1:county_name "Herkimer" ;
-	pollution:hasCountyCode "43"^^xsd:double ;
+	pollution:hasCountyCode "043" ;
 	pollution:hasStateCode "NY" ;
 	e1:country "US" .
 
@@ -8611,7 +8611,7 @@ typed_lake:X rdfs:Label "Seventh" ;
 	a dfw_lake_samples_vocab:Lake , water:waterSite ;
 	rdfs:label "050215" ;
 	e1:county_name "Hamilton" ;
-	pollution:hasCountyCode "41"^^xsd:double ;
+	pollution:hasCountyCode "041" ;
 	pollution:hasStateCode "NY" ;
 	e1:country "US" .
 
@@ -8622,7 +8622,7 @@ typed_lake:X rdfs:Label "Seventh" ;
 	a dfw_lake_samples_vocab:Lake , water:waterSite ;
 	rdfs:label "040210" ;
 	e1:county_name "Lewis" ;
-	pollution:hasCountyCode "49"^^xsd:double ;
+	pollution:hasCountyCode "049" ;
 	pollution:hasStateCode "NY" ;
 	e1:country "US" .
 
@@ -8633,6 +8633,6 @@ typed_lake:X rdfs:Label "Seventh" ;
 	a dfw_lake_samples_vocab:Lake , water:waterSite ;
 	rdfs:label "040750A" ;
 	e1:county_name "Herkimer" ;
-	pollution:hasCountyCode "43"^^xsd:double ;
+	pollution:hasCountyCode "043" ;
 	pollution:hasStateCode "NY" ;
 	e1:country "US" .
