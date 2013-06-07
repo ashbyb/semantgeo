@@ -150,6 +150,8 @@
          # 'relation between sample and lake'
          conversion:equivalent_property <http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#hasContext>;
          conversion:bundled_by [ ov:csvCol 1 ];
+         # Rebuild our references
+         conversion:range_template "[/sd]typed/lake/[.]";
       ];
       conversion:enhance [
          ov:csvCol          4;

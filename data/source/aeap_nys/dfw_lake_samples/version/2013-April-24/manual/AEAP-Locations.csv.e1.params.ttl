@@ -120,6 +120,8 @@
          conversion:comment "A numeric reference to a lake in the DEC registry, unique to a specific lake";
          conversion:range   rdfs:Resource;
          conversion:range_name  "Lake";
+         # Rebuild uri
+         conversion:range_template "[/sd]typed/lake/[.]";
          
          # Trying to bring the definition of a lake to something that spans files
          #conversion:domain_template "[/sd]lake/[r]";
