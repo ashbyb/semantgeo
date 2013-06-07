@@ -27,26 +27,26 @@
 @prefix e1: <http://purl.org/twc/semantgeo/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> .
 @prefix dfw_lake_samples_global_value: <http://purl.org/twc/semantgeo/source/aeap_nys/dataset/dfw_lake_samples/> .
 @prefix typed_lake: <http://purl.org/twc/semantgeo/source/aeap_nys/dataset/dfw_lake_samples/typed/lake/> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix govtrackusgov: <http://www.rdfabout.com/rdf/usgov/geo/us/> .
-@prefix nfo: <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#> .
-@prefix pollution: <http://escience.rpi.edu/ontology/semanteco/2/0/pollution.owl#> .
-@prefix sioc: <http://rdfs.org/sioc/ns#> .
-@prefix dbpedia: <http://dbpedia.org/resource/> .
-@prefix muo: <http://purl.oclc.org/NET/muo/muo#> .
-@prefix time: <http://www.w3.org/2006/time#> .
-@prefix dbpediaowl: <http://dbpedia.org/ontology/> .
-@prefix wgs: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
-@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
-@prefix sio: <http://semanticscience.org/resource/> .
-@prefix water: <http://escience.rpi.edu/ontology/semanteco/2/0/water.owl#> .
-@prefix bibo: <http://purl.org/ontology/bibo/> .
-@prefix con: <http://www.w3.org/2000/10/swap/pim/contact#> .
-@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix geonamesid: <http://sws.geonames.org/> .
+@prefix govtrackusgov: <http://www.rdfabout.com/rdf/usgov/geo/us/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix sioc: <http://rdfs.org/sioc/ns#> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix dgtwc: <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#> .
-@prefix dbpediaprop: <http://dbpedia.org/property/> .
+@prefix wgs: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix con: <http://www.w3.org/2000/10/swap/pim/contact#> .
+@prefix nfo: <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#> .
+@prefix water: <http://escience.rpi.edu/ontology/semanteco/2/0/water.owl#> .
+@prefix dbpedia: <http://dbpedia.org/resource/> .
 @prefix geonames: <http://www.geonames.org/ontology#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix dbpediaowl: <http://dbpedia.org/ontology/> .
+@prefix dbpediaprop: <http://dbpedia.org/property/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix muo: <http://purl.oclc.org/NET/muo/muo#> .
+@prefix pollution: <http://escience.rpi.edu/ontology/semanteco/2/0/pollution.owl#> .
 @prefix value_of_dec_code: <http://purl.org/twc/semantgeo/source/aeap_nys/dataset/dfw_lake_samples/value-of/dec_code/> .
 
 e1:lake a rdf:Property ;
@@ -62,9 +62,9 @@ e1:lake a rdf:Property ;
 
 dfw_lake_samples_vocab:Lake a rdfs:Class , owl:Class ;
 	rdfs:label "Lake" ;
-	rdfs:subClassOf water:waterSite .
+	rdfs:subClassOf water:WaterSite .
 
-water:waterSite a rdfs:Class , owl:Class .
+water:WaterSite a rdfs:Class , owl:Class .
 
 e1:lat a rdf:Property ;
 	ov:csvRow "1"^^xsd:integer ;
@@ -10202,33 +10202,33 @@ dfw_lake_samples:thing_2008 dcterms:isReferencedBy <http://purl.org/twc/semantge
 @prefix e1: <http://purl.org/twc/semantgeo/source/aeap_nys/dataset/dfw_lake_samples/vocab/enhancement/1/> .
 @prefix dfw_lake_samples_global_value: <http://purl.org/twc/semantgeo/source/aeap_nys/dataset/dfw_lake_samples/> .
 @prefix typed_lake: <http://purl.org/twc/semantgeo/source/aeap_nys/dataset/dfw_lake_samples/typed/lake/> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix govtrackusgov: <http://www.rdfabout.com/rdf/usgov/geo/us/> .
-@prefix nfo: <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#> .
-@prefix pollution: <http://escience.rpi.edu/ontology/semanteco/2/0/pollution.owl#> .
-@prefix sioc: <http://rdfs.org/sioc/ns#> .
-@prefix dbpedia: <http://dbpedia.org/resource/> .
-@prefix muo: <http://purl.oclc.org/NET/muo/muo#> .
-@prefix time: <http://www.w3.org/2006/time#> .
-@prefix dbpediaowl: <http://dbpedia.org/ontology/> .
-@prefix wgs: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
-@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
-@prefix sio: <http://semanticscience.org/resource/> .
-@prefix water: <http://escience.rpi.edu/ontology/semanteco/2/0/water.owl#> .
-@prefix bibo: <http://purl.org/ontology/bibo/> .
-@prefix con: <http://www.w3.org/2000/10/swap/pim/contact#> .
-@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix geonamesid: <http://sws.geonames.org/> .
+@prefix govtrackusgov: <http://www.rdfabout.com/rdf/usgov/geo/us/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix sioc: <http://rdfs.org/sioc/ns#> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix dgtwc: <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#> .
-@prefix dbpediaprop: <http://dbpedia.org/property/> .
+@prefix wgs: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix con: <http://www.w3.org/2000/10/swap/pim/contact#> .
+@prefix nfo: <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#> .
+@prefix water: <http://escience.rpi.edu/ontology/semanteco/2/0/water.owl#> .
+@prefix dbpedia: <http://dbpedia.org/resource/> .
 @prefix geonames: <http://www.geonames.org/ontology#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix dbpediaowl: <http://dbpedia.org/ontology/> .
+@prefix dbpediaprop: <http://dbpedia.org/property/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix muo: <http://purl.oclc.org/NET/muo/muo#> .
+@prefix pollution: <http://escience.rpi.edu/ontology/semanteco/2/0/pollution.owl#> .
 @prefix value_of_dec_code: <http://purl.org/twc/semantgeo/source/aeap_nys/dataset/dfw_lake_samples/value-of/dec_code/> .
 
 <http://purl.org/twc/semantgeo/source/aeap_nys/dataset/dfw_lake_samples/typed/lake/040752> rdfs:Label "Big Moose" ;
 	wgs:lat "43.8359303748"^^xsd:double ;
 	wgs:long "-74.8328684771"^^xsd:double ;
 	dcterms:identifier "040752" ;
-	a dfw_lake_samples_vocab:Lake , water:waterSite ;
+	a dfw_lake_samples_vocab:Lake , water:WaterSite ;
 	rdfs:label "040752" ;
 	e1:county_name "Herkimer" ;
 	pollution:hasCountyCode "043" ;
@@ -10239,7 +10239,7 @@ dfw_lake_samples:thing_2008 dcterms:isReferencedBy <http://purl.org/twc/semantge
 	wgs:lat "43.6029838767"^^xsd:double ;
 	wgs:long "-74.6614648292"^^xsd:double ;
 	dcterms:identifier "040874" ;
-	a dfw_lake_samples_vocab:Lake , water:waterSite ;
+	a dfw_lake_samples_vocab:Lake , water:WaterSite ;
 	rdfs:label "040874" ;
 	e1:county_name "Hamilton" ;
 	pollution:hasCountyCode "041" ;
@@ -10250,7 +10250,7 @@ dfw_lake_samples:thing_2008 dcterms:isReferencedBy <http://purl.org/twc/semantge
 	wgs:lat "43.6817356956"^^xsd:double ;
 	wgs:long "-74.4885601631"^^xsd:double ;
 	dcterms:identifier "050669" ;
-	a dfw_lake_samples_vocab:Lake , water:waterSite ;
+	a dfw_lake_samples_vocab:Lake , water:WaterSite ;
 	rdfs:label "050669" ;
 	e1:county_name "Hamilton" ;
 	pollution:hasCountyCode "041" ;
@@ -10261,7 +10261,7 @@ dfw_lake_samples:thing_2008 dcterms:isReferencedBy <http://purl.org/twc/semantge
 	wgs:lat "43.7913968861"^^xsd:double ;
 	wgs:long "-74.8019564585"^^xsd:double ;
 	dcterms:identifier "040747" ;
-	a dfw_lake_samples_vocab:Lake , water:waterSite ;
+	a dfw_lake_samples_vocab:Lake , water:WaterSite ;
 	rdfs:label "040747" ;
 	e1:county_name "Hamilton" ;
 	pollution:hasCountyCode "041" ;
@@ -10272,7 +10272,7 @@ dfw_lake_samples:thing_2008 dcterms:isReferencedBy <http://purl.org/twc/semantge
 	wgs:lat "43.8337190037"^^xsd:double ;
 	wgs:long "-74.7959101896"^^xsd:double ;
 	dcterms:identifier "040777" ;
-	a dfw_lake_samples_vocab:Lake , water:waterSite ;
+	a dfw_lake_samples_vocab:Lake , water:WaterSite ;
 	rdfs:label "040777" ;
 	e1:county_name "Hamilton" ;
 	pollution:hasCountyCode "041" ;
@@ -10283,7 +10283,7 @@ dfw_lake_samples:thing_2008 dcterms:isReferencedBy <http://purl.org/twc/semantge
 	wgs:lat "43.7948259371"^^xsd:double ;
 	wgs:long "-74.8654437536"^^xsd:double ;
 	dcterms:identifier "040750" ;
-	a dfw_lake_samples_vocab:Lake , water:waterSite ;
+	a dfw_lake_samples_vocab:Lake , water:WaterSite ;
 	rdfs:label "040750" ;
 	e1:county_name "Herkimer" ;
 	pollution:hasCountyCode "043" ;
@@ -10294,7 +10294,7 @@ dfw_lake_samples:thing_2008 dcterms:isReferencedBy <http://purl.org/twc/semantge
 	wgs:lat "43.415316823"^^xsd:double ;
 	wgs:long "-74.6326724793"^^xsd:double ;
 	dcterms:identifier "070859" ;
-	a dfw_lake_samples_vocab:Lake , water:waterSite ;
+	a dfw_lake_samples_vocab:Lake , water:WaterSite ;
 	rdfs:label "070859" ;
 	e1:county_name "Hamilton" ;
 	pollution:hasCountyCode "041" ;
@@ -10305,7 +10305,7 @@ dfw_lake_samples:thing_2008 dcterms:isReferencedBy <http://purl.org/twc/semantge
 	wgs:lat "43.6930139571"^^xsd:double ;
 	wgs:long "-75.0608755607"^^xsd:double ;
 	dcterms:identifier "040706" ;
-	a dfw_lake_samples_vocab:Lake , water:waterSite ;
+	a dfw_lake_samples_vocab:Lake , water:WaterSite ;
 	rdfs:label "040706" ;
 	e1:county_name "Herkimer" ;
 	pollution:hasCountyCode "043" ;
@@ -10316,7 +10316,7 @@ dfw_lake_samples:thing_2008 dcterms:isReferencedBy <http://purl.org/twc/semantge
 	wgs:lat "43.6687026231"^^xsd:double ;
 	wgs:long "-74.6965757217"^^xsd:double ;
 	dcterms:identifier "040877" ;
-	a dfw_lake_samples_vocab:Lake , water:waterSite ;
+	a dfw_lake_samples_vocab:Lake , water:WaterSite ;
 	rdfs:label "040877" ;
 	e1:county_name "Hamilton" ;
 	pollution:hasCountyCode "041" ;
@@ -10327,7 +10327,7 @@ dfw_lake_samples:thing_2008 dcterms:isReferencedBy <http://purl.org/twc/semantge
 	wgs:lat "43.6654987534"^^xsd:double ;
 	wgs:long "-74.7031733756"^^xsd:double ;
 	dcterms:identifier "040876" ;
-	a dfw_lake_samples_vocab:Lake , water:waterSite ;
+	a dfw_lake_samples_vocab:Lake , water:WaterSite ;
 	rdfs:label "040876" ;
 	e1:county_name "Hamilton" ;
 	pollution:hasCountyCode "041" ;
@@ -10338,7 +10338,7 @@ dfw_lake_samples:thing_2008 dcterms:isReferencedBy <http://purl.org/twc/semantge
 	wgs:lat "43.6147653204"^^xsd:double ;
 	wgs:long "-74.753978018"^^xsd:double ;
 	dcterms:identifier "040852" ;
-	a dfw_lake_samples_vocab:Lake , water:waterSite ;
+	a dfw_lake_samples_vocab:Lake , water:WaterSite ;
 	rdfs:label "040852" ;
 	e1:county_name "Hamilton" ;
 	pollution:hasCountyCode "041" ;
@@ -10349,7 +10349,7 @@ dfw_lake_samples:thing_2008 dcterms:isReferencedBy <http://purl.org/twc/semantge
 	wgs:lat "43.3037238665"^^xsd:double ;
 	wgs:long "-74.5961304549"^^xsd:double ;
 	dcterms:identifier "050259" ;
-	a dfw_lake_samples_vocab:Lake , water:waterSite ;
+	a dfw_lake_samples_vocab:Lake , water:WaterSite ;
 	rdfs:label "050259" ;
 	e1:county_name "Fulton" ;
 	pollution:hasCountyCode "035" ;
@@ -10360,7 +10360,7 @@ dfw_lake_samples:thing_2008 dcterms:isReferencedBy <http://purl.org/twc/semantge
 	wgs:lat "43.7121007459"^^xsd:double ;
 	wgs:long "-74.7975996435"^^xsd:double ;
 	dcterms:identifier "040829" ;
-	a dfw_lake_samples_vocab:Lake , water:waterSite ;
+	a dfw_lake_samples_vocab:Lake , water:WaterSite ;
 	rdfs:label "040829" ;
 	e1:county_name "Hamilton" ;
 	pollution:hasCountyCode "041" ;
@@ -10371,7 +10371,7 @@ dfw_lake_samples:thing_2008 dcterms:isReferencedBy <http://purl.org/twc/semantge
 	wgs:lat "43.8369491803"^^xsd:double ;
 	wgs:long "-74.4804191251"^^xsd:double ;
 	dcterms:identifier "050649" ;
-	a dfw_lake_samples_vocab:Lake , water:waterSite ;
+	a dfw_lake_samples_vocab:Lake , water:WaterSite ;
 	rdfs:label "050649" ;
 	e1:county_name "Hamilton" ;
 	pollution:hasCountyCode "041" ;
@@ -10382,7 +10382,7 @@ dfw_lake_samples:thing_2008 dcterms:isReferencedBy <http://purl.org/twc/semantge
 	wgs:lat "43.9634624574"^^xsd:double ;
 	wgs:long "-75.0427801877"^^xsd:double ;
 	dcterms:identifier "040186" ;
-	a dfw_lake_samples_vocab:Lake , water:waterSite ;
+	a dfw_lake_samples_vocab:Lake , water:WaterSite ;
 	rdfs:label "040186" ;
 	e1:county_name "Lewis" ;
 	pollution:hasCountyCode "049" ;
@@ -10393,7 +10393,7 @@ dfw_lake_samples:thing_2008 dcterms:isReferencedBy <http://purl.org/twc/semantge
 	wgs:lat "43.6997098914"^^xsd:double ;
 	wgs:long "-75.1004138716"^^xsd:double ;
 	dcterms:identifier "040707" ;
-	a dfw_lake_samples_vocab:Lake , water:waterSite ;
+	a dfw_lake_samples_vocab:Lake , water:WaterSite ;
 	rdfs:label "040707" ;
 	e1:county_name "Herkimer" ;
 	pollution:hasCountyCode "043" ;
@@ -10404,7 +10404,7 @@ dfw_lake_samples:thing_2008 dcterms:isReferencedBy <http://purl.org/twc/semantge
 	wgs:lat "43.6842673905"^^xsd:double ;
 	wgs:long "-75.0972453543"^^xsd:double ;
 	dcterms:identifier "040704" ;
-	a dfw_lake_samples_vocab:Lake , water:waterSite ;
+	a dfw_lake_samples_vocab:Lake , water:WaterSite ;
 	rdfs:label "040704" ;
 	e1:county_name "Herkimer" ;
 	pollution:hasCountyCode "043" ;
@@ -10415,7 +10415,7 @@ dfw_lake_samples:thing_2008 dcterms:isReferencedBy <http://purl.org/twc/semantge
 	wgs:lat "43.7856993445"^^xsd:double ;
 	wgs:long "-74.8528798072"^^xsd:double ;
 	dcterms:identifier "040746" ;
-	a dfw_lake_samples_vocab:Lake , water:waterSite ;
+	a dfw_lake_samples_vocab:Lake , water:WaterSite ;
 	rdfs:label "040746" ;
 	e1:county_name "Herkimer" ;
 	pollution:hasCountyCode "043" ;
@@ -10426,7 +10426,7 @@ dfw_lake_samples:thing_2008 dcterms:isReferencedBy <http://purl.org/twc/semantge
 	wgs:lat "43.5287558102"^^xsd:double ;
 	wgs:long "-74.9380933873"^^xsd:double ;
 	dcterms:identifier "0401007" ;
-	a dfw_lake_samples_vocab:Lake , water:waterSite ;
+	a dfw_lake_samples_vocab:Lake , water:WaterSite ;
 	rdfs:label "0401007" ;
 	e1:county_name "Herkimer" ;
 	pollution:hasCountyCode "043" ;
@@ -10437,7 +10437,7 @@ dfw_lake_samples:thing_2008 dcterms:isReferencedBy <http://purl.org/twc/semantge
 	wgs:lat "43.8131799579"^^xsd:double ;
 	wgs:long "-74.7946665205"^^xsd:double ;
 	dcterms:identifier "060329" ;
-	a dfw_lake_samples_vocab:Lake , water:waterSite ;
+	a dfw_lake_samples_vocab:Lake , water:WaterSite ;
 	rdfs:label "060329" ;
 	e1:county_name "Hamilton" ;
 	pollution:hasCountyCode "041" ;
@@ -10448,7 +10448,7 @@ dfw_lake_samples:thing_2008 dcterms:isReferencedBy <http://purl.org/twc/semantge
 	wgs:lat "43.7932709243"^^xsd:double ;
 	wgs:long "-74.6514727162"^^xsd:double ;
 	dcterms:identifier "060315A" ;
-	a dfw_lake_samples_vocab:Lake , water:waterSite ;
+	a dfw_lake_samples_vocab:Lake , water:WaterSite ;
 	rdfs:label "060315A" ;
 	e1:county_name "Hamilton" ;
 	pollution:hasCountyCode "041" ;
@@ -10459,7 +10459,7 @@ dfw_lake_samples:thing_2008 dcterms:isReferencedBy <http://purl.org/twc/semantge
 	wgs:lat "43.7631551024"^^xsd:double ;
 	wgs:long "-74.9055652905"^^xsd:double ;
 	dcterms:identifier "040739" ;
-	a dfw_lake_samples_vocab:Lake , water:waterSite ;
+	a dfw_lake_samples_vocab:Lake , water:WaterSite ;
 	rdfs:label "040739" ;
 	e1:county_name "Herkimer" ;
 	pollution:hasCountyCode "043" ;
@@ -10470,7 +10470,7 @@ dfw_lake_samples:thing_2008 dcterms:isReferencedBy <http://purl.org/twc/semantge
 	wgs:lat "43.7380678615"^^xsd:double ;
 	wgs:long "-74.9722611752"^^xsd:double ;
 	dcterms:identifier "047031A" ;
-	a dfw_lake_samples_vocab:Lake , water:waterSite ;
+	a dfw_lake_samples_vocab:Lake , water:WaterSite ;
 	rdfs:label "047031A" ;
 	e1:county_name "Herkimer" ;
 	pollution:hasCountyCode "043" ;
@@ -10481,7 +10481,7 @@ dfw_lake_samples:thing_2008 dcterms:isReferencedBy <http://purl.org/twc/semantge
 	wgs:lat "43.7679449993"^^xsd:double ;
 	wgs:long "-74.623286657"^^xsd:double ;
 	dcterms:identifier "060313" ;
-	a dfw_lake_samples_vocab:Lake , water:waterSite ;
+	a dfw_lake_samples_vocab:Lake , water:WaterSite ;
 	rdfs:label "060313" ;
 	e1:county_name "Hamilton" ;
 	pollution:hasCountyCode "041" ;
@@ -10492,7 +10492,7 @@ typed_lake:X rdfs:Label "Seventh" ;
 	wgs:lat "43.7434600128"^^xsd:double ;
 	wgs:long "-74.7494415975"^^xsd:double ;
 	dcterms:identifier "X" ;
-	a dfw_lake_samples_vocab:Lake , water:waterSite ;
+	a dfw_lake_samples_vocab:Lake , water:WaterSite ;
 	rdfs:label "X" ;
 	e1:county_name "Hamilton" ;
 	pollution:hasCountyCode "041" ;
@@ -10503,7 +10503,7 @@ typed_lake:X rdfs:Label "Seventh" ;
 	wgs:lat "43.5106968751"^^xsd:double ;
 	wgs:long "-74.8947255805"^^xsd:double ;
 	dcterms:identifier "0401004" ;
-	a dfw_lake_samples_vocab:Lake , water:waterSite ;
+	a dfw_lake_samples_vocab:Lake , water:WaterSite ;
 	rdfs:label "0401004" ;
 	e1:county_name "Herkimer" ;
 	pollution:hasCountyCode "043" ;
@@ -10514,7 +10514,7 @@ typed_lake:X rdfs:Label "Seventh" ;
 	wgs:lat "43.8262406253"^^xsd:double ;
 	wgs:long "-74.8885319661"^^xsd:double ;
 	dcterms:identifier "040754" ;
-	a dfw_lake_samples_vocab:Lake , water:waterSite ;
+	a dfw_lake_samples_vocab:Lake , water:WaterSite ;
 	rdfs:label "040754" ;
 	e1:county_name "Herkimer" ;
 	pollution:hasCountyCode "043" ;
@@ -10525,7 +10525,7 @@ typed_lake:X rdfs:Label "Seventh" ;
 	wgs:lat "43.6325087705"^^xsd:double ;
 	wgs:long "-74.7393962179"^^xsd:double ;
 	dcterms:identifier "040850" ;
-	a dfw_lake_samples_vocab:Lake , water:waterSite ;
+	a dfw_lake_samples_vocab:Lake , water:WaterSite ;
 	rdfs:label "040850" ;
 	e1:county_name "Hamilton" ;
 	pollution:hasCountyCode "041" ;
@@ -10536,7 +10536,7 @@ typed_lake:X rdfs:Label "Seventh" ;
 	wgs:lat "43.8575877079"^^xsd:double ;
 	wgs:long "-75.1039988583"^^xsd:double ;
 	dcterms:identifier "040473" ;
-	a dfw_lake_samples_vocab:Lake , water:waterSite ;
+	a dfw_lake_samples_vocab:Lake , water:WaterSite ;
 	rdfs:label "040473" ;
 	e1:county_name "Herkimer" ;
 	pollution:hasCountyCode "043" ;
@@ -10547,7 +10547,7 @@ typed_lake:X rdfs:Label "Seventh" ;
 	wgs:lat "43.5421048967"^^xsd:double ;
 	wgs:long "-73.7014310787"^^xsd:double ;
 	dcterms:identifier "020379" ;
-	a dfw_lake_samples_vocab:Lake , water:waterSite ;
+	a dfw_lake_samples_vocab:Lake , water:WaterSite ;
 	rdfs:label "020379" ;
 	e1:county_name "Warren" ;
 	pollution:hasCountyCode "113" ;
@@ -10558,7 +10558,7 @@ typed_lake:X rdfs:Label "Seventh" ;
 	wgs:lat "43.8107751998"^^xsd:double ;
 	wgs:long "-74.8823830544"^^xsd:double ;
 	dcterms:identifier "040753" ;
-	a dfw_lake_samples_vocab:Lake , water:waterSite ;
+	a dfw_lake_samples_vocab:Lake , water:WaterSite ;
 	rdfs:label "040753" ;
 	e1:county_name "Herkimer" ;
 	pollution:hasCountyCode "043" ;
@@ -10569,7 +10569,7 @@ typed_lake:X rdfs:Label "Seventh" ;
 	wgs:lat "43.7419222017"^^xsd:double ;
 	wgs:long "-74.9629500822"^^xsd:double ;
 	dcterms:identifier "040731" ;
-	a dfw_lake_samples_vocab:Lake , water:waterSite ;
+	a dfw_lake_samples_vocab:Lake , water:WaterSite ;
 	rdfs:label "040731" ;
 	e1:county_name "Herkimer" ;
 	pollution:hasCountyCode "043" ;
@@ -10580,7 +10580,7 @@ typed_lake:X rdfs:Label "Seventh" ;
 	wgs:lat "43.3706474669"^^xsd:double ;
 	wgs:long "-74.2413204142"^^xsd:double ;
 	dcterms:identifier "050215" ;
-	a dfw_lake_samples_vocab:Lake , water:waterSite ;
+	a dfw_lake_samples_vocab:Lake , water:WaterSite ;
 	rdfs:label "050215" ;
 	e1:county_name "Hamilton" ;
 	pollution:hasCountyCode "041" ;
@@ -10591,7 +10591,7 @@ typed_lake:X rdfs:Label "Seventh" ;
 	wgs:lat "43.9674063099"^^xsd:double ;
 	wgs:long "-74.9584706389"^^xsd:double ;
 	dcterms:identifier "040210" ;
-	a dfw_lake_samples_vocab:Lake , water:waterSite ;
+	a dfw_lake_samples_vocab:Lake , water:WaterSite ;
 	rdfs:label "040210" ;
 	e1:county_name "Lewis" ;
 	pollution:hasCountyCode "049" ;
@@ -10602,7 +10602,7 @@ typed_lake:X rdfs:Label "Seventh" ;
 	wgs:lat "43.805561711"^^xsd:double ;
 	wgs:long "-74.8284666356"^^xsd:double ;
 	dcterms:identifier "040750A" ;
-	a dfw_lake_samples_vocab:Lake , water:waterSite ;
+	a dfw_lake_samples_vocab:Lake , water:WaterSite ;
 	rdfs:label "040750A" ;
 	e1:county_name "Herkimer" ;
 	pollution:hasCountyCode "043" ;
@@ -10611,7 +10611,7 @@ typed_lake:X rdfs:Label "Seventh" ;
 
 <http://purl.org/twc/semantgeo/source/aeap_nys/dataset/dfw_lake_samples/typed/lake/> rdfs:Label "" ;
 	dcterms:identifier "" ;
-	a dfw_lake_samples_vocab:Lake , water:waterSite ;
+	a dfw_lake_samples_vocab:Lake , water:WaterSite ;
 	rdfs:label "" ;
 	e1:county_name "" ;
 	pollution:hasCountyCode "" ;
