@@ -32,6 +32,9 @@
 @prefix ov:            <http://open.vocab.org/terms/> .
 @prefix conversion:    <http://purl.org/twc/vocab/conversion/> .
 @prefix :              <http://purl.org/twc/semantgeo/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/params/enhancement/1/> .
+# Added by Brendan
+@prefix water:         <http://escience.rpi.edu/ontology/semanteco/2/0/water.owl#> .
+@prefix pollution:     <http://escience.rpi.edu/ontology/semanteco/2/0/pollution.owl#> .
 
 <http://tw.rpi.edu/instances/BrendanAshby> dcterms:identifier "ashbyb" .
 
@@ -53,21 +56,20 @@
    conversion:conversion_process [
       a conversion:EnhancementConversionProcess;
       conversion:enhancement_identifier "1";
-      conversion:subject_discriminator  "aeap-locations";
 
       dcterms:creator [ a foaf:OnlineAccount; foaf:accountName "ashbyb";
                         sioc:account_of <http://tw.rpi.edu/instances/BrendanAshby> ];
-      dcterms:created "2013-06-06T02:11:08+00:00"^^xsd:dateTime;
+      dcterms:created "2013-06-07T04:44:48+00:00"^^xsd:dateTime;
 
-     conversion:delimits_cell ",";
-      #conversion:delimits_cell "   "; # tab
+      conversion:delimits_cell ",";
+      #conversion:delimits_cell "	"; # tab
       #conversion:delimits_cell "|";   # pipe
       #conversion:delimits_cell ",";   # comma
 
-      conversion:interpret [
-         conversion:symbol        "";
-         conversion:interpretation conversion:null; 
-      ];
+      #conversion:interpret [
+      #   conversion:symbol        "";
+      #   conversion:interpretation conversion:null; 
+      #];
       #conversion:enhance [
       #   conversion:domain_template "thing_[r]";
       #   conversion:domain_name     "Thing";
@@ -76,6 +78,11 @@
       #   conversion:class_name "Thing";
       #   conversion:subclass_of <http://purl.org/...>;
       #];
+      # Water Site Enhancement Block
+      conversion:enhance [
+         conversion:class_name "Lake";
+         conversion:subclass_of water:waterSite;
+      ];
       conversion:enhance [
          ov:csvCol          1;
          ov:csvHeader       "Lake";
@@ -122,9 +129,43 @@
          #conversion:bundled_by [ ov:csvCol 1,2,3 ];
          #a qb:Observation;  # This is out cell based call. We are opting for bundled by for now
       ];
+      conversion:enhance [
+         ov:csvCol          5;
+         ov:csvHeader       "County Name";
+         #conversion:label   "County Name";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+         conversion:bundled_by [ ov:csvCol 4 ];
+      ];
+      conversion:enhance [
+         ov:csvCol          6;
+         ov:csvHeader       "County Code";
+         #conversion:label   "County Code";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+         conversion:equivalent_property pollution:hasCountyCode;
+         conversion:bundled_by [ ov:csvCol 4 ];
+      ];
+      conversion:enhance [
+         ov:csvCol          7;
+         ov:csvHeader       "State";
+         #conversion:label   "State";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+         conversion:bundled_by [ ov:csvCol 4 ];
+         conversion:equivalent_property pollution:hasStateCode;
+      ];
+      conversion:enhance [
+         ov:csvCol          8;
+         ov:csvHeader       "Country";
+         #conversion:label   "Country";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+         conversion:bundled_by [ ov:csvCol 4 ];
+      ];
       #conversion:enhance [            
       #   ov:csvRow 3,4,5;             
       #   a conversion:ExampleResource;
-      #];                              
+      #];                             
    ];
 .
