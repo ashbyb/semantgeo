@@ -160,6 +160,9 @@
          conversion:label   "Date";
          conversion:comment "The date the sample was taken from the lake";
          conversion:range   xsd:date;
+         # Fixing date format parsing
+         conversion:eg           "13-Aug-1989";
+         conversion:date_pattern "dd-MMM-yyyy";
          # Aligning date types to SemantEco
          conversion:equivalent_property time:inXSDDateTime;
       ];
