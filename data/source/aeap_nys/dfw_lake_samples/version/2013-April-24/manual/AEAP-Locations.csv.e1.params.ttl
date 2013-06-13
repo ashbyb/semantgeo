@@ -66,10 +66,10 @@
       #conversion:delimits_cell "|";   # pipe
       #conversion:delimits_cell ",";   # comma
 
-      #conversion:interpret [
-      #   conversion:symbol        "";
-      #   conversion:interpretation conversion:null; 
-      #];
+      conversion:interpret [
+         conversion:symbol        "";
+         conversion:interpretation conversion:null; 
+      ];
       #conversion:enhance [
       #   conversion:domain_template "thing_[r]";
       #   conversion:domain_name     "Thing";
@@ -87,7 +87,7 @@
          ov:csvCol          1;
          ov:csvHeader       "Lake";
          #conversion:label   "Lake";
-         conversion:equivalent_property rdfs:Label;
+         conversion:equivalent_property rdfs:label;
          conversion:comment "The name of the lake the sample is from";
          conversion:range   rdfs:Literal;
          # Explicit Bundle
@@ -162,8 +162,10 @@
          ov:csvHeader       "Country";
          #conversion:label   "Country";
          conversion:comment "";
-         conversion:range   todo:Literal;
+         conversion:range   rdfs:Resource;
          conversion:bundled_by [ ov:csvCol 4 ];
+         # Making Tim happy, bind this column to a proper ttl on countries
+         conversion:links_via <http://logd.tw.rpi.edu/source/twc-rpi-edu/file/instance-hub-countries/version/2012-May-09/conversion/twc-rpi-edu-instance-hub-countries-2012-May-09.e1.ttl>;
       ];
       #conversion:enhance [            
       #   ov:csvRow 3,4,5;             
