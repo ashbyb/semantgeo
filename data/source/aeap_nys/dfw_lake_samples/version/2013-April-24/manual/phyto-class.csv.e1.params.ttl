@@ -35,7 +35,7 @@
 @prefix foaf:          <http://xmlns.com/foaf/0.1/> .
 @prefix ov:            <http://open.vocab.org/terms/> .
 @prefix conversion:    <http://purl.org/twc/vocab/conversion/> .
-@prefix :              <http://logd.tw.rpi.edu/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/params/enhancement/1/> .
+@prefix :              <http://purl.org/twc/semantgeo/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/params/enhancement/1/> .
 
 <http://tw.rpi.edu/instances/TimLebo> foaf:holdsAccount <http://purl.org/twc/id/machine/lebot/MacBookPro6_2#lebot> .
 <http://purl.org/twc/id/machine/lebot/MacBookPro6_2#lebot>
@@ -52,10 +52,10 @@
 #   #conversion:type_name     "My Class";   # Can also be a URI, e.g. foaf:Person.
 #.
 
-<http://logd.tw.rpi.edu/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1>
+<http://purl.org/twc/semantgeo/source/aeap_nys/dataset/dfw_lake_samples/version/2013-April-24/conversion/enhancement/1>
    a conversion:LayerDataset, void:Dataset;
 
-   conversion:base_uri           "http://logd.tw.rpi.edu"^^xsd:anyURI;
+   conversion:base_uri           "http://purl.org/twc/semantgeo"^^xsd:anyURI;
    conversion:source_identifier  "aeap_nys";
    conversion:dataset_identifier "dfw_lake_samples";
    conversion:version_identifier "2013-April-24";
@@ -66,7 +66,7 @@
       conversion:enhancement_identifier "1";
 
       dcterms:creator <http://purl.org/twc/id/machine/lebot/MacBookPro6_2#lebot>;
-      dcterms:created "2013-06-19T08:47:26-04:00"^^xsd:dateTime;
+      dcterms:created "2013-06-19T08:24:20-04:00"^^xsd:dateTime;
 
 
       #conversion:enhance [
@@ -83,10 +83,10 @@
       #   conversion:symbol        "";
       #   conversion:interpretation conversion:null; 
       #];
-      #conversion:enhance [
-      #   conversion:domain_template "thing_[r]";
+      conversion:enhance [
+         conversion:domain_template "[#1]";
       #   conversion:domain_name     "Thing";
-      #];
+      ];
       #conversion:enhance [
       #   conversion:class_name "Thing";
       #   conversion:subclass_of <http://purl.org/...>;
@@ -94,26 +94,25 @@
       conversion:enhance [
          ov:csvCol          1;
          ov:csvHeader       "Taxon Name";
-         #conversion:bundled_by [ ov:csvCol 1 ];
          #conversion:label   "Taxon Name";
-         #conversion:equivalent_property dcterms:identifier;
+         conversion:equivalent_property dcterms:identifier;
          #conversion:subproperty_of      dcterms:identifier;
          conversion:comment "";
          #conversion:range_template  "[/sd]thing[.]";
-         conversion:range   todo:Literal;
+         #conversion:range   owl:Class;
          #conversion:range_name  "Thing";
       ];
       conversion:enhance [
          ov:csvCol          2;
          ov:csvHeader       "class";
-         #conversion:bundled_by [ ov:csvCol 1 ];
          #conversion:label   "class";
          #conversion:equivalent_property dcterms:identifier;
          #conversion:subproperty_of      dcterms:identifier;
          conversion:comment "";
          #conversion:range_template  "[/sd]thing[.]";
-         conversion:range   todo:Literal;
+         conversion:range   rdfs:Resource;
          #conversion:range_name  "Thing";
+         conversion:links_via <https://raw.github.com/ashbyb/semantgeo/master/data/source/aeap_nys/dfw_lake_samples/version/2013-April-24/manual/example-link-link-file.ttl>;
       ];
       #conversion:enhance [            
       #   ov:csvRow 3,4,5;             
